@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: info/jupyter-book.md
+- file: info/pandas.md
+- file: info/pdm.md
+- file: info/seabon.md
+- file: info/sphinx.md
+- file: info/wsl.md
+- file: info/mysql.md
+- file: test.ipynb
