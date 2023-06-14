@@ -21,7 +21,13 @@ parts:
 - caption: python
   chapters:
   - file: python/pandas
+    sections:
+    - file: jn/pandas_01
+
   - file: python/pdm
+    sections:
+    - file: jn/pdm_01
+
   - file: python/seaborn
     sections:
     - file: python/seaborn_01

@@ -16,6 +16,10 @@ dependencies = [
     "bokeh>=3.1.1",
     "folium>=0.14.0",
     "seaborn>=0.12.2",
+    "jupyter>=1.0.0",
+    "opendata>=0.0.1",
+    "opendata-kr>=0.0.8",
+    "openpyxl>=3.1.2",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -25,4 +29,3 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.pdm]
