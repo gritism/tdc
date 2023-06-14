@@ -1,4 +1,4 @@
-## mysql
+# mysql
 > 관계형 데이터 구조를 관리하기 위한 database program,  
 > 오픈 소스로 시작하여 기업용은 별도 라이선스 구매 필요.  
 > [mysql document](https://www.mysql.com/support/)  

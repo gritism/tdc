@@ -1,4 +1,4 @@
-## wsl <sup>window subsystem linux</sup>
+# wsl <sup>window subsystem linux</sup>
 > 윈도우에서 리눅스를 사용할 수 있는 가상환경 프로그램  
 >> [wsl document](https://learn.microsoft.com/ko-kr/windows/wsl/install)  
 > ...

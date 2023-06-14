@@ -7,7 +7,6 @@ title: Books with Jupyter
 --- -->
 
 ::::{grid} 3
-<!-- :reverse: -->
 
 :::{grid-item}
 :class: sd-m-auto
