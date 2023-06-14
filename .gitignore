@@ -1,4 +1,4 @@
 _backup/
-docs/_build/
+docs/_build/*
 .pdm-build/
 .venv/
