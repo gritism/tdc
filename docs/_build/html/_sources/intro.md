@@ -1,11 +1,31 @@
-# Welcome to your Jupyter Book
+# Technical Document Center
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+- python 관련 기술 문서 정리
+- 
+<!-- ---
+title: Books with Jupyter
+--- -->
 
-Check out the content pages bundled with this sample book to see more.
+::::{grid} 3
+<!-- :reverse: -->
 
-```{tableofcontents}
-```
+:::{grid-item}
+:class: sd-m-auto
+{bdg-primary}`A`  
+
+:::
+
+:::{grid-item}
+:class: sd-m-auto
+{bdg-secondary}`B`  
+Octicon Icons: {octicon}`beaker;1em;sd-text-info`
+:::
+
+:::{grid-item}
+:class: sd-m-auto
+[{bdg-info}`sphinx-design`](https://sphinx-design.readthedocs.io/en/latest/index.html)  
+
+:::
+
+💬 Ask and answer questions
+^^^

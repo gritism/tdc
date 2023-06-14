@@ -3,12 +3,40 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: info/jupyter-book.md
-- file: info/pandas.md
-- file: info/pdm.md
-- file: info/seabon.md
-- file: info/sphinx.md
-- file: info/wsl.md
-- file: info/mysql.md
-- file: test.ipynb
+parts:
+- caption: doc generator
+  chapters:
+  - file: doc-generator/jupyter-book
+    sections:
+    - file: doc-generator/jb/overview
+    - file: doc-generator/jb/quick-start
+    - file: doc-generator/jb/config
+    - file: doc-generator/jb/toc
+    - file: doc-generator/jb/intro_area
+    - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
+      title: MyST syntax
+
+  - file: doc-generator/sphinx
+
+- caption: python
+  chapters:
+  - file: python/pandas
+  - file: python/pdm
+  - file: python/seaborn
+    sections:
+    - file: python/seaborn_01
+  - file: python/bokeh
+    sections:
+    - file: python/bokeh_01
+
+- caption: jupyter
+  chapters:
+  - file: jn/test.ipynb
+  - file: jn/is.ipynb
+  - file: jn/notebooks.ipynb
+
+- caption: etc
+  chapters:
+  - file: etc/wsl
+  - file: etc/mysql
+
