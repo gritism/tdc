@@ -26,5 +26,4 @@ Octicon Icons: {octicon}`beaker;1em;sd-text-info`
 
 :::
 
-💬 Ask and answer questions
-^^^
+* 💬 Ask and answer questions

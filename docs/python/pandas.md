@@ -145,8 +145,8 @@
     > Image('https://static1.squarespace.com/static/5006453fe4b09ef2252ba068/t/5090b249e4b047ba54dfd258/1351660113175/TItanic-Survival-Infographic.jpg')
 - 
 
-# warning 무시
+## warning 무시
 - `warnings.filterwarnings('ignore')`: 
 
-# e notation 표현 방식 변경
+## e notation 표현 방식 변경
 - `pd.options.display.float_format = '{:.2f}'.format`

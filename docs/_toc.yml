@@ -34,9 +34,14 @@ parts:
   - file: jn/test.ipynb
   - file: jn/is.ipynb
   - file: jn/notebooks.ipynb
+  - file: jn/sample.ipynb
 
 - caption: etc
   chapters:
   - file: etc/wsl
   - file: etc/mysql
 
+- caption: reference
+  chapters:
+  - file: ref/markdown
+  - file: ref/markdown-notebooks

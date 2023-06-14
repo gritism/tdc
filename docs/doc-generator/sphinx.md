@@ -1,13 +1,16 @@
 # sphinx
-> python 기반 문서 자동 생성 라이브러리임  
-> 공식 [python document](https://docs.python.org/ko/3/)도 sphinx 기반  
-> [readthedocs](https://readthedocs.org/)도 sphinx기반으로 구현됨
 
+```{note}
+
+* python 기반 문서 자동 생성 라이브러리로 2008년 시작 '23년 6월 기준 7.0.1 버전
+* python 공식 [document](https://docs.python.org/ko/3/)도 sphinx 기반으로 생성됨  
+* 기술문서관련 많이 사용되는 [readthedocs](https://readthedocs.org/)도 sphinx기반으로 구현
+
+```
 -------
 
 ## install
-- (pip) pip install sphinx
-- (pdm) pdm add sphinx
+- `(pip) pip install sphinx` or `(pdm) pdm add sphinx`
 
 ## quickstart
 - **config**: `pdm run sphinx-quickstart docs`
@@ -18,7 +21,7 @@
     - python 소스 파일(패키지, 모듈)로 부터 document generation
     - 소스 내 docstring(주석) 내용을 읽어서 문서화 하는 것으로 docstring 작성 규칙에 따라 주석을 작성해야 함.
     - 이를 위해서는 conf.py 파일 수정 필요
-        ```
+        ```python
         import sys, os
         # sys.path.append(os.path.abspath('sphinxext'))
         sys.path.insert(0, os.path.abspath('../../../'))
@@ -32,19 +35,6 @@
     > `usage: sphinx-build [OPTIONS] SOURCEDIR OUTPUTDIR [FILENAMES...]`
     > ※ make html로 실행해도 됨
 
-## 목차 만들기
-- index.rst 수정
-    - (caption) 제목
-    - python/pandas.md 가 페이지 명
-    ```
-    .. toctree::
-        :maxdepth: 2
-        :caption: python:
-
-        python/pandas.md
-        python/seaborn.md
-        python/sphnix.md
-    ```
 
 ## jupyter notebook 사용
 - nbsphinx 설치
@@ -81,6 +71,20 @@
         > `pdm add sphinx_rtd_theme`
     - conf.py 파일 수정
         > `html_theme = 'sphinx_rtd_theme'`
+
+## 목차 만들기
+- index.rst 수정
+    - (caption) 제목
+    - python/pandas.md 가 페이지 명
+        ```
+        .. toctree::
+            :maxdepth: 2
+            :caption: python:
+
+            python/pandas.md
+            python/seaborn.md
+            python/sphnix.md
+        ```
 
 ## Error
 - `WARNING: invalid signature for automodule`
