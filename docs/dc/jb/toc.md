@@ -1,7 +1,7 @@
 # _toc
 * manage manu structure
 
-### _toc.yml 파일 내용
+## _toc.yml 파일 내용
 * table of content 정의
   ```md
     format: jb-book
@@ -15,7 +15,7 @@
         - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
           title: MyST syntax
   ```
-### 항목 설명
+## 항목 설명
 * {bdg-info}`format:` jb-book, jb-article 2개 종류 
 * {bdg-info}`root:` 
   * 메인화면 파일명 (intro.md)

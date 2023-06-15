@@ -51,10 +51,10 @@ parts:
 
 - caption: etc
   chapters:
-  - file: etc/wsl
-  - file: etc/mysql
+  - file: et/wsl
+  - file: et/mysql
 
 - caption: reference
   chapters:
-  - file: ref/markdown
-  - file: ref/markdown-notebooks
+  - file: rf/markdown
+  - file: rf/markdown-notebooks
