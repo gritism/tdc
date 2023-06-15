@@ -20,9 +20,11 @@ parts:
   - file: doc-generator/jupytext
   - file: doc-generator/markdown
   - file: doc-generator/ghp
+  - file: doc-generator/autodoc
 
 - caption: python
   chapters:
+  - file: python/docstring
   - file: python/pandas
     sections:
     - file: jn/pandas_01
@@ -31,12 +33,14 @@ parts:
     sections:
     - file: jn/pdm_01
 
-  - file: python/seaborn
+- caption: data visulization
+  chapters:
+  - file: dv/seaborn
     sections:
-    - file: python/seaborn_01
-  - file: python/bokeh
+    - file: dv/seaborn_01
+  - file: dv/bokeh
     sections:
-    - file: python/bokeh_01
+    - file: dv/bokeh_01
 
 - caption: jupyter
   chapters:

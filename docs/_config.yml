@@ -31,8 +31,8 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-sphinx:
-  config:
-    html_theme: sphinx_rtd_theme
-    # html_theme: press
-    # html_theme: sphinxawesome_theme
+# sphinx:
+#   config:
+#     html_theme: sphinx_rtd_theme
+#     # html_theme: press
+#     # html_theme: sphinxawesome_theme
