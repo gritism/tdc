@@ -20,6 +20,12 @@ dependencies = [
     "opendata>=0.0.1",
     "opendata-kr>=0.0.8",
     "openpyxl>=3.1.2",
+    "sphinx-press-theme>=0.8.0",
+    "sphinxawesome-theme>=5.0.0b2",
+    "jupytext>=1.14.6",
+    "notebook==7.0.0b4",
+    "jupyter-nbextensions-configurator>=0.6.3",
+    "jupyter-contrib-nbextensions>=0.7.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -29,3 +35,4 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
+[tool.pdm]

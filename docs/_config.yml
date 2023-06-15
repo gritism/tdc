@@ -3,7 +3,7 @@
 
 title: My sample book
 author: The Jupyter Book Community
-logo: YB
+logo: tdc_logo_3.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -34,3 +34,5 @@ html:
 sphinx:
   config:
     html_theme: sphinx_rtd_theme
+    # html_theme: press
+    # html_theme: sphinxawesome_theme

@@ -17,6 +17,8 @@ parts:
       title: MyST syntax
 
   - file: doc-generator/sphinx
+  - file: doc-generator/jupytext
+  - file: doc-generator/markdown
 
 - caption: python
   chapters:
