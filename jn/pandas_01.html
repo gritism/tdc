@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pandas_01 &mdash; My sample book</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx-thebe.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/design-tabs.js"></script>
+        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+        <script async="async" src="../_static/sphinx-thebe.js"></script>
+        <script type="application/vnd.jupyter.widget-state+json">{"state": {"ae3e8f6c12eb455ba2c8ad6b348470fb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a50ba3a9899e413d9692e316ee252535": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "e7e54b6832864711bfdb87889732cba3": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_ae3e8f6c12eb455ba2c8ad6b348470fb", "max": 26250.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_a50ba3a9899e413d9692e316ee252535", "tabbable": null, "tooltip": null, "value": 26250.0}}, "5016134ef8414a8cb252c8b8da8a0420": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "417ae501522a478b8c992f0ada198486": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "6ce98b3bdcba474e9262d8245075ac17": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_5016134ef8414a8cb252c8b8da8a0420", "placeholder": "\u200b", "style": "IPY_MODEL_417ae501522a478b8c992f0ada198486", "tabbable": null, "tooltip": null, "value": "100%"}}, "a119f66d85254de09fe8484d5868674c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "525eb698c7844e4595f7cf031d3226dc": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "744be548eaf14186bb926e69ee25f4e8": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_a119f66d85254de09fe8484d5868674c", "placeholder": "\u200b", "style": "IPY_MODEL_525eb698c7844e4595f7cf031d3226dc", "tabbable": null, "tooltip": null, "value": " 26.2k/26.2k [00:00&lt;00:00, 3.11MB/s]"}}, "b550ce26ac72453c8851049b23b091d3": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8a4ea8e7046c48149158bdf829235fed": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_6ce98b3bdcba474e9262d8245075ac17", "IPY_MODEL_e7e54b6832864711bfdb87889732cba3", "IPY_MODEL_744be548eaf14186bb926e69ee25f4e8"], "layout": "IPY_MODEL_b550ce26ac72453c8851049b23b091d3", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pdm" href="../python/pdm.html" />
+    <link rel="prev" title="pandas" href="../python/pandas.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../intro.html" class="icon icon-home">
+            Python
+              <img src="../_static/tdc_logo_3.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">doc generator</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupyter-book.html">jupyter-book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/sphinx.html">sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupytext.html">jupytext</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">python</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../python/pandas.html">pandas</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pandas_01</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/pdm.html">pdm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/seaborn.html">seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/bokeh.html">Bokeh</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">jupyter</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Jupyter Notebook files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="is.html">finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Jupyter Notebook files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">etc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/wsl.html">wsl <sup>window subsystem linux</sup></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/mysql.html">mysql</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ref/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../intro.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../intro.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../python/pandas.html">pandas</a></li>
+      <li class="breadcrumb-item active">pandas_01</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/jn/pandas_01.ipynb" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="pandas-01">
+<span id="file-types-pandas-01"></span><h1>pandas_01<a class="headerlink" href="#pandas-01" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2>데이터셋 다운로드를 위한 패키지 설치<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pdm add opendata-kr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>데이터 다운로드<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opendata</span> <span class="kn">import</span> <span class="n">dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;서울시대중교통&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======= 다운로드 시작 =======
+
+data/서울시대중교통/seoul_transportation.xlsx
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "8a4ea8e7046c48149158bdf829235fed"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======= 다운로드 완료 =======
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>파일 읽기<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>pandas는 아래와 같은 형태의 파일을 읽어 올 수 있음.</p>
+<ul class="simple">
+<li><p>excel: <code class="docutils literal notranslate"><span class="pre">pd.read_excel()</span></code></p></li>
+<li><p>csv: <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code></p></li>
+<li><p>pickle: <code class="docutils literal notranslate"><span class="pre">pd.read_pickle()</span></code></p></li>
+<li><p>json: <code class="docutils literal notranslate"><span class="pre">pd.read_json()</span></code></p></li>
+</ul>
+</li>
+<li><p>엑셀 읽기 위해 openpyxl 라이브러리 설치: <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">add</span> <span class="pre">openpyxl</span></code></p></li>
+<li><p>엑셀 읽기: <code class="docutils literal notranslate"><span class="pre">pd.read_excel('경로/파일명',</span> <span class="pre">sheet_name='',</span> <span class="pre">engine='openpyxl')</span></code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>sheet_name 입력하지 않을 경우 전체 시트를 가져옴</p>
+</div>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pdm add openpyxl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/서울시대중교통/seoul_transportation.xlsx&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;openpyxl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>데이터 처리<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>info: <code class="docutils literal notranslate"><span class="pre">df.info()</span></code></p></li>
+<li><p>index: <code class="docutils literal notranslate"><span class="pre">df.index</span></code></p></li>
+<li><p>columns: <code class="docutils literal notranslate"><span class="pre">df.columns</span></code></p></li>
+<li><p>sort: <code class="docutils literal notranslate"><span class="pre">df.sort_values(by=['컬럼명'],</span> <span class="pre">ascending=True/False)</span></code></p>
+<ul>
+<li><p>ascending=False 이면 내림차순 정렬</p></li>
+</ul>
+</li>
+<li><p>slicing</p>
+<ul>
+<li><p>loc: 행,열을 기준으로 데이터 값 추출 <code class="docutils literal notranslate"><span class="pre">df.loc[:5,</span> <span class="pre">'컬럼명']</span></code></p></li>
+<li><p>iloc: 인덱스를 기준으로 슬라이싱 <code class="docutils literal notranslate"><span class="pre">df.iloc[1,</span> <span class="pre">3]</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 601 entries, 0 to 600
+Data columns (total 4 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   대중교통구분  601 non-null    object
+ 1   노선명     601 non-null    object
+ 2   년월      601 non-null    int64 
+ 3   승차총승객수  601 non-null    int64 
+dtypes: int64(2), object(2)
+memory usage: 18.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>Dtype: Object(문자형을 포함한 객체 타입), int64(정수형), float64(실수형)</p></li>
+<li><p>RangeIdex: 601 -&gt; 숫자형태로 인덱스가 지정되어 있으며 전체 데이터 개수 601개임</p></li>
+</ul>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;대중교통구분&#39;, &#39;노선명&#39;, &#39;년월&#39;, &#39;승차총승객수&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>컬럼은 4개 ‘대중교통구분’, ‘노선명’, ‘년월’, ‘승차총승객수’</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* df.columns, df.value_counts()
+* ()가 있는 것은 데이터 프레임의 함수를 호출하는 것이고, ()가 없는 것은 속성값을 가져오는 것임
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;승차총승객수&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>대중교통구분</th>
+      <th>노선명</th>
+      <th>년월</th>
+      <th>승차총승객수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>37</th>
+      <td>지하철</td>
+      <td>2호선</td>
+      <td>201905</td>
+      <td>49356486</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>지하철</td>
+      <td>2호선</td>
+      <td>201803</td>
+      <td>49033111</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>지하철</td>
+      <td>2호선</td>
+      <td>201810</td>
+      <td>48343358</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>지하철</td>
+      <td>2호선</td>
+      <td>201811</td>
+      <td>48332253</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>지하철</td>
+      <td>2호선</td>
+      <td>201712</td>
+      <td>48288516</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>승차총승객수로 내림차순 정렬, 가장 많은 승객수는 2019년 5월 2호선</p></li>
+</ul>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;대중교통구분&#39;</span><span class="p">,</span> <span class="s1">&#39;노선명&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>대중교통구분</th>
+      <th>노선명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>지하철</td>
+      <td>1호선</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>df.loc[행, 열]</p></li>
+<li><p>행 ‘start:end;step’ 형태로 지정
+:10은 0부터 10번째 행을 가져오라는 의미</p></li>
+<li><p>열 ‘컬럼명’을 명시하거나 ‘컬럼명’:’컬럼명’으로 지정</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id5">
+<h2>통계<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.describe()</span></code></p>
+<ul>
+<li><p>데이터프레임의 주요 통계량 정보 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.count()</span></code>, <code class="docutils literal notranslate"><span class="pre">df.mean()</span></code>, <code class="docutils literal notranslate"><span class="pre">df.max()</span></code>, <code class="docutils literal notranslate"><span class="pre">df.quantile()</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.agg(['min',</span> <span class="pre">'max',</span> <span class="pre">'count'])</span></code></p>
+<ul>
+<li><p>개별 통계 조회가 아닌 필요한 내용을 한번에 조회하는 방법</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.unique()</span></code></p>
+<ul>
+<li><p>데이터 중 유니크 개수</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>년월</th>
+      <th>승차총승객수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>601.00</td>
+      <td>601.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>201822.42</td>
+      <td>7542216.74</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>56.30</td>
+      <td>9225438.09</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>201711.00</td>
+      <td>343785.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>201803.00</td>
+      <td>1403115.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>201808.00</td>
+      <td>3537142.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>201901.00</td>
+      <td>10346038.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>201905.00</td>
+      <td>49356486.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;승차총승객수&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="s1">&#39;quantile&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min          343785.00
+max        49356486.00
+quantile    3537142.00
+Name: 승차총승객수, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘서울시대중교통’ 데이터셋에는 ‘승차총승객수’만 통계량 산출이 가능한 상황</p></li>
+<li><p>df[‘승차총승객수’] 의미는 ‘승차총승객수’ 컬럼만 가져온다는 의미임</p></li>
+</ul>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;노선명&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;1호선&#39;, &#39;2호선&#39;, &#39;3호선&#39;, &#39;4호선&#39;, &#39;경부선&#39;, &#39;경인선&#39;, &#39;경원선&#39;, &#39;안산선&#39;, &#39;과천선&#39;,
+       &#39;분당선&#39;, &#39;일산선&#39;, &#39;중앙선&#39;, &#39;장항선&#39;, &#39;경의선&#39;, &#39;경춘선&#39;, &#39;수인선&#39;, &#39;경강선&#39;, &#39;서해선&#39;,
+       &#39;5호선&#39;, &#39;6호선&#39;, &#39;7호선&#39;, &#39;8호선&#39;, &#39;인천1호선&#39;, &#39;인천2호선&#39;, &#39;9호선&#39;, &#39;공항철도 1호선&#39;,
+       &#39;신분당선&#39;, &#39;9호선2~3단계&#39;, &#39;용인에버라인&#39;, &#39;의정부경전철&#39;, &#39;경기철도&#39;, &#39;우이신설선&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.unique()</span></code> 하면 error 발생</p></li>
+<li><p>unique() 함수는 특정 컬럼별 조회</p></li>
+</ul>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">df</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="c1"># 전체 컬럼별 유니크한 값 개수 조회</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>대중교통구분      1
+노선명        32
+년월         19
+승차총승객수    601
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-visualization-with-bokeh">
+<h2>data visualization with bokeh<a class="headerlink" href="#data-visualization-with-bokeh" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>bokeh는 python data visualization tool 중 하나</p></li>
+<li><p>다른 툴보다 자유도가 높은 것이 장점이나, seaborn과 같이 쉽지 않은 것이 단점</p></li>
+</ul>
+</div></blockquote>
+<section id="bokeh-library-import">
+<h3>bokeh library import<a class="headerlink" href="#bokeh-library-import" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>bokeh 설치 <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">add</span> <span class="pre">bokeh</span></code></p></li>
+<li><p>library import</p>
+<ul>
+<li><p>ColumnDataSource: bokeh는 dictionary 형태의 데이터를 이용하여 차트를 생성함.</p></li>
+<li><p>dataframe 형태의 데이터를 dictionary형으로 전환해 주어야 함. <code class="docutils literal notranslate"><span class="pre">df.to_dict('list')</span></code> 함수 이용</p></li>
+</ul>
+</li>
+<li><p>출력</p>
+<ul>
+<li><p>브라우저, html, notebook 등 다양한 형태로 차트를 출력함</p></li>
+<li><p>jupyter notebook을 출력 매체로 사용할 경우 <strong><a class="reference external" href="http://bokeh.io">bokeh.io</a> import 및 output_notebook()</strong> 호출 필요</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">output_notebook</span>
+<span class="n">output_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+        .bk-notebook-logo {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAOkSURBVDiNjZRtaJVlGMd/1/08zzln5zjP1LWcU9N0NkN8m2CYjpgQYQXqSs0I84OLIC0hkEKoPtiH3gmKoiJDU7QpLgoLjLIQCpEsNJ1vqUOdO7ppbuec5+V+rj4ctwzd8IIbbi6u+8f1539dt3A78eXC7QizUF7gyV1fD1Yqg4JWz84yffhm0qkFqBogB9rM8tZdtwVsPUhWhGcFJngGeWrPzHm5oaMmkfEg1usvLFyc8jLRqDOMru7AyC8saQr7GG7f5fvDeH7Ej8CM66nIF+8yngt6HWaKh7k49Soy9nXurCi1o3qUbS3zWfrYeQDTB/Qj6kX6Ybhw4B+bOYoLKCC9H3Nu/leUTZ1JdRWkkn2ldcCamzrcf47KKXdAJllSlxAOkRgyHsGC/zRday5Qld9DyoM4/q/rUoy/CXh3jzOu3bHUVZeU+DEn8FInkPBFlu3+nW3Nw0mk6vCDiWg8CeJaxEwuHS3+z5RgY+YBR6V1Z1nxSOfoaPa4LASWxxdNp+VWTk7+4vzaou8v8PN+xo+KY2xsw6une2frhw05CTYOmQvsEhjhWjn0bmXPjpE1+kplmmkP3suftwTubK9Vq22qKmrBhpY4jvd5afdRA3wGjFAgcnTK2s4hY0/GPNIb0nErGMCRxWOOX64Z8RAC4oCXdklmEvcL8o0BfkNK4lUg9HTl+oPlQxdNo3Mg4Nv175e/1LDGzZen30MEjRUtmXSfiTVu1kK8W4txyV6BMKlbgk3lMwYCiusNy9fVfvvwMxv8Ynl6vxoByANLTWplvuj/nF9m2+PDtt1eiHPBr1oIfhCChQMBw6Aw0UulqTKZdfVvfG7VcfIqLG9bcldL/+pdWTLxLUy8Qq38heUIjh4XlzZxzQm19lLFlr8vdQ97rjZVOLf8nclzckbcD4wxXMidpX30sFd37Fv/GtwwhzhxGVAprjbg0gCAEeIgwCZyTV2Z1REEW8O4py0wsjeloKoMr6iCY6dP92H6Vw/oTyICIthibxjm/DfN9lVz8IqtqKYLUXfoKVMVQVVJOElGjrnnUt9T9wbgp8AyYKaGlqingHZU/uG2NTZSVqwHQTWkx9hxjkpWDaCg6Ckj5qebgBVbT3V3NNXMSiWSDdGV3hrtzla7J+duwPOToIg42ChPQOQjspnSlp1V+Gjdged7+8UN5CRAV7a5EdFNwCjEaBR27b3W890TE7g24NAP/mMDXRWrGoFPQI9ls/MWO2dWFAar/xcOIImbbpA3zgAAAABJRU5ErkJggg==);
+        }
+    </style>
+    <div>
+        <a href="https://bokeh.org" target="_blank" class="bk-notebook-logo"></a>
+        <span id="a5028de8-de1f-4c37-b5f8-9c8a3444c065">Loading BokehJS ...</span>
+    </div>
+</div><script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+    // Clean up Bokeh references
+    if (id != null && id in Bokeh.index) {
+      Bokeh.index[id].model.document.clear();
+      delete Bokeh.index[id];
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim();
+            if (id in Bokeh.index) {
+              Bokeh.index[id].model.document.clear();
+              delete Bokeh.index[id];
+            }
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    const el = document.getElementById("a5028de8-de1f-4c37-b5f8-9c8a3444c065");
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.1.1.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+          for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+if (force === true) {
+        display_loaded();
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById("a5028de8-de1f-4c37-b5f8-9c8a3444c065")).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script></div>
+</div>
+</section>
+<section id="df">
+<h3>df 데이터 전처리<a class="headerlink" href="#df" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>chart를 위해 월 평균 이용 고객수 산출하여 데이터 정제</p></li>
+<li><p>df[‘년월’] 데이터는 ‘201801’ 6자리 문자열로 되어 있기 때문에 이를 datatime 형식으로 변경</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.to_datetime()</span></code> 함수 이용</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;년월&#39;</span><span class="p">])[</span><span class="s1">&#39;승차총승객수&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">new</span><span class="p">[</span><span class="s1">&#39;년월&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;년월&#39;</span><span class="p">],</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y%m&#39;</span><span class="p">)</span>
+<span class="n">new</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>년월        datetime64[ns]
+승차총승객수           float64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bokeh-chart">
+<h3>bokeh chart<a class="headerlink" href="#bokeh-chart" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>new dataset을 dictionay 형태로 데이터 전환 <code class="docutils literal notranslate"><span class="pre">df.to_dict('list')</span></code> 함수 이용</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">new</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s1">&#39;list&#39;</span><span class="p">)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;월 평균 지하철 이용 승객수&#39;</span><span class="p">,</span> 
+           <span class="n">x_axis_label</span><span class="o">=</span><span class="s1">&#39;년월&#39;</span><span class="p">,</span> 
+           <span class="n">y_axis_label</span><span class="o">=</span><span class="s1">&#39;승차총승객수&#39;</span><span class="p">,</span>
+           <span class="n">x_axis_type</span><span class="o">=</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> 
+           <span class="n">width</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span>
+           <span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
+           <span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;년월&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;승차총승객수&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="b3f314e7-369f-47cf-b445-f988ce501b51" data-root-id="p1004" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"acf20b24-9c54-4bab-bc05-f0ea857a3521":{"version":"3.1.1","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"Figure","id":"p1004","attributes":{"width":700,"height":300,"x_range":{"type":"object","name":"DataRange1d","id":"p1006"},"y_range":{"type":"object","name":"DataRange1d","id":"p1005"},"x_scale":{"type":"object","name":"LinearScale","id":"p1018"},"y_scale":{"type":"object","name":"LinearScale","id":"p1020"},"title":{"type":"object","name":"Title","id":"p1007","attributes":{"text":"\uc6d4 \ud3c9\uade0 \uc9c0\ud558\ucca0 \uc774\uc6a9 \uc2b9\uac1d\uc218"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1093","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["\ub144\uc6d4",[1509494400000.0,1512086400000.0,1514764800000.0,1517443200000.0,1519862400000.0,1522540800000.0,1525132800000.0,1527811200000.0,1530403200000.0,1533081600000.0,1535760000000.0,1538352000000.0,1541030400000.0,1543622400000.0,1546300800000.0,1548979200000.0,1551398400000.0,1554076800000.0,1556668800000.0]],["\uc2b9\ucc28\ucd1d\uc2b9\uac1d\uc218",[7824046.354838709,7835355.225806451,7326306.806451613,6486137.451612903,8074678.806451613,7860905.387096774,8090671.387096774,7325202.21875,7406768.28125,7153949.09375,6975990.96875,7885627.625,7793026.5625,7616263.8125,7420875.5625,6369240.3125,7823512.5625,7902812.625,8152702.8125]]]}}},"view":{"type":"object","name":"CDSView","id":"p1094","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1095"}}},"glyph":{"type":"object","name":"Line","id":"p1090","attributes":{"x":{"type":"field","field":"\ub144\uc6d4"},"y":{"type":"field","field":"\uc2b9\ucc28\ucd1d\uc2b9\uac1d\uc218"},"line_color":"#1f77b4"}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1091","attributes":{"x":{"type":"field","field":"\ub144\uc6d4"},"y":{"type":"field","field":"\uc2b9\ucc28\ucd1d\uc2b9\uac1d\uc218"},"line_color":"#1f77b4","line_alpha":0.1}},"muted_glyph":{"type":"object","name":"Line","id":"p1092","attributes":{"x":{"type":"field","field":"\ub144\uc6d4"},"y":{"type":"field","field":"\uc2b9\ucc28\ucd1d\uc2b9\uac1d\uc218"},"line_color":"#1f77b4","line_alpha":0.2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1009","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1072"},{"type":"object","name":"WheelZoomTool","id":"p1073"},{"type":"object","name":"BoxZoomTool","id":"p1074","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1075","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1076"},{"type":"object","name":"ResetTool","id":"p1077"},{"type":"object","name":"HelpTool","id":"p1078"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1065","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1068","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1066"},"axis_label":"\uc2b9\ucc28\ucd1d\uc2b9\uac1d\uc218","major_label_policy":{"type":"object","name":"AllLabels","id":"p1067"}}}],"below":[{"type":"object","name":"DatetimeAxis","id":"p1022","attributes":{"ticker":{"type":"object","name":"DatetimeTicker","id":"p1025","attributes":{"num_minor_ticks":5,"tickers":[{"type":"object","name":"AdaptiveTicker","id":"p1026","attributes":{"num_minor_ticks":0,"mantissas":[1,2,5],"max_interval":500.0}},{"type":"object","name":"AdaptiveTicker","id":"p1027","attributes":{"num_minor_ticks":0,"base":60,"mantissas":[1,2,5,10,15,20,30],"min_interval":1000.0,"max_interval":1800000.0}},{"type":"object","name":"AdaptiveTicker","id":"p1028","attributes":{"num_minor_ticks":0,"base":24,"mantissas":[1,2,4,6,8,12],"min_interval":3600000.0,"max_interval":43200000.0}},{"type":"object","name":"DaysTicker","id":"p1029","attributes":{"days":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]}},{"type":"object","name":"DaysTicker","id":"p1030","attributes":{"days":[1,4,7,10,13,16,19,22,25,28]}},{"type":"object","name":"DaysTicker","id":"p1031","attributes":{"days":[1,8,15,22]}},{"type":"object","name":"DaysTicker","id":"p1032","attributes":{"days":[1,15]}},{"type":"object","name":"MonthsTicker","id":"p1033","attributes":{"months":[0,1,2,3,4,5,6,7,8,9,10,11]}},{"type":"object","name":"MonthsTicker","id":"p1034","attributes":{"months":[0,2,4,6,8,10]}},{"type":"object","name":"MonthsTicker","id":"p1035","attributes":{"months":[0,4,8]}},{"type":"object","name":"MonthsTicker","id":"p1036","attributes":{"months":[0,6]}},{"type":"object","name":"YearsTicker","id":"p1037"}]}},"formatter":{"type":"object","name":"DatetimeTickFormatter","id":"p1023"},"axis_label":"\ub144\uc6d4","major_label_policy":{"type":"object","name":"AllLabels","id":"p1024"}}}],"center":[{"type":"object","name":"Grid","id":"p1064","attributes":{"axis":{"id":"p1022"}}},{"type":"object","name":"Grid","id":"p1071","attributes":{"dimension":1,"axis":{"id":"p1065"}}}]}}],"callbacks":{"type":"map"}}};
+  const render_items = [{"docid":"acf20b24-9c54-4bab-bc05-f0ea857a3521","roots":{"p1004":"b3f314e7-369f-47cf-b445-f988ce501b51"},"root_ids":["p1004"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./jn"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../python/pandas.html" class="btn btn-neutral float-left" title="pandas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../python/pdm.html" class="btn btn-neutral float-right" title="pdm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>finance &mdash; My sample book</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx-thebe.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/design-tabs.js"></script>
+        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+        <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="Jupyter Notebook files" href="test.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../intro.html" class="icon icon-home">
+            Python
+              <img src="../_static/tdc_logo_3.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">doc generator</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupyter-book.html">jupyter-book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/sphinx.html">sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupytext.html">jupytext</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/pandas.html">pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/pdm.html">pdm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/seaborn.html">seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/bokeh.html">Bokeh</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">jupyter</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="test.html">Jupyter Notebook files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Jupyter Notebook files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">etc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/wsl.html">wsl <sup>window subsystem linux</sup></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/mysql.html">mysql</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ref/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../intro.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../intro.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">finance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/jn/is.ipynb" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="finance">
+<span id="file-types-is"></span><h1>finance<a class="headerlink" href="#finance" title="Permalink to this heading"></a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df = pd.read_csv(&#39;./data/2016_FS.txt&#39;, sep = &quot;\t&quot;, engine=&#39;python&#39;, encoding=&#39;cp949&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pymysql</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">text</span>
+<span class="c1"># conn = pymysql.connect(host=&#39;localhost&#39;,</span>
+<span class="c1">#                              user=&#39;admin&#39;,</span>
+<span class="c1">#                              password=&#39;admin1234&#39;,</span>
+<span class="c1">#                              db=&#39;STOCKDB&#39;,</span>
+<span class="c1">#                              charset=&#39;utf8&#39;)</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mysql+pymysql://admin:admin1234@localhost/STOCKDB&#39;</span><span class="p">)</span>
+<span class="n">connn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="c1"># curs = conn.cursor()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df.to_sql(name=&#39;fs1&#39;, con=engine, if_exists=&#39;append&#39;, index=False)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;select * from pb_fs&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="c1"># with engine.connect() as conn:</span>
+<span class="c1">#     result = conn.execute(text(sql)).fetchall()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;basDt&#39;, &#39;crno&#39;, &#39;bizYear&#39;, &#39;fnclDcd&#39;, &#39;fnclDcdNm&#39;, &#39;enpSaleAmt&#39;,
+       &#39;enpBzopPft&#39;, &#39;iclsPalClcAmt&#39;, &#39;enpCrtmNpf&#39;, &#39;enpTastAmt&#39;, &#39;enpTdbtAmt&#39;,
+       &#39;enpTcptAmt&#39;, &#39;enpCptlAmt&#39;, &#39;fnclDebtRto&#39;, &#39;curCd&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basDt</th>
+      <th>crno</th>
+      <th>bizYear</th>
+      <th>fnclDcd</th>
+      <th>fnclDcdNm</th>
+      <th>enpSaleAmt</th>
+      <th>enpBzopPft</th>
+      <th>iclsPalClcAmt</th>
+      <th>enpCrtmNpf</th>
+      <th>enpTastAmt</th>
+      <th>enpTdbtAmt</th>
+      <th>enpTcptAmt</th>
+      <th>enpCptlAmt</th>
+      <th>fnclDebtRto</th>
+      <th>curCd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20221231</td>
+      <td>1101110043870</td>
+      <td>2022</td>
+      <td>ifrs_ConsolidatedMember</td>
+      <td>연결요약재무제표</td>
+      <td>340426327300</td>
+      <td>29915077882</td>
+      <td>23085548187</td>
+      <td>21591210925</td>
+      <td>461136459052</td>
+      <td>82463208091</td>
+      <td>378673250961</td>
+      <td>27931470000</td>
+      <td>21.7768769993</td>
+      <td>KRW</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20221231</td>
+      <td>1601110007032</td>
+      <td>2022</td>
+      <td>ifrs_ConsolidatedMember</td>
+      <td>연결요약재무제표</td>
+      <td>117058740510</td>
+      <td>-6234392973</td>
+      <td>-19007690242</td>
+      <td>-13001279643</td>
+      <td>149185245583</td>
+      <td>109161230426</td>
+      <td>40024015157</td>
+      <td>48069232500</td>
+      <td>272.7393291198</td>
+      <td>KRW</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20221231</td>
+      <td>1101110013287</td>
+      <td>2022</td>
+      <td>ifrs_ConsolidatedMember</td>
+      <td>연결요약재무제표</td>
+      <td>389227582838</td>
+      <td>31895306272</td>
+      <td>1648315655</td>
+      <td>4415249761</td>
+      <td>1248318313535</td>
+      <td>493309854178</td>
+      <td>755008459357</td>
+      <td>13707635000</td>
+      <td>65.3383214538</td>
+      <td>KRW</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20221231</td>
+      <td>1101110026181</td>
+      <td>2022</td>
+      <td>ifrs_ConsolidatedMember</td>
+      <td>연결요약재무제표</td>
+      <td>3316778000000</td>
+      <td>132324000000</td>
+      <td>126664000000</td>
+      <td>105849000000</td>
+      <td>4547781000000</td>
+      <td>2024270000000</td>
+      <td>2523511000000</td>
+      <td>44342000000</td>
+      <td>80.2164127678</td>
+      <td>KRW</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>20221231</td>
+      <td>1101110028591</td>
+      <td>2022</td>
+      <td>ifrs_ConsolidatedMember</td>
+      <td>연결요약재무제표</td>
+      <td>2497554821448</td>
+      <td>190571249139</td>
+      <td>121380678145</td>
+      <td>86816258840</td>
+      <td>3333438311387</td>
+      <td>2172409936540</td>
+      <td>1161028374847</td>
+      <td>368842230000</td>
+      <td>187.1108392873</td>
+      <td>KRW</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./jn"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test.html" class="btn btn-neutral float-left" title="Jupyter Notebook files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="notebooks.html" class="btn btn-neutral float-right" title="Content with notebooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
