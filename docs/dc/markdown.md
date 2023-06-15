@@ -139,6 +139,114 @@
 :::
 ::::
 
+## to-do list
+
+::::{grid} 2
+
+:::{grid-item-card} syntax
+  ```md
+    ```
+    - [ ] Mercury
+    - [ ] Venus
+    - [ ] Earth
+    - [ ] Mars
+    ```
+  ```
+:::
+:::{grid-item-card} result
+  - [x] Mercury
+  - [ ] Venus
+  - [ ] Earth
+  - [ ] Mars
+:::
+::::
+
+## emoji (octicon)
+
+::::{grid} 2
+
+:::{grid-item-card} syntax
+  ```md
+    ```
+    [sphinx style]
+    - {octicon}`smiley;1em;sd-text-info`
+
+    [github style]
+    - |:smiley:|
+    ```
+  ```
+:::
+:::{grid-item-card} result
+  - {octicon}`smiley;1em;sd-text-info`
+  - {octicon}`thumbsup;1em;sd-text-info`
+  - {octicon}`workflow;1em;sd-text-info`
+  - {octicon}`tag;1em;sd-text-info`
+  - {octicon}`arrow-right;1em;sd-text-info`
+:::
+::::
+
+## button
+
+::::{grid} 2
+
+:::{grid-item-card} syntax
+  ```md
+    ```{button-link} https://example.com
+    :color: primary
+    :outline:
+    button
+    ```
+  ```
+:::
+:::{grid-item-card} result
+  ```{button-link} https://sphinx-design.readthedocs.io/en/rtd-theme/badges_buttons.html#buttons
+  :color: primary
+  :outline:
+  button
+  ```
+:::
+::::
+
+## tab
+
+::::::{grid} 2
+
+:::::{grid-item-card} syntax
+  ```md
+    ::::{tab-set}
+
+    :::{tab-item} Label1
+    Content 1
+    :::
+
+    :::{tab-item} Label2
+    Content 2
+    :::
+
+    ::::
+  ```
+:::::
+:::::{grid-item-card} result
+
+::::{tab-set}
+
+:::{tab-item} Label1
+Content 1
+:::
+
+:::{tab-item} Label2
+Content 2
+:::
+
+::::
+:::::
+::::::
+
+```{tip}
+  - ':::' 최소 개수는 3개 이고 안쪽 컴포넌트를 감싸고 있는 컴포넌트는 ':' 개수가 하나씩 증가
+  - 즉, {tab-item}은 **':::'** 이고, {tab-item}을 감싸는 {tab-set}은 '::::' 4개임
+```
+
 ## Math
 
 ::::{grid} 2
@@ -218,4 +326,10 @@
   ::::
   :::
 ::::
+------
+
+
+<!-- :::{div} sd-text-left sd-text-primary sd-fs-4 sd-font-weight-bolder  
+  ## Header
+::: -->
 

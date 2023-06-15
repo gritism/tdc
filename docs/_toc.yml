@@ -4,32 +4,32 @@
 format: jb-book
 root: intro
 parts:
-- caption: doc generator
+- caption: documentation
   chapters:
-  - file: doc-generator/jupyter-book
+  - file: dc/jupyter-book
     sections:
-    - file: doc-generator/jb/overview
-    - file: doc-generator/jb/quick-start
-    - file: doc-generator/jb/config
-    - file: doc-generator/jb/toc
-    - file: doc-generator/jb/intro_area
+    - file: dc/jb/overview
+    - file: dc/jb/quick-start
+    - file: dc/jb/config
+    - file: dc/jb/toc
+    - file: dc/jb/intro_area
     - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
       title: MyST syntax
 
-  - file: doc-generator/sphinx
-  - file: doc-generator/jupytext
-  - file: doc-generator/markdown
-  - file: doc-generator/ghp
-  - file: doc-generator/autodoc
+  - file: dc/sphinx
+  - file: dc/jupytext
+  - file: dc/markdown
+  - file: dc/ghp
+  - file: dc/autodoc
 
 - caption: python
   chapters:
-  - file: python/docstring
-  - file: python/pandas
+  - file: py/docstring
+  - file: py/pandas
     sections:
     - file: jn/pandas_01
 
-  - file: python/pdm
+  - file: py/pdm
     sections:
     - file: jn/pdm_01
 

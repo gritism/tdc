@@ -27,6 +27,7 @@ dependencies = [
     "jupyter-nbextensions-configurator>=0.6.3",
     "jupyter-contrib-nbextensions>=0.7.0",
     "ghp-import>=2.1.0",
+    "sphinxemoji>=0.2.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -36,4 +37,3 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.pdm]

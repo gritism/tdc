@@ -1418,6 +1418,14 @@ requires_python = ">=3.5"
 summary = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)."
 
 [[package]]
+name = "sphinxemoji"
+version = "0.2.0"
+summary = "An extension to use emoji codes in your Sphinx documentation"
+dependencies = [
+    "sphinx>=1.8",
+]
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.16"
 requires_python = ">=3.7"
@@ -1574,8 +1582,9 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.2"
+cross_platform = true
 groups = ["default"]
-content_hash = "sha256:047f8d8731abd36433d6219fcbf3dc386c1653791d6e578d495c95e803921460"
+content_hash = "sha256:f7c758b637bc9dd96b29ef1e5b04bd358547f32254a80b32ba50b7267fd0dd00"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -3009,6 +3018,9 @@ content_hash = "sha256:047f8d8731abd36433d6219fcbf3dc386c1653791d6e578d495c95e80
 "sphinxcontrib-serializinghtml 1.1.5" = [
     {url = "https://files.pythonhosted.org/packages/b5/72/835d6fadb9e5d02304cf39b18f93d227cd93abd3c41ebf58e6853eeb1455/sphinxcontrib-serializinghtml-1.1.5.tar.gz", hash = "sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952"},
     {url = "https://files.pythonhosted.org/packages/c6/77/5464ec50dd0f1c1037e3c93249b040c8fc8078fdda97530eeb02424b6eea/sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl", hash = "sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd"},
+]
+"sphinxemoji 0.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/5e/d4/03eeedb6346625ec40bd4ab16f3d4971f4f3db6f635dc8b2d0ad605368eb/sphinxemoji-0.2.0.tar.gz", hash = "sha256:27861d1dd7c6570f5e63020dac9a687263f7481f6d5d6409eb31ecebcc804e4c"},
 ]
 "sqlalchemy 2.0.16" = [
     {url = "https://files.pythonhosted.org/packages/07/5e/540cabfd5a00bcee7abae404cdf784520348c9cd9a59b083976d794573ae/SQLAlchemy-2.0.16-cp39-cp39-win_amd64.whl", hash = "sha256:43e69c8c1cea0188b7094e22fb93ae1a1890aac748628b7e925024a206f75368"},

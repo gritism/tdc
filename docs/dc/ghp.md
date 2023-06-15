@@ -18,9 +18,9 @@ github pages 연동 방식은 3가지 존재
   * Click `save` button
     ```{figure} ./img/ghp_01.png
 
-## `gph-import` 모듈 설치 및 publish
+## `ghp-import` 모듈 설치 및 publish
 * 모듈 설치: `pdm add ghp-import`
-* 모듈 실행: `pdm run gph-import -n -p -f docs/_build/html`
+* 모듈 실행: `pdm run ghp-import -n -p -f docs/_build/html`
   * 옵션
   * -n: Include a .nojekyll file in the branch.
   * -p: Push the branch to origin/{branch} after committing.

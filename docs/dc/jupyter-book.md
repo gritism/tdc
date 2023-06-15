@@ -1,4 +1,4 @@
-# jupyter-book
+# jupyter book
 
 ```{note}
 > Executable Book Project 일환으로 2018년 4월 Beta 버전 출시  
