@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bokeh &mdash; My sample book</title>
+  <title>github pages &mdash; My sample book</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -39,8 +39,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="bokeh chart example" href="bokeh_01.html" />
-    <link rel="prev" title="seaborn chart example" href="seaborn_01.html" /> 
+    <link rel="next" title="pandas" href="../python/pandas.html" />
+    <link rel="prev" title="markdown" href="markdown.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,22 +64,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">doc generator</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupyter-book.html">jupyter-book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/sphinx.html">sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupytext.html">jupytext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/markdown.html">markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/ghp.html">github pages</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jupyter-book.html">jupyter-book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx.html">sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupytext.html">jupytext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">markdown</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">github pages</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">python</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="pandas.html">pandas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdm.html">pdm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="seaborn.html">seaborn</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bokeh</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bokeh_01.html">bokeh chart example</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/pandas.html">pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/pdm.html">pdm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/seaborn.html">seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/bokeh.html">Bokeh</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">jupyter</span></p>
 <ul>
@@ -113,9 +110,9 @@ const thebe_selector_output = ".output, .cell_output"
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../intro.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Bokeh</li>
+      <li class="breadcrumb-item active">github pages</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/python/bokeh.md" rel="nofollow"> View page source</a>
+            <a href="../_sources/doc-generator/ghp.md" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -123,35 +120,78 @@ const thebe_selector_output = ".output, .cell_output"
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="bokeh">
-<h1>Bokeh<a class="headerlink" href="#bokeh" title="Permalink to this heading"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="github-pages">
+<h1>github pages<a class="headerlink" href="#github-pages" title="Permalink to this heading"></a></h1>
+<section id="create-repo">
+<h2>create repo<a class="headerlink" href="#create-repo" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Data Visualization Tool</p></li>
+<li><p>github repository를 public으로 생성 (private의 경우 유료로 github page 서비스 이용 가능)</p></li>
+<li><p>github repo 존재한다고 가정하고 아래 내용 시작</p></li>
 </ul>
-<ol class="arabic">
-<li><p>설치</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">add</span> <span class="pre">bokeh</span></code></p></li>
-</ul>
-</li>
-<li><p>실행 (bokeh server)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">bokeh</span> <span class="pre">--dev</span> <span class="pre">--show</span> <span class="pre">stock.py</span></code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<blockquote>
-<div><p>–dev: 개발자 모드 실행, 파일 수정 시 auto reload</p>
-</div></blockquote>
-</div>
-</li>
-</ul>
-</li>
+</section>
+<section id="id1">
+<h2>3가지 방법<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>github pages 연동 방식은 3가지 존재</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 폴더 내 html 컨텐츠를 수동으로 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch로 이동 복사</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">모듈</span></code> 활용하는 방법 (여기서 설명)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Action</span></code> 활용하는 방법 (다음에 설명)</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</section>
+<section id="create-pages">
+<h2>create pages<a class="headerlink" href="#create-pages" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>click github repo &gt; setting</p></li>
+<li><p>click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">pages</span> in left menu</p>
+<ul>
+<li><p>Source: select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">branch</span></code></p></li>
+<li><p>Branch: select <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, <code class="docutils literal notranslate"><span class="pre">root</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">save</span></code> button</p>
+<figure class="align-default">
+<img alt="../_images/ghp_01.png" src="../_images/ghp_01.png" />
+</figure>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="gph-import-publish">
+<h2><code class="docutils literal notranslate"><span class="pre">gph-import</span></code> 모듈 설치 및 publish<a class="headerlink" href="#gph-import-publish" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>모듈 설치: <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">add</span> <span class="pre">ghp-import</span></code></p></li>
+<li><p>모듈 실행: <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">gph-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">docs/_build/html</span></code></p>
+<ul>
+<li><p>옵션</p></li>
+<li><p>-n: Include a .nojekyll file in the branch.</p></li>
+<li><p>-p: Push the branch to origin/{branch} after committing.</p></li>
+<li><p>-f: Force the push to the repository.</p></li>
+<li><p>실행결과</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 389, done.
+Counting objects: 100% (389/389), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (204/204), done.
+Writing objects: 100% (389/389), 5.06 MiB | 2.76 MiB/s, done.
+Total 389 (delta 135), reused 386 (delta 133), pack-reused 0
+remote: Resolving deltas: 100% (135/135), done.
+remote: 
+remote: Create a pull request for &#39;gh-pages&#39; on GitHub by visiting:
+remote:      https://github.com/yoblee/tdc/pull/new/gh-pages
+remote: 
+To https://github.com/yoblee/tdc.git
+* [new branch]      gh-pages -&gt; gh-pages
 </pre></div>
 </div>
-<div class="toctree-wrapper compound">
-</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="github-page">
+<h2>본인 github page 접속<a class="headerlink" href="#github-page" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://{github id}.github.io/{book name}</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -167,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             name: "python3",
-            path: "./python"
+            path: "./doc-generator"
         },
         predefinedOutput: true
     }
@@ -177,8 +217,8 @@ const thebe_selector_output = ".output, .cell_output"
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="seaborn_01.html" class="btn btn-neutral float-left" title="seaborn chart example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bokeh_01.html" class="btn btn-neutral float-right" title="bokeh chart example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="markdown.html" class="btn btn-neutral float-left" title="markdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../python/pandas.html" class="btn btn-neutral float-right" title="pandas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
