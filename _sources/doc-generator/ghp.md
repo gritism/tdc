@@ -7,8 +7,8 @@
 ## 3가지 방법
 github pages 연동 방식은 3가지 존재
 1) `_build/html` 폴더 내 html 컨텐츠를 수동으로 `gh-pages` branch로 이동 복사
-2) `ghp-import 모듈` 활용하는 방법 (여기서 설명)
-3) `Github Action` 활용하는 방법 (다음에 설명)
+2) `ghp-import 모듈` 활용하는 방법 (반자동: 여기서 설명)
+3) `Github Action` 활용하는 방법 (자동: 다음에 설명)
 
 ## create pages
 * click github repo > setting
