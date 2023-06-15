@@ -19,6 +19,7 @@ parts:
   - file: doc-generator/sphinx
   - file: doc-generator/jupytext
   - file: doc-generator/markdown
+  - file: doc-generator/ghp
 
 - caption: python
   chapters:
