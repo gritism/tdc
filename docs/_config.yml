@@ -32,9 +32,9 @@ html:
   use_repository_button: true
 
 # sphinx
-sphinx:
-  extra_extensions:
-    # - sphinxemoji.sphinxemoji
+# sphinx:
+#   extra_extensions:
+#     # - sphinxemoji.sphinxemoji
 
 sphinx:
   config:

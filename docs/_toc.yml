@@ -17,10 +17,16 @@ parts:
       title: MyST syntax
 
   - file: dc/sphinx
-  - file: dc/jupytext
+
+  - file: dc/jupytext_01.ipynb
+    sections:
+    - file: blank
+
   - file: dc/markdown
   - file: dc/ghp
   - file: dc/autodoc
+
+  - file: exe_book_test
 
 - caption: python
   chapters:

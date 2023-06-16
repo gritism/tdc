@@ -182,6 +182,12 @@
   - {octicon}`workflow;1em;sd-text-info`
   - {octicon}`tag;1em;sd-text-info`
   - {octicon}`arrow-right;1em;sd-text-info`
+
+  ```{button-link} https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#octicon-icons
+  :color: primary
+  :outline:
+  octicon 바로가기
+  ```
 :::
 ::::
 
