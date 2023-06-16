@@ -410,6 +410,20 @@ Content 2
 ::::
 ------
 
+## flow
+
+```{mermaid}
+flowchart LR
+  A[Jupyter Notebook] --> D
+  B[Markdown] --> D
+  D{MyST}
+  D <--> E[LaTeX]
+  E --> F[PDF]
+  D --> G[Word]
+  D --> H[React]
+  D --> I[HTML]
+  D <--> J[JATS]
+```
 
 <!-- :::{div} sd-text-left sd-text-primary sd-fs-4 sd-font-weight-bolder  
   ## Header
