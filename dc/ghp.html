@@ -413,7 +413,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3가지 방법</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-pages">create pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">본인 github page 접속</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">github page 접속</a></li>
 </ul>
             </nav>
         </div>
@@ -491,8 +492,74 @@ To https://github.com/yoblee/tdc.git
 </li>
 </ul>
 </section>
+<section id="github-action">
+<h2>github action<a class="headerlink" href="#github-action" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">&gt;</span> <span class="pre">settings</span> <span class="pre">&gt;</span> <span class="pre">Pages</span></code> 선택</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">and</span> <span class="pre">deployment</span></code> Source를 <code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Actions</span></code>로 선택</p>
+<figure class="align-default">
+<img alt="../_images/git_action_01.png" src="../_images/git_action_01.png" />
+</figure>
+</li>
+<li><p>위 그림 하단 <code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Pages</span> <span class="pre">Jekyll</span></code> 영역 <code class="docutils literal notranslate"><span class="pre">Configure</span></code> 선택</p></li>
+<li><p>파일을 아래 내용으로 수정 <code class="docutils literal notranslate"><span class="pre">publish.yml</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: [&quot;main&quot;]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  **contents: write**
+  pages: write
+  id-token: write
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.10.12
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.10.12
+
+    - name: Install pdm
+      run: |
+        pip install pdm
+
+    - name: Install dependencies
+      run: |
+        pdm install
+
+    # Build the book
+    - name: Build the book
+      run: |
+        pdm run jupyter-book build ./docs/
+
+    # Push the book&#39;s HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.5.9
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_build/html
+</pre></div>
+</div>
+</li>
+<li><p>repo 상단 메뉴 <code class="docutils literal notranslate"><span class="pre">action</span></code> 탭 선택 &gt; 좌측 메뉴 <code class="docutils literal notranslate"><span class="pre">pages-build-deployment</span></code> 선택 후 우측 <code class="docutils literal notranslate"><span class="pre">workflow</span></code> 선택</p>
+<figure class="align-default">
+<img alt="../_images/git_action_02.png" src="../_images/git_action_02.png" />
+</figure>
+</li>
+</ul>
+</section>
 <section id="github-page">
-<h2>본인 github page 접속<a class="headerlink" href="#github-page" title="Permalink to this heading">#</a></h2>
+<h2>github page 접속<a class="headerlink" href="#github-page" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>https://{github id}.github.io/{book name}</p></li>
 </ul>
@@ -570,7 +637,8 @@ To https://github.com/yoblee/tdc.git
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3가지 방법</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-pages">create pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">본인 github page 접속</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">github page 접속</a></li>
 </ul>
   </nav></div>
 

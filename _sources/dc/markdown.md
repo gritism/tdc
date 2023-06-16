@@ -2,9 +2,14 @@
 # markdown
 ※ jupyter book의 ['MyST syntax cheat sheet'](https://jupyterbook.org/en/stable/reference/cheatsheet.html#) 참조하여 추가 정리
 
-## Header
+```{note}
+:class: dropdown
 
-::::{grid} 2
+/
+```
+
+## Header
+::::{grid} 1 1 2 2
 
 :::{grid-item-card} syntax
   ```md
@@ -17,11 +22,16 @@
   ```
 :::
 :::{grid-item-card} result
-  ### Heading level 3
+  '\### Heading level 3
 :::
 ::::
 
 ## Quote
+```{note}
+:class: dropdown
+
+
+```
 
 ::::{grid} 2
 
@@ -55,7 +65,8 @@
 
 ## Link
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
   ```md
@@ -69,7 +80,8 @@
 
 ## Table
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
   ````md
@@ -103,25 +115,85 @@
 
 ## Admotion
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
-  ```md
-    ```{admonition} This is a title
-    An example of an admonition with a title.
-    ```
-  ```
-:::
-:::{grid-item-card} result
+````md
   ```{admonition} This is a title
     An example of an admonition with a title.
   ```
+````
+:::
+:::{grid-item-card} syntax
+`````{tab-set}
+
+````{tab-item} Note
+```{note}
+This is an note admonition
+```
+````
+
+````{tab-item} Important
+```{important}
+This is an important admonition
+```
+````
+
+````{tab-item} Hint
+```{hint}
+This is an hint admonition
+```
+````
+
+````{tab-item} See Also
+```{seealso}
+This is an seealso admonition
+```
+````
+
+````{tab-item} Tip
+```{tip}
+This is an tip admonition
+```
+````
+
+````{tab-item} Attention
+```{attention}
+This is an attention admonition
+```
+````
+
+````{tab-item} Caution
+```{caution}
+This is an caution admonition
+```
+````
+
+````{tab-item} Warning
+```{warning}
+This is an warning admonition
+```
+````
+
+````{tab-item} Danger
+```{danger}
+This is an danger admonition
+```
+````
+
+````{tab-item} Error
+```{error}
+This is an error admonition
+```
+````
+`````
 :::
 ::::
 
 ## Figure
 
-::::{grid} 2
+::::{grid} 1 1 1 1
 
 :::{grid-item-card} syntax
   ```md
@@ -133,7 +205,7 @@
 :::
 :::{grid-item-card} result
   ```{image} ../tdc_logo_3.png
-    :height: 90px
+    :height: 100px
     :name: image-example
   ```
 :::
@@ -163,7 +235,8 @@
 
 ## emoji (octicon)
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
   ```md
@@ -177,12 +250,19 @@
   ```
 :::
 :::{grid-item-card} result
-  - {octicon}`smiley;1em;sd-text-info`
+```{list-table} 
+:header-rows: 0
+* - {octicon}`smiley;1em;sd-text-info`
   - {octicon}`thumbsup;1em;sd-text-info`
   - {octicon}`workflow;1em;sd-text-info`
   - {octicon}`tag;1em;sd-text-info`
   - {octicon}`arrow-right;1em;sd-text-info`
-
+* - smiley
+  - thumbsup
+  - workflow
+  - tag
+  - arrow-right
+```
   ```{button-link} https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#octicon-icons
   :color: primary
   :outline:
@@ -193,7 +273,8 @@
 
 ## button
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
   ```md
@@ -215,7 +296,8 @@
 
 ## tab
 
-::::::{grid} 2
+::::::{grid} 1 1 1 1
+:gutter: 3
 
 :::::{grid-item-card} syntax
   ```md
@@ -234,24 +316,18 @@
 :::::
 :::::{grid-item-card} result
 
-::::{tab-set}
+````{tab-set}
 
-:::{tab-item} Label1
+```{tab-item} Label1
 Content 1
-:::
+```
 
-:::{tab-item} Label2
+```{tab-item} Label2
 Content 2
-:::
-
-::::
+```
+````
 :::::
 ::::::
-
-```{tip}
-  - ':::' 최소 개수는 3개 이고 안쪽 컴포넌트를 감싸고 있는 컴포넌트는 ':' 개수가 하나씩 증가
-  - 즉, {tab-item}은 **':::'** 이고, {tab-item}을 감싸는 {tab-set}은 '::::' 4개임
-```
 
 ## Math
 
@@ -296,11 +372,11 @@ Content 2
 
 ## grid
 
-::::{grid} 1
-  :gutter: 1
+::::{grid} 1 1 1 1
+:gutter: 3
 
   :::{grid-item-card} syntax
-    ```
+    ```md
       ::::{grid} 3
       :outline:
 
@@ -317,7 +393,7 @@ Content 2
     ```
   :::
   :::{grid-item-card} result
-  ::::{grid} 3
+  ::::{grid} 3 3 3 3
   :outline:
 
     :::{grid-item}

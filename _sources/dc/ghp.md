@@ -1,3 +1,8 @@
+---
+numbering:
+  heading_2: true
+---
+
 # github pages
 
 ## create repo
@@ -41,8 +46,63 @@ github pages 연동 방식은 3가지 존재
     To https://github.com/yoblee/tdc.git
     * [new branch]      gh-pages -> gh-pages
     ``` 
+## github action
+* `repo > settings > Pages` 선택
+* `Build and deployment` Source를 `Github Actions`로 선택
+    ```{figure} ./img/git_action_01.png
+* 위 그림 하단 `Github Pages Jekyll` 영역 `Configure` 선택
+* 파일을 아래 내용으로 수정 `publish.yml`
+  ```
+  on:
+    # Runs on pushes targeting the default branch
+    push:
+      branches: ["main"]
 
-## 본인 github page 접속
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+  # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+  permissions:
+    **contents: write**
+    pages: write
+    id-token: write
+
+  jobs:
+    deploy-book:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+
+      # Install dependencies
+      - name: Set up Python 3.10.12
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.10.12
+
+      - name: Install pdm
+        run: |
+          pip install pdm
+
+      - name: Install dependencies
+        run: |
+          pdm install
+
+      # Build the book
+      - name: Build the book
+        run: |
+          pdm run jupyter-book build ./docs/
+
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.5.9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_build/html
+  ```
+* repo 상단 메뉴 `action` 탭 선택 > 좌측 메뉴 `pages-build-deployment` 선택 후 우측 `workflow` 선택
+    ```{figure} ./img/git_action_02.png
+
+## github page 접속
 * https://{github id}.github.io/{book name}
 
 
