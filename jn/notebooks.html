@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -158,38 +159,46 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">doc generator</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">documentation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../doc-generator/jupyter-book.html">jupyter-book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../doc-generator/jb/overview.html">overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc-generator/jb/quick-start.html">quickstart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc-generator/jb/config.html">_config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc-generator/jb/toc.html">_toc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc-generator/jb/intro_area.html">intro area</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dc/jupyter-book.html">jupyter book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/overview.html">overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/quick-start.html">quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/config.html">_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/toc.html">_toc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/intro_area.html">intro area</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">MyST syntax</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/sphinx.html">sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/jupytext.html">jupytext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/markdown.html">markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc-generator/ghp.html">github pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/sphinx.html">sphinx</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dc/jupytext_01.html">jupytext</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/markdown.html">markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/ghp.html">github pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/autodoc.html">autodoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exe_book_test.html">My simple notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">python</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/pandas.html">pandas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../py/docstring.html">docstring</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../py/pandas.html">pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="pandas_01.html">pandas_01</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/pdm.html">pdm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../py/pdm.html">pdm</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="pdm_01.html">pdm</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/seaborn.html">seaborn</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/seaborn_01.html">seaborn chart example</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">data visulization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dv/seaborn.html">seaborn</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dv/seaborn_01.html">seaborn chart example</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/bokeh.html">Bokeh</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/bokeh_01.html">bokeh chart example</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dv/bokeh.html">Bokeh</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dv/bokeh_01.html">bokeh chart example</a></li>
 </ul>
 </li>
 </ul>
@@ -202,13 +211,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">etc</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../etc/wsl.html">wsl <sup>window subsystem linux</sup></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../etc/mysql.html">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../et/wsl.html">wsl <sup>window subsystem linux</sup></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../et/mysql.html">mysql</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ref/markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ref/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rf/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rf/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -459,7 +468,7 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x7ff5649dd990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x7f86b48e3010&gt;
 </pre></div>
 </div>
 </div>

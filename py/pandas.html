@@ -1,0 +1,798 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>pandas &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'py/pandas';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pandas_01" href="../jn/pandas_01.html" />
+    <link rel="prev" title="docstring" href="docstring.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/tdc_logo_3.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/tdc_logo_3.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Technical Document Center
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dc/jupyter-book.html">jupyter book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/overview.html">overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/quick-start.html">quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/config.html">_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/toc.html">_toc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dc/jb/intro_area.html">intro area</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">MyST syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/sphinx.html">sphinx</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dc/jupytext_01.html">jupytext</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/markdown.html">markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/ghp.html">github pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dc/autodoc.html">autodoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exe_book_test.html">My simple notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="docstring.html">docstring</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jn/pandas_01.html">pandas_01</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pdm.html">pdm</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jn/pdm_01.html">pdm</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">data visulization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dv/seaborn.html">seaborn</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dv/seaborn_01.html">seaborn chart example</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dv/bokeh.html">Bokeh</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dv/bokeh_01.html">bokeh chart example</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">jupyter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../jn/test.html">Jupyter Notebook files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jn/is.html">finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jn/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jn/sample.html">Jupyter Notebook files</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">etc</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../et/wsl.html">wsl <sup>window subsystem linux</sup></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../et/mysql.html">mysql</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rf/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rf/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpy/pandas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/py/pandas.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>pandas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">파일입출력</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">조회정렬필터</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">통계</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">복제및결측치</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">전처리</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">고급 - apply()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error">주요 error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-api">Open API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ipython">IPython</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning">warning 무시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-notation">e notation 표현 방식 변경</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pandas">
+<h1>pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>데이터 자료 구조 처리 및 분석을 위한 python library<br />
+high-performance, easy-to-use <strong>data structures and data analysis tools</strong> for the Python programming language<br />
+<a class="reference external" href="https://pandas.pydata.org/docs/">pandas document</a><br />
+…</p>
+</div></blockquote>
+<hr class="docutils" />
+<section id="id1">
+<h2>파일입출력<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.read_excel('경로/파일명',</span> <span class="pre">sheet_name</span> <span class="pre">=</span> <span class="pre">'시트명')</span></code></p>
+<blockquote>
+<div><p>sheet_name = None 이면 전체 시트를 읽어옴</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.to_excel('경록/파일명',</span> <span class="pre">index=True)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.read_csv('경로/파일명')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.to_csv('경로/파일명')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.read_json('경로/파일명')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.to_json('경로/파일명')</span></code></p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>조회정렬필터<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.info()</span></code>: 컬럼별 정보 조회(데이터 개수, 타입 등)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.value_counts()</span></code>: 데이터 개수 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.ndim</span></code>: 데이터 프레임 차원 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.shape</span></code>: (행, 열) 순서로 차원 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.index</span></code>: 인덱스 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.columns</span></code>: 컬럼 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.values</span></code>: 값 조회</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.T</span></code>: 전치(Transpose) 행, 열 바꾸기</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.astype('int32')</span></code>: 타입 변경</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.sort_index(ascending=False)</span></code>: 인덱스 기준 정렬</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.sort_values(by=['컬럼명',</span> <span class="pre">'컬럼명'],</span> <span class="pre">ascending=[False,</span> <span class="pre">Ture])</span></code>: 컬럼 값 기준 정렬</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[5,</span> <span class="pre">'컬럼명']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[2:10:2,</span> <span class="pre">'컬럼명']</span></code>: 2부터 10까지 2씩 증가해서</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[2:5,</span> <span class="pre">'컬럼명A':'컬럼명C']</span></code>: 2~5행, 컬럼 A~C까지 Slicing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[df['컬럼명']</span> <span class="pre">&gt;=</span> <span class="pre">70]</span></code>: boolean index slicing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[1,3]</span></code>: loc와 유사하고 index만 허용</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.isin(['값A',</span> <span class="pre">'값B'])</span></code>: 특정 값의 포함 여부 확인</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>통계<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.describe(include='object')</span></code>: 전반적인 주요 통계</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.count()</span></code>: 전체 개수</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.mean()</span></code>: 평균</p></li>
+<li><p>skipna=True: skipna=False로 설정하게 되면 NaN 값이 있는 컬럼은 NaN으로 출력</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.median()</span></code>: 데이터의 중앙값</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.sum()</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.cumsum()</span></code>: 누적합</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.cumprod()</span></code>: 누적곱</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.var()</span></code>: 분산</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.std()</span></code>: 표준편차</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.min()</span></code>: 최소값</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.max()</span></code>: 최대값</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.agg(['min',</span> <span class="pre">'max',</span> <span class="pre">'count'])</span></code>: 여러 통계함수 동시 적용</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.quantile()</span></code>: 주어진 데이터를 동등한 크기로 분할하는 지점</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.unique()</span></code>: 고유값</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.nunique()</span></code>: 고유값 개수</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.mode()</span></code>: 최빈값</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.corr()['컬럼명']</span></code>: 컬럼간 상관관계 (-1 ~ 1사이 값을 가짐, -1에 가까울 수록 반비례)</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>복제및결측치<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.copy()</span></code>: DataFrame 전체 복사</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.isnull()</span></code>: 결측치 확인</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.isnull().sum()</span></code>: 결측치 개수 확인</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.isna()</span></code>: isnull 함수와 동일</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.notnull()</span></code>: 결측치가 아닌</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.notnull().sum()</span></code>: 결측치가 아닌 컬럼 개수</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.fillna('값')</span></code>: 결측치 채우기</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.dropna(how='any/all')</span></code>: 결측치 제거 any 1개라도 NaN값 존재시 drop</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>전처리<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">df['컬럼명']</span> <span class="pre">=</span> <span class="pre">값</span></code>: 컬럼 추가 (<strong>컬럼 끝에 추가됨</strong>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.insert(index,</span> <span class="pre">컬럼명,</span> <span class="pre">값)</span></code>: 특정 위치에 컬럼 추가</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.drop(index)</span></code>: index 행 삭제</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.drop(np.arange(10))</span></code>: 범위 지정 삭제</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.drop(['컬럼명A',</span> <span class="pre">'컬럼명B'],</span> <span class="pre">axis=1,</span> <span class="pre">inplace=True)</span></code>: 열 삭제 <strong>axis=1</strong> 삭제하면 안됨</p>
+<blockquote>
+<div><p>inplace=True 옵션은 삭제 결과를 원본 DataFrame에 반영</p>
+</div></blockquote>
+</li>
+<li><p>Category type 변경: df.astype(‘catageory’)</p>
+<blockquote>
+<div><p>Category 타입 변경 시 사용하는 메모리도 줄어 듬
+.cat으로 접근 <code class="docutils literal notranslate"><span class="pre">df.cat.cagegories</span></code>: 카테고리 출력
+<code class="docutils literal notranslate"><span class="pre">df.cat.categories</span> <span class="pre">=</span> <span class="pre">['값A',</span> <span class="pre">'값B']</span></code>: 카테고리 값 변경</p>
+</div></blockquote>
+</li>
+<li><p>문자열 처리</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.str.split()</span></code>:</p></li>
+</ul>
+</li>
+<li><p>Datatime</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.to_datetime(df/df['컬럼명'])</span></code>: datetime type으로 변경</p></li>
+<li><p>datatime으로 변경 후 .dt로 속성 접근 가능</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df['컬럼명'].dt.year</span></code> -&gt; 2004(년도) 출력</p></li>
+</ul>
+</li>
+<li><p>binning (pd.cut())</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.cut(df,</span> <span class="pre">bins,</span> <span class="pre">labels=labels,</span> <span class="pre">right=False)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bins=[0,</span> <span class="pre">6000,</span> <span class="pre">10000,</span> <span class="pre">df['컬럼명'].max()]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels=['레이블A',</span> <span class="pre">'레이블B',</span> <span class="pre">'레이블C']</span></code></p></li>
+<li><p>pd.cut()은 최소에서 최대구간을 지정한 Bin 개수 만큼 균등 분할</p></li>
+<li><p>데이터가 편향되어 있을 경우 적절하지 않음.</p></li>
+</ul>
+</li>
+<li><p>binning (pd.qcut())</p>
+<ul class="simple">
+<li><p>데이터가 균등 분할 될 수 있도록 나눔</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.qcut(df,</span> <span class="pre">q=5)</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="apply">
+<h2>고급 - apply()<a class="headerlink" href="#apply" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><strong>apply()</strong></p>
+<ul class="simple">
+<li><p>데이터 전처리를 위한 함수를 생성하고 적용하는 것</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span> 
+            <span class="k">return</span> <span class="n">young</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">old</span>
+    
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;컬럼명&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>lambda: 간단한 로직의 경우 별도 함수 생성하지 않고 inline 처리</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;컬럼명&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;yound&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span><span class="mi">30</span> <span class="k">else</span> <span class="s1">&#39;old&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>groupby()</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.groupby(['컬럼명A',</span> <span class="pre">'컬럼명B']).mean()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.groupby(['컬럼명A',</span> <span class="pre">'컬럼명B']).mean().reset_index()</span></code>: 그룹핑 해제한 새로운 df</p></li>
+</ul>
+</li>
+<li><p><strong>pivot_table()</strong></p>
+<ul class="simple">
+<li><p>//</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.pivot_table(index=['컬럼명'</span> <span class="pre">..],</span> <span class="pre">columns=['컬럼명'</span> <span class="pre">..],</span> <span class="pre">values='컬럼명',</span> <span class="pre">aggfunc=['mean'</span> <span class="pre">..])</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>pd.concat()</strong></p>
+<ul class="simple">
+<li><p>병합 (axis=0 행방향 병합, axis=1 열방향 병항)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.concat([df1,</span> <span class="pre">df2],</span> <span class="pre">ignore_index=True,</span> <span class="pre">axis=1)</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>pd.merge()</strong></p>
+<ul class="simple">
+<li><p>병합 데이터셋 간 공통키를 기준으로 병합</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.merge(left=,</span> <span class="pre">right=,</span> <span class="pre">how=,</span> <span class="pre">on/left_on/right_on=)</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="error">
+<h2>주요 error<a class="headerlink" href="#error" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>type(df[‘컬럼명’])</p>
+<ul>
+<li><p>DataFrame에서 컬럼 <strong>1개</strong>를 Slicing했을 경우 해당 type은 Series임.</p></li>
+<li><p>Series Type이기 때문에 DataFrame 관련 함수가 적용되지 않음.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="open-api">
+<h2>Open API<a class="headerlink" href="#open-api" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>실시간 환율 정보 조회 API
+“<a class="reference external" href="https://api.exchangerate-api.com/v4/latest/USD">https://api.exchangerate-api.com/v4/latest/USD</a>”</p></li>
+<li><p>open data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opendata</span> <span class="kn">import</span> <span class="n">dataset</span>
+
+<span class="n">dataset</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;소상공인상권정보&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;서울시자전거&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;민간아파트분양&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="ipython">
+<h2>IPython<a class="headerlink" href="#ipython" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>Image 가져오기</p>
+<blockquote>
+<div><p>Image(’<a class="reference external" href="https://static1.squarespace.com/static/5006453fe4b09ef2252ba068/t/5090b249e4b047ba54dfd258/1351660113175/TItanic-Survival-Infographic.jpg">https://static1.squarespace.com/static/5006453fe4b09ef2252ba068/t/5090b249e4b047ba54dfd258/1351660113175/TItanic-Survival-Infographic.jpg</a>’)</p>
+</div></blockquote>
+</li>
+<li></li>
+</ul>
+</section>
+<section id="warning">
+<h2>warning 무시<a class="headerlink" href="#warning" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">warnings.filterwarnings('ignore')</span></code>:</p></li>
+</ul>
+</section>
+<section id="e-notation">
+<h2>e notation 표현 방식 변경<a class="headerlink" href="#e-notation" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.options.display.float_format</span> <span class="pre">=</span> <span class="pre">'{:.2f}'.format</span></code></p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./py"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="docstring.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">docstring</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../jn/pandas_01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pandas_01</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">파일입출력</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">조회정렬필터</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">통계</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">복제및결측치</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">전처리</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">고급 - apply()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error">주요 error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-api">Open API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ipython">IPython</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning">warning 무시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-notation">e notation 표현 방식 변경</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
