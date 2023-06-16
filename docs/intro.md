@@ -54,13 +54,16 @@ df.head()
 
 ::::{grid} 3
 
-:::{grid-item-card} {bdg-primary}`A` to-do
+:::{grid-item-card} to-do
+- [ ] thebe
+- [ ] autodoc
+- [ ] LaTex
 :::
 
-:::{grid-item-card} {bdg-primary}`B` change
+:::{grid-item-card} change
 :::
 
-:::{grid-item-card} {bdg-primary}`C` ref
+:::{grid-item-card} ref
 :::
 ::::
 
