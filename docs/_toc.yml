@@ -8,7 +8,6 @@ parts:
   chapters:
   - file: dc/jupyter-book
     sections:
-    - file: dc/jb/overview
     - file: dc/jb/quick-start
     - file: dc/jb/config
     - file: dc/jb/toc
