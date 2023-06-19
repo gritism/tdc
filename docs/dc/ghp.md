@@ -22,25 +22,37 @@ github pages(web hosting) 및 github action(workflow 자동화)를 이용하여 
 * 일련의 과정을 자동화 해주기 위해 `github action`을 사용함.
 
 ## github pages 설정
+github pages는 2가지 방식으로 deploy 할 수 있음.
+```{list-table}
+:header-rows: 1
+:name: example-table
+
+* - 방법
+  - 설명
+* - `Deploy from a branch`
+  - build 자동화 deploy는 github에서 수행
+* - `Github Action`
+  - build & deploy를 사용자가 설정하여 수행
+```
+
+### 1) `Deploy from a branch` 방법
+
+#### github page 설정 
 github pages 생성 후 설정에서 source를 `Deploy from a branch`로 설정
 * click github repo > setting
 * click {bdg-primary}`pages` in left menu
   * Source: select `Deploy from a branch`
-    * `Deploy from a branch`와 `github action` 2가지 옵션 존재
-    * `Deploy from a branch`는 build는 사용자 정의하고 deploy 배포만 자동 실행
-      * 이 방식으로 설정 시 workflow에 `pages build and deployment` workflow 파일 자동 생성됨
-    * `github action`은 build와 deploy를 모두 사용자가 정의하고 사용하는 방식
   * Branch: select `gh-pages`, `root`
   * Click `save` button
     ```{figure} ./img/ghp_01.png
 
-## build
+#### build
 github pages build를 위해 아래 3가지 방법 중 2, 3번 설명
 1) `_build/html` 폴더 내 html 컨텐츠를 수동으로 `gh-pages` branch로 이동 복사
 2) `ghp-import 모듈` 활용하는 방법 (반자동: 여기서 설명)
 3) `Github Action` 활용하는 방법 (자동: 다음에 설명)
 
-### build 반자동 (`ghp-import`)
+##### build 반자동 (`ghp-import`)
 ghp-import 모듈을 이용하여 build 후 `gh-pages` branch로 자동 배포
 * 모듈 설치: `pdm add ghp-import`
 * 모듈 실행: `pdm run ghp-import -n -p -f docs/_build/html`
@@ -64,7 +76,7 @@ ghp-import 모듈을 이용하여 build 후 `gh-pages` branch로 자동 배포
     To https://github.com/yoblee/tdc.git
     * [new branch]      gh-pages -> gh-pages
     ``` 
-### build 자동화 - github action
+##### build 자동화 - github action
 * github > Actions 선택
 * `New workflow` 선택 후 아래 내용 작성 후 commit (`publish.yml`)
   ```
