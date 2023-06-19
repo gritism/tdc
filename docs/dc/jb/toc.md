@@ -1,4 +1,4 @@
-# _toc
+# toc
 * manage manu structure
 
 ## _toc.yml 파일 내용

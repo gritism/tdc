@@ -9,9 +9,11 @@
 ```
 
 ## Header
-::::{grid} 1 1 2 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
       # Heading level 1
       ## Heading level 2
@@ -22,34 +24,35 @@
   ```
 :::
 :::{grid-item-card} result
-  '\### Heading level 3
+:shadow: none
+  ### Heading level 3
 :::
 ::::
 
 ## Quote
-```{note}
-:class: dropdown
 
-
-```
-
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     > This is a quote
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   > This is a quote
 :::
 ::::
 
 ## List
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     1. First item
     2. Second item
@@ -57,9 +60,14 @@
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   1. First item
   2. Second item
      1. First sub-item
+
+#. step1
+#. step2
+  #. supstep1
 :::
 ::::
 
@@ -69,11 +77,13 @@
 :gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     [Jupyter Book](https://jupyterbook.org)
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   [Jupyter Book](https://jupyterbook.org)
 :::
 ::::
@@ -84,6 +94,7 @@
 :gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ````md
     ```{list-table} This table title
     :header-rows: 1
@@ -99,6 +110,7 @@
   ````
 :::
 :::{grid-item-card} result
+:shadow: none
   ```{list-table} This table title
     :header-rows: 1
     :name: example-table
@@ -119,6 +131,7 @@
 :gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
 ````md
   ```{admonition} This is a title
     An example of an admonition with a title.
@@ -126,6 +139,7 @@
 ````
 :::
 :::{grid-item-card} syntax
+:shadow: none
 `````{tab-set}
 
 ````{tab-item} Note
@@ -194,8 +208,10 @@ This is an error admonition
 ## Figure
 
 ::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     ```{image} ../images/C-3PO_droid.png
     :height: 150px
@@ -204,6 +220,7 @@ This is an error admonition
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   ```{image} ../tdc_logo_3.png
     :height: 100px
     :name: image-example
@@ -213,9 +230,11 @@ This is an error admonition
 
 ## to-do list
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     ```
     - [ ] Mercury
@@ -226,6 +245,7 @@ This is an error admonition
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   - [x] Mercury
   - [ ] Venus
   - [ ] Earth
@@ -239,6 +259,7 @@ This is an error admonition
 :gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     ```
     [sphinx style]
@@ -250,6 +271,7 @@ This is an error admonition
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
 ```{list-table} 
 :header-rows: 0
 * - {octicon}`smiley;1em;sd-text-info`
@@ -277,6 +299,7 @@ This is an error admonition
 :gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     ```{button-link} https://example.com
     :color: primary
@@ -286,6 +309,7 @@ This is an error admonition
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   ```{button-link} https://sphinx-design.readthedocs.io/en/rtd-theme/badges_buttons.html#buttons
   :color: primary
   :outline:
@@ -300,6 +324,7 @@ This is an error admonition
 :gutter: 3
 
 :::::{grid-item-card} syntax
+:shadow: none
   ```md
     ::::{tab-set}
 
@@ -315,6 +340,7 @@ This is an error admonition
   ```
 :::::
 :::::{grid-item-card} result
+:shadow: none
 
 ````{tab-set}
 
@@ -331,9 +357,11 @@ Content 2
 
 ## Math
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
   :::{grid-item-card} syntax
+  :shadow: none
     ```md
       This is an example of a
       math block
@@ -344,6 +372,7 @@ Content 2
     ```
   :::
   :::{grid-item-card} result
+  :shadow: none
     This is an example of a
     math block
 
@@ -355,14 +384,17 @@ Content 2
 
 ## block code
 
-::::{grid} 2
+::::{grid} 1 1 1 1
+:gutter: 3
 
 :::{grid-item-card} syntax
+:shadow: none
   ```md
     Wrap in-line code blocks in backticks: `boolean example = true;`.
   ```
 :::
 :::{grid-item-card} result
+:shadow: none
   ```python
     note = "Python syntax highlighting"
     print(node)
@@ -376,6 +408,7 @@ Content 2
 :gutter: 3
 
   :::{grid-item-card} syntax
+  :shadow: none
     ```md
       ::::{grid} 3
       :outline:
@@ -393,6 +426,7 @@ Content 2
     ```
   :::
   :::{grid-item-card} result
+  :shadow: none
   ::::{grid} 3 3 3 3
   :outline:
 

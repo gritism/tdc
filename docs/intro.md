@@ -12,11 +12,8 @@ kernelspec:
 
 # Technical Document Center
 
+기술문서 정리
 -------------
-
-<!-- ---
-title: Books with Jupyter
---- -->
 
 {bdg-primary}`A` Information
 * {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간

@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+title: Technical Document Center
+author: YB
 logo: tdc_logo_3.png
 
 # Force re-execution of notebooks on each build.
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  url: https://github.com/yoblee/tdc  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
@@ -31,15 +31,15 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-# sphinx
-# sphinx:
-#   extra_extensions:
-#     # - sphinxemoji.sphinxemoji
+sphinx:
+  extra_extensions:
+    - sphinxawesome_theme.docsearch
+    - sphinxawesome.highlighting
 
 sphinx:
   config:
     html_css_files: custom.css
 #     sphinxemoji_style: twemoji
-#     html_theme: sphinx_rtd_theme
-#     # html_theme: press
-#     # html_theme: sphinxawesome_theme
+    # html_theme: sphinx_rtd_theme
+    # html_theme: press
+    # html_theme: sphinxawesome_theme

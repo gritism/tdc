@@ -12,8 +12,6 @@ parts:
     - file: dc/jb/config
     - file: dc/jb/toc
     - file: dc/jb/intro_area
-    - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
-      title: MyST syntax
 
   - file: dc/sphinx
 
@@ -61,5 +59,4 @@ parts:
 
 - caption: reference
   chapters:
-  - file: rf/markdown
-  - file: rf/markdown-notebooks
+  - file: rf/ref.md
