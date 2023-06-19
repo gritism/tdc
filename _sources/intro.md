@@ -19,7 +19,7 @@ title: Books with Jupyter
 --- -->
 
 {bdg-primary}`A` Information
-* {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간
+* {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간 테스트
 * {octicon}`report;1em;sd-text-info` 관심분야: 데이터 분석/시각화, 머신러닝, 딥러닝 등 
 
 -----
