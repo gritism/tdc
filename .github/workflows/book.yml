@@ -64,7 +64,7 @@ jobs:
       uses: actions/upload-pages-artifact@v1
       with:
         # Upload entire repository
-        path: './docs/_build/html'
+        path: '.'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
     - name: Deploy to GitHub Pages
