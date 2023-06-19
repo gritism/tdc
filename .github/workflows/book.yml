@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy-book:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -48,6 +48,8 @@ jobs:
         publish_dir: ./docs/_build/html
 
   publish:
+    # Add a dependency to the build job
+    needs: deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -66,4 +68,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
-        
