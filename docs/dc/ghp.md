@@ -4,24 +4,37 @@ numbering:
 ---
 
 # github pages
+* `github pages`는 github에서 웹 사이트 hosting을 제공하는 서비스 
+* `github action`은 workflow 자동화
+* 위 2가지를 이용해 github에 등록된 정적 컨텐츠(html, image 등)를 쉽게 호스팅 할 수 있음. 
+  (site url --> https://{github_id}.github.io)/directory
 
-## create repo
-* github repository를 public으로 생성 (private의 경우 유료로 github page 서비스 이용 가능)
-* github repo 존재한다고 가정하고 아래 내용 시작
-  
-## 3가지 방법
-github pages 연동 방식은 3가지 존재
-1) `_build/html` 폴더 내 html 컨텐츠를 수동으로 `gh-pages` branch로 이동 복사
-2) `ghp-import 모듈` 활용하는 방법 (반자동: 여기서 설명)
-3) `Github Action` 활용하는 방법 (자동: 다음에 설명)
+## flow
+* book 컨텐츠를 작성하고 build 한 후 github pages보 배포 3단계 절차로 이루어지며
+  이를 자동화 하기 위해 `github action`을 사용함
 
-## create pages
+<절차>
+1. book 컨텐츠 작성 (.md) commit
+2. build: .md 파일로 부터 html/image 등 static 파일 생성 
+  * 명령어: `jupyter-book build docs/`
+  * build 수행하면 `./_build/html` 디렉토리에 관련 artifact 생성됨
+3. deploy: `./_build/html` 파일을 github pages에 배포
+  * github pages configuration: `deploy from branch` 선택
+
+## 0. github pages 설정
 * click github repo > setting
 * click {bdg-primary}`pages` in left menu
   * Source: select `Deploy from a branch`
   * Branch: select `gh-pages`, `root`
   * Click `save` button
     ```{figure} ./img/ghp_01.png
+
+## 3가지 방법
+github pages 연동 방식은 3가지 존재
+1) `_build/html` 폴더 내 html 컨텐츠를 수동으로 `gh-pages` branch로 이동 복사
+2) `ghp-import 모듈` 활용하는 방법 (반자동: 여기서 설명)
+3) `Github Action` 활용하는 방법 (자동: 다음에 설명)
+
 
 ## `ghp-import` 모듈 설치 및 publish
 * 모듈 설치: `pdm add ghp-import`
