@@ -408,11 +408,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow">flow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0. github pages 설정</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3가지 방법</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process">process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">github pages 설정</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action 자동화</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">github action</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">github page 접속</a></li>
 </ul>
             </nav>
@@ -428,35 +430,43 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="github-pages">
 <h1>github pages<a class="headerlink" href="#github-pages" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">github</span> <span class="pre">pages</span></code>는 github에서 웹 사이트 hosting을 제공하는 서비스</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github</span> <span class="pre">pages</span></code>는 웹 사이트 hosting 제공 서비스</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">github</span> <span class="pre">action</span></code>은 workflow 자동화</p></li>
 <li><p>위 2가지를 이용해 github에 등록된 정적 컨텐츠(html, image 등)를 쉽게 호스팅 할 수 있음.
 (site url –&gt; https://{github_id}.github.io)/directory</p></li>
 </ul>
-<section id="flow">
-<h2>flow<a class="headerlink" href="#flow" title="Permalink to this heading">#</a></h2>
+<section id="process">
+<h2>process<a class="headerlink" href="#process" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>book 컨텐츠를 작성하고 build 한 후 github pages보 배포 3단계 절차로 이루어지며
-이를 자동화 하기 위해 <code class="docutils literal notranslate"><span class="pre">github</span> <span class="pre">action</span></code>을 사용함</p></li>
+<li><p>book컨텐츠(.md 파일)를 작성하고 웹 호스팅을 위해 html 파일로 전환(build 단계)를 수행한 후
+생성한 html 파일을 github page(웹 서버)로 deploy(배포)하는 3단계 과정을 거쳐야 함.</p>
+<ol class="arabic simple">
+<li><p>create (.md 작성) -&gt; build (html파일 생성) -&gt; deploy (웹서버 배포)</p></li>
+</ol>
+</li>
+<li><p>일련의 과정을 자동화 해주기 위해 <code class="docutils literal notranslate"><span class="pre">github</span> <span class="pre">action</span></code>을 사용함.</p></li>
 </ul>
-<p>&lt;절차&gt;</p>
+<blockquote>
+<div><p>&lt;절차&gt;</p>
 <ol class="arabic simple">
 <li><p>book 컨텐츠 작성 (.md) commit</p></li>
-<li><p>build: .md 파일로 부터 html/image 등 static 파일 생성</p></li>
-</ol>
+<li><p>build: .md 파일로 부터 html/image 등 static 파일 생성</p>
 <ul class="simple">
 <li><p>명령어: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">docs/</span></code></p></li>
 <li><p>build 수행하면 <code class="docutils literal notranslate"><span class="pre">./_build/html</span></code> 디렉토리에 관련 artifact 생성됨</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>deploy: <code class="docutils literal notranslate"><span class="pre">./_build/html</span></code> 파일을 github pages에 배포</p></li>
-</ol>
+</li>
+<li><p>deploy: <code class="docutils literal notranslate"><span class="pre">./_build/html</span></code> 파일을 github pages에 배포</p>
 <ul class="simple">
 <li><p>github pages configuration: <code class="docutils literal notranslate"><span class="pre">deploy</span> <span class="pre">from</span> <span class="pre">branch</span></code> 선택</p></li>
 </ul>
+</li>
+</ol>
+</div></blockquote>
 </section>
 <section id="id1">
-<h2>0. github pages 설정<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>github pages 설정<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>github pages 생성 후 설정에서 source를 <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">branch</span></code>로 설정</p>
 <ul>
 <li><p>click github repo &gt; setting</p></li>
 <li><p>click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">pages</span> in left menu</p>
@@ -472,17 +482,16 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="id2">
-<h2>3가지 방법<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>github pages 연동 방식은 3가지 존재</p>
+<section id="github-action">
+<h2>github action 자동화<a class="headerlink" href="#github-action" title="Permalink to this heading">#</a></h2>
+<p>github pages 자동화를 위해 아래 3가지 방법 중 2, 3번 설명</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 폴더 내 html 컨텐츠를 수동으로 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch로 이동 복사</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">모듈</span></code> 활용하는 방법 (반자동: 여기서 설명)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Action</span></code> 활용하는 방법 (자동: 다음에 설명)</p></li>
 </ol>
-</section>
 <section id="ghp-import-publish">
-<h2><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish<a class="headerlink" href="#ghp-import-publish" title="Permalink to this heading">#</a></h2>
+<h3><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish<a class="headerlink" href="#ghp-import-publish" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>모듈 설치: <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">add</span> <span class="pre">ghp-import</span></code></p></li>
 <li><p>모듈 실행: <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">docs/_build/html</span></code></p>
@@ -512,8 +521,8 @@ To https://github.com/yoblee/tdc.git
 </li>
 </ul>
 </section>
-<section id="github-action">
-<h2>github action<a class="headerlink" href="#github-action" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>github action<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">&gt;</span> <span class="pre">settings</span> <span class="pre">&gt;</span> <span class="pre">Pages</span></code> 선택</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">and</span> <span class="pre">deployment</span></code> Source를 <code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Actions</span></code>로 선택</p>
@@ -577,6 +586,7 @@ jobs:
 </figure>
 </li>
 </ul>
+</section>
 </section>
 <section id="github-page">
 <h2>github page 접속<a class="headerlink" href="#github-page" title="Permalink to this heading">#</a></h2>
@@ -653,11 +663,13 @@ jobs:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow">flow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0. github pages 설정</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3가지 방법</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process">process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">github pages 설정</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-action">github action 자동화</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ghp-import-publish"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 모듈 설치 및 publish</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">github action</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-page">github page 접속</a></li>
 </ul>
   </nav></div>
