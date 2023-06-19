@@ -11,6 +11,7 @@ parts:
     - file: dc/jb/quick-start
     - file: dc/jb/config
     - file: dc/jb/toc
+    - file: dc/jb/ghp
     - file: dc/jb/intro_area
 
   - file: dc/sphinx
@@ -20,10 +21,7 @@ parts:
     - file: blank
 
   - file: dc/markdown
-  - file: dc/ghp
   - file: dc/autodoc
-
-  - file: exe_book_test
 
 - caption: python
   chapters:

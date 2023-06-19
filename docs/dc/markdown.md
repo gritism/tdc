@@ -12,19 +12,23 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
-  ```md
-      # Heading level 1
-      ## Heading level 2
-      ### Heading level 3
-      #### Heading level 4
-      ##### Heading level 5
-      ###### Heading level 6
+syntax
+^^^
+  ```{code-block}
+  # Heading level 1
+  ## Heading level 2
+  ### Heading level 3
+  #### Heading level 4
+  ##### Heading level 5
+  ###### Heading level 6
   ```
 :::
-:::{grid-item-card} result
+:::{grid-item-card}
 :shadow: none
+result
+^^^
   ### Heading level 3
 :::
 ::::
@@ -34,8 +38,10 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     > This is a quote
   ```
@@ -51,8 +57,10 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     1. First item
     2. Second item
@@ -64,10 +72,6 @@
   1. First item
   2. Second item
      1. First sub-item
-
-#. step1
-#. step2
-  #. supstep1
 :::
 ::::
 
@@ -76,8 +80,10 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     [Jupyter Book](https://jupyterbook.org)
   ```
@@ -93,8 +99,10 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ````md
     ```{list-table} This table title
     :header-rows: 1
@@ -130,16 +138,18 @@
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
-:shadow: none
+:::{grid-item-card}
+syntax
+^^^
 ````md
   ```{admonition} This is a title
     An example of an admonition with a title.
   ```
 ````
 :::
-:::{grid-item-card} syntax
-:shadow: none
+:::{grid-item-card}
+result
+^^^
 `````{tab-set}
 
 ````{tab-item} Note
@@ -210,8 +220,10 @@ This is an error admonition
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     ```{image} ../images/C-3PO_droid.png
     :height: 150px
@@ -233,8 +245,10 @@ This is an error admonition
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     ```
     - [ ] Mercury
@@ -258,8 +272,10 @@ This is an error admonition
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     ```
     [sphinx style]
@@ -298,8 +314,10 @@ This is an error admonition
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     ```{button-link} https://example.com
     :color: primary
@@ -323,8 +341,10 @@ This is an error admonition
 ::::::{grid} 1 1 1 1
 :gutter: 3
 
-:::::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     ::::{tab-set}
 
@@ -360,8 +380,10 @@ Content 2
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-  :::{grid-item-card} syntax
+  :::{grid-item-card}
   :shadow: none
+  syntax
+  ^^^
     ```md
       This is an example of a
       math block
@@ -387,8 +409,10 @@ Content 2
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} syntax
+:::{grid-item-card}
 :shadow: none
+syntax
+^^^
   ```md
     Wrap in-line code blocks in backticks: `boolean example = true;`.
   ```
@@ -407,8 +431,10 @@ Content 2
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-  :::{grid-item-card} syntax
+  :::{grid-item-card}
   :shadow: none
+  syntax
+  ^^^
     ```md
       ::::{grid} 3
       :outline:
@@ -425,8 +451,10 @@ Content 2
       ::::
     ```
   :::
-  :::{grid-item-card} result
+  :::{grid-item-card}
   :shadow: none
+  result
+  ^^^
   ::::{grid} 3 3 3 3
   :outline:
 
