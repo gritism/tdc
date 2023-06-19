@@ -40,6 +40,20 @@ jobs:
       run: |
         pdm run jupyter-book build ./docs/
 
+    # Push the book's HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_build/html
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     # Deploy the book
     - name: Checkout
       uses: actions/checkout@v3
@@ -54,9 +68,3 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v2
         
-#     # Push the book's HTML to github-pages
-#     - name: GitHub Pages action
-#       uses: peaceiris/actions-gh-pages@v3
-#       with:
-#         github_token: ${{ secrets.GITHUB_TOKEN }}
-#         publish_dir: ./docs/_build/html
