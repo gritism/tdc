@@ -3,7 +3,7 @@
 
 title: Technical Document Center
 author: YB
-logo: tdc_logo_3.png
+logo: ./img/tdc_logo_3.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
