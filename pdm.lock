@@ -606,6 +606,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "jupyterlab-myst"
+version = "1.2.0"
+requires_python = ">=3.7"
+summary = "Use MyST in JupyterLab"
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 requires_python = ">=3.7"
@@ -1554,9 +1560,8 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.2"
-cross_platform = true
 groups = ["default"]
-content_hash = "sha256:3df4eb2ac1110807ea3edc23b022c1b5d235c7726e5588d94cf7a17c0176a464"
+content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959319b786"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -2113,6 +2118,10 @@ content_hash = "sha256:3df4eb2ac1110807ea3edc23b022c1b5d235c7726e5588d94cf7a17c0
 "jupyter-server-terminals 0.4.4" = [
     {url = "https://files.pythonhosted.org/packages/54/e1/6bc19392e6957356f085b8d7ec33d6d0d721e646b7576c1c6758dd264c64/jupyter_server_terminals-0.4.4.tar.gz", hash = "sha256:57ab779797c25a7ba68e97bcfb5d7740f2b5e8a83b5e8102b10438041a7eac5d"},
     {url = "https://files.pythonhosted.org/packages/ea/7f/36db12bdb90f5237766dcbf59892198daab7260acbcf03fc75e2a2a82672/jupyter_server_terminals-0.4.4-py3-none-any.whl", hash = "sha256:75779164661cec02a8758a5311e18bb8eb70c4e86c6b699403100f1585a12a36"},
+]
+"jupyterlab-myst 1.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/a1/79/e035ffc287c99524fb6e35ffa7463b8c5c15810ae32d61a8094582371555/jupyterlab_myst-1.2.0-py3-none-any.whl", hash = "sha256:29b8055003e713058f9702fcf8d28fbbf74002c9e66cf4625d8746d7ee8f22ae"},
+    {url = "https://files.pythonhosted.org/packages/b1/76/0338e44ff4928e1d918b6205d47ea2ccdb65a99c9337aeafdbe5ef17fa7a/jupyterlab_myst-1.2.0.tar.gz", hash = "sha256:fbc686a79543cdd439d256c71d26410d281bcdff6620ff92b7fea247a71b6f12"},
 ]
 "jupyterlab-pygments 0.2.2" = [
     {url = "https://files.pythonhosted.org/packages/69/8e/8ae01f052013ee578b297499d16fcfafb892927d8e41c1a0054d2f99a569/jupyterlab_pygments-0.2.2.tar.gz", hash = "sha256:7405d7fde60819d905a9fa8ce89e4cd830e318cdad22a0030f7a901da705585d"},

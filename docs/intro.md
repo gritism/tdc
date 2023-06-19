@@ -27,7 +27,7 @@ kernelspec:
 
 from myst_nb import glue
 import pandas as pd
-df = pd.read_pickle('./history/history.pickle')
+df = pd.read_pickle('./cn/history.pickle')
 df = df.sort_values(['date'], ascending=False)
 df.head()
 ```

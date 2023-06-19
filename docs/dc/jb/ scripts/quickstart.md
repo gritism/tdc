@@ -23,14 +23,13 @@ kernelspec:
 
 ```{code-cell} ipython3
 %cd ../../../
-%pwd
 ```
 
 ## 1. install
 
 ```{code-cell} ipython3
 #!pdm add jupyter-book
-!pdm --version
+!pdm show jupyter-book
 ```
 
 ## 2. create
@@ -59,7 +58,6 @@ kernelspec:
 ```
 
 ```{code-cell} ipython3
-%pwd
 !pdm run jb build docs/
 ```
 
