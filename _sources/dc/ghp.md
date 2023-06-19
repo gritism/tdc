@@ -7,7 +7,6 @@ numbering:
 :class: dropdown
 
 github pages(web hosting) 및 github action(workflow 자동화)를 이용하여 md 파일로 작성된 book을 호스팅하는 방법
-
 ```
 
 # github pages
