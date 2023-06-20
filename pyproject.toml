@@ -30,6 +30,7 @@ dependencies = [
     "notebook==6.5.2",
     "jupyterlab-myst>=1.2.0",
     "jupyterlab>=4.0.2",
+    "myst-parser>=0.18.1",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -39,4 +40,3 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.pdm]

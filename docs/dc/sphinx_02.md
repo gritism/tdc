@@ -83,9 +83,8 @@ sys.path.insert(0, os.path.abspath('~/workspace/sph/.venv/lib/python3.10/site-pa
 :tags: [output_scroll]
 
 from IPython.display import display, HTML
-chart = HTML('./docs/_build/html/py-modindex.html')
-# or chart = charts.plot(...)
-display(chart)
+html = HTML('./docs/_build/html/sphinx.html')
+display(html)
 ```
 
 ```{code-cell} ipython3

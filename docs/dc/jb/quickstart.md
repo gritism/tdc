@@ -58,6 +58,8 @@ kernelspec:
 ```
 
 ```{code-cell} ipython3
+:tags: [output_scroll]
+
 !pdm run jb build docs/
 ```
 
@@ -82,7 +84,7 @@ from IPython.display import IFrame
 ```
 
 ```{code-cell} ipython3
-IFrame(src='https://yoblee.github.io/tdc', width=700, height=400)
+IFrame(src='https://gritism.github.io/tdc', width=1000, height=600)
 ```
 
 ```{code-cell} ipython3

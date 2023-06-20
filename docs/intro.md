@@ -45,23 +45,6 @@ df.head()
 * - [{bdg-info-line}`MyST`](https://mystmd.org/guide/quickstart)
   - MyST markdown reference site  
 ```
-
 -------
-
-
-::::{grid} 3
-
-:::{grid-item-card} to-do
-- [ ] thebe
-- [ ] autodoc
-- [ ] LaTex
-:::
-
-:::{grid-item-card} change
-:::
-
-:::{grid-item-card} ref
-:::
-::::
 
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
