@@ -67,6 +67,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-lru"
+version = "2.0.2"
+requires_python = ">=3.8"
+summary = "Simple LRU cache for asyncio"
+dependencies = [
+    "typing-extensions>=4.0.0",
+]
+
+[[package]]
 name = "attrs"
 version = "23.1.0"
 requires_python = ">=3.7"
@@ -379,6 +388,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "json5"
+version = "0.9.14"
+summary = "A Python implementation of the JSON5 data format."
+
+[[package]]
 name = "jsonpointer"
 version = "2.3"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -556,6 +570,15 @@ version = "0.2.0"
 summary = "Jupyter notebook extension that enables highlighting every instance of the current word in the notebook."
 
 [[package]]
+name = "jupyter-lsp"
+version = "2.2.0"
+requires_python = ">=3.8"
+summary = "Multi-Language Server WebSocket proxy for Jupyter Notebook/Lab server"
+dependencies = [
+    "jupyter-server>=1.1.2",
+]
+
+[[package]]
 name = "jupyter-nbextensions-configurator"
 version = "0.6.3"
 summary = "jupyter serverextension providing configuration interfaces for nbextensions."
@@ -606,6 +629,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "jupyterlab"
+version = "4.0.2"
+requires_python = ">=3.8"
+summary = "JupyterLab computational environment"
+dependencies = [
+    "async-lru>=1.0.0",
+    "ipykernel",
+    "jinja2>=3.0.3",
+    "jupyter-core",
+    "jupyter-lsp>=2.0.0",
+    "jupyter-server<3,>=2.4.0",
+    "jupyterlab-server<3,>=2.19.0",
+    "notebook-shim>=0.2",
+    "packaging",
+    "tomli; python_version < \"3.11\"",
+    "tornado>=6.2.0",
+    "traitlets",
+]
+
+[[package]]
 name = "jupyterlab-myst"
 version = "1.2.0"
 requires_python = ">=3.7"
@@ -616,6 +659,21 @@ name = "jupyterlab-pygments"
 version = "0.2.2"
 requires_python = ">=3.7"
 summary = "Pygments theme using JupyterLab CSS variables"
+
+[[package]]
+name = "jupyterlab-server"
+version = "2.23.0"
+requires_python = ">=3.7"
+summary = "A set of server components for JupyterLab and JupyterLab like applications."
+dependencies = [
+    "babel>=2.10",
+    "jinja2>=3.0.3",
+    "json5>=0.9.0",
+    "jsonschema>=4.17.3",
+    "jupyter-server<3,>=1.21",
+    "packaging>=21.3",
+    "requests>=2.28",
+]
 
 [[package]]
 name = "jupyterlab-widgets"
@@ -1462,6 +1520,12 @@ requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 summary = "Python Library for Tom's Obvious, Minimal Language"
 
 [[package]]
+name = "tomli"
+version = "2.0.1"
+requires_python = ">=3.7"
+summary = "A lil' TOML parser"
+
+[[package]]
 name = "tornado"
 version = "6.3.2"
 requires_python = ">= 3.8"
@@ -1561,7 +1625,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 [metadata]
 lock_version = "4.2"
 groups = ["default"]
-content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959319b786"
+content_hash = "sha256:b7780e5a049cf8679c8de1fd08247cb6dec796af990362c59de67c549a1205c5"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -1614,6 +1678,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
 "asttokens 2.2.1" = [
     {url = "https://files.pythonhosted.org/packages/c8/e3/b0b4f32162621126fbdaba636c152c6b6baec486c99f48686e66343d638f/asttokens-2.2.1.tar.gz", hash = "sha256:4622110b2a6f30b77e1473affaa97e711bc2f07d3f10848420ff1898edbe94f3"},
     {url = "https://files.pythonhosted.org/packages/f3/e1/64679d9d0759db5b182222c81ff322c2fe2c31e156a59afd6e9208c960e5/asttokens-2.2.1-py2.py3-none-any.whl", hash = "sha256:6b0ac9e93fb0335014d382b8fa9b3afa7df546984258005da0b9e7095b3deb1c"},
+]
+"async-lru 2.0.2" = [
+    {url = "https://files.pythonhosted.org/packages/17/f8/bdc723f93ec2458db76352e0f2c017331fe284e4e6b749db262199803f81/async_lru-2.0.2-py3-none-any.whl", hash = "sha256:d7c2b873e9af5c5a1f0a87a6c145e7e0b4eb92342b7235dda9dd5b10e950d6e2"},
+    {url = "https://files.pythonhosted.org/packages/92/16/be197573adca3d584dbd64d508488e95e36324ea036d751564d2f88d74bf/async-lru-2.0.2.tar.gz", hash = "sha256:3b87ec4f2460c52cc7916a0138cc606b584c75d1ef7d661853c95d1d3acb869a"},
 ]
 "attrs 23.1.0" = [
     {url = "https://files.pythonhosted.org/packages/97/90/81f95d5f705be17872843536b1868f351805acf6971251ff07c1b8334dbb/attrs-23.1.0.tar.gz", hash = "sha256:6279836d581513a26f1bf235f9acd333bc9115683f14f7e8fae46c98fc50e015"},
@@ -2061,6 +2129,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
     {url = "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
     {url = "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
 ]
+"json5 0.9.14" = [
+    {url = "https://files.pythonhosted.org/packages/70/ba/fa37123a86ae8287d6678535a944f9c3377d8165e536310ed6f6cb0f0c0e/json5-0.9.14-py2.py3-none-any.whl", hash = "sha256:740c7f1b9e584a468dbb2939d8d458db3427f2c93ae2139d05f47e453eae964f"},
+    {url = "https://files.pythonhosted.org/packages/f9/40/89e0ecbf8180e112f22046553b50a99fdbb9e8b7c49d547cda2bfa81097b/json5-0.9.14.tar.gz", hash = "sha256:9ed66c3a6ca3510a976a9ef9b8c0787de24802724ab1860bc0153c7fdd589b02"},
+]
 "jsonpointer 2.3" = [
     {url = "https://files.pythonhosted.org/packages/a0/6c/c52556b957a0f904e7c45585444feef206fe5cb1ff656303a1d6d922a53b/jsonpointer-2.3.tar.gz", hash = "sha256:97cba51526c829282218feb99dab1b1e6bdf8efd1c43dc9d57be093c0d69c99a"},
     {url = "https://files.pythonhosted.org/packages/a3/be/8dc9d31b50e38172c8020c40f497ce8debdb721545ddb9fcb7cca89ea9e6/jsonpointer-2.3-py2.py3-none-any.whl", hash = "sha256:51801e558539b4e9cd268638c078c6c5746c9ac96bc38152d443400e4f3793e9"},
@@ -2108,6 +2180,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
     {url = "https://files.pythonhosted.org/packages/50/d7/19ab7cfd60bf268d2abbacc52d4295a40f52d74dfc0d938e4761ee5e598b/jupyter_highlight_selected_word-0.2.0-py2.py3-none-any.whl", hash = "sha256:9545dfa9cb057eebe3a5795604dcd3a5294ea18637e553f61a0b67c1b5903c58"},
     {url = "https://files.pythonhosted.org/packages/cd/a5/3dfeb7c8643ef502e82969fdebb201b63b33ded15a7761b27299bacebc3a/jupyter_highlight_selected_word-0.2.0.tar.gz", hash = "sha256:9fa740424859a807950ca08d2bfd28a35154cd32dd6d50ac4e0950022adc0e7b"},
 ]
+"jupyter-lsp 2.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/01/f9/85c8361175208e279f63c3896db14b547d821c9cb8a52675e51a7bdb336f/jupyter-lsp-2.2.0.tar.gz", hash = "sha256:8ebbcb533adb41e5d635eb8fe82956b0aafbf0fd443b6c4bfa906edeeb8635a1"},
+    {url = "https://files.pythonhosted.org/packages/8f/b6/a1571e48550855a79898f851f57e5858b00eb36b09ea3b1a8bb65c53a290/jupyter_lsp-2.2.0-py3-none-any.whl", hash = "sha256:9e06b8b4f7dd50300b70dd1a78c0c3b0c3d8fa68e0f2d8a5d1fbab62072aca3f"},
+]
 "jupyter-nbextensions-configurator 0.6.3" = [
     {url = "https://files.pythonhosted.org/packages/24/87/5d528bbd1e0c6a634ca0e1cb9ca5fe337c2f82c7590265fd2b5a5651f036/jupyter_nbextensions_configurator-0.6.3-py2.py3-none-any.whl", hash = "sha256:cece496f3f62cf80bb0b04867ea463c32ed5db19ff5814fe18a3a7f1bb9da95b"},
 ]
@@ -2119,6 +2195,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
     {url = "https://files.pythonhosted.org/packages/54/e1/6bc19392e6957356f085b8d7ec33d6d0d721e646b7576c1c6758dd264c64/jupyter_server_terminals-0.4.4.tar.gz", hash = "sha256:57ab779797c25a7ba68e97bcfb5d7740f2b5e8a83b5e8102b10438041a7eac5d"},
     {url = "https://files.pythonhosted.org/packages/ea/7f/36db12bdb90f5237766dcbf59892198daab7260acbcf03fc75e2a2a82672/jupyter_server_terminals-0.4.4-py3-none-any.whl", hash = "sha256:75779164661cec02a8758a5311e18bb8eb70c4e86c6b699403100f1585a12a36"},
 ]
+"jupyterlab 4.0.2" = [
+    {url = "https://files.pythonhosted.org/packages/35/a9/dbd56bc681e3ceee945f87f3faccfe6f8f92ef1dd603d38b5eaf311306ac/jupyterlab-4.0.2-py3-none-any.whl", hash = "sha256:201b4f729a7dc5e22ca6c4dd8944cde792f1cb008d7c6b821e0a48d2502205c8"},
+    {url = "https://files.pythonhosted.org/packages/ed/30/72352660bbb4f4f46da15ead0fcb02bbd2e45bacbaba86b5c0fddaa9ea0d/jupyterlab-4.0.2.tar.gz", hash = "sha256:0a77898aebb55da391e5f57022774c089fb075e98803ff3d514a79b727dc934d"},
+]
 "jupyterlab-myst 1.2.0" = [
     {url = "https://files.pythonhosted.org/packages/a1/79/e035ffc287c99524fb6e35ffa7463b8c5c15810ae32d61a8094582371555/jupyterlab_myst-1.2.0-py3-none-any.whl", hash = "sha256:29b8055003e713058f9702fcf8d28fbbf74002c9e66cf4625d8746d7ee8f22ae"},
     {url = "https://files.pythonhosted.org/packages/b1/76/0338e44ff4928e1d918b6205d47ea2ccdb65a99c9337aeafdbe5ef17fa7a/jupyterlab_myst-1.2.0.tar.gz", hash = "sha256:fbc686a79543cdd439d256c71d26410d281bcdff6620ff92b7fea247a71b6f12"},
@@ -2126,6 +2206,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
 "jupyterlab-pygments 0.2.2" = [
     {url = "https://files.pythonhosted.org/packages/69/8e/8ae01f052013ee578b297499d16fcfafb892927d8e41c1a0054d2f99a569/jupyterlab_pygments-0.2.2.tar.gz", hash = "sha256:7405d7fde60819d905a9fa8ce89e4cd830e318cdad22a0030f7a901da705585d"},
     {url = "https://files.pythonhosted.org/packages/c0/7e/c3d1df3ae9b41686e664051daedbd70eea2e1d2bd9d9c33e7e1455bc9f96/jupyterlab_pygments-0.2.2-py2.py3-none-any.whl", hash = "sha256:2405800db07c9f770863bcf8049a529c3dd4d3e28536638bd7c1c01d2748309f"},
+]
+"jupyterlab-server 2.23.0" = [
+    {url = "https://files.pythonhosted.org/packages/02/65/f7ba44dc74f611b1d00fb37ed1ad0069edeb353a0f0cc7214e3014575b85/jupyterlab_server-2.23.0.tar.gz", hash = "sha256:83c01aa4ad9451cd61b383e634d939ff713850f4640c0056b2cdb2b6211a74c7"},
+    {url = "https://files.pythonhosted.org/packages/cb/14/8f1c4b9b80db855d48a762e248efd41649d102841b6bfadbd26b8c25e054/jupyterlab_server-2.23.0-py3-none-any.whl", hash = "sha256:a5ea2c839336a8ba7c38c8e7b2f24cedf919f0d439f4d2e606d9322013a95788"},
 ]
 "jupyterlab-widgets 3.0.7" = [
     {url = "https://files.pythonhosted.org/packages/46/98/e7ce879b7b5d4871b80e291be967d22e5e66fa43474c476a95fe6231f50d/jupyterlab_widgets-3.0.7-py3-none-any.whl", hash = "sha256:c73f8370338ec19f1bec47254752d6505b03601cbd5a67e6a0b184532f73a459"},
@@ -3049,6 +3133,10 @@ content_hash = "sha256:00b65b52a3ca1cbf6b790fb1c4cbe791e84c17a749fdd063b145d8959
 "toml 0.10.2" = [
     {url = "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {url = "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+"tomli 2.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {url = "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 "tornado 6.3.2" = [
     {url = "https://files.pythonhosted.org/packages/30/3c/68e9896ce47dd4acdb7e27945046f139db2862d3b990c655a5c0627c9a05/tornado-6.3.2-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:c367ab6c0393d71171123ca5515c61ff62fe09024fa6bf299cd1339dc9456829"},

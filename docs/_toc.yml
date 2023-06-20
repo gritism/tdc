@@ -15,13 +15,16 @@ parts:
     - file: dc/jb/intro_area
 
   - file: dc/sphinx
+    sections:
+    - file: dc/sphinx_01
+    - file: dc/sphinx_02
+    - file: dc/autodoc
 
   - file: dc/jupytext_01.ipynb
     sections:
     - file: blank
 
   - file: dc/markdown
-  - file: dc/autodoc
 
 - caption: python
   chapters:
