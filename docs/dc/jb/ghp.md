@@ -2,7 +2,7 @@
 numbering:
   heading_2: true
 ---
-# github pages
+# 4. github pages
 
 ```{dropdown} Objective
 
@@ -27,7 +27,7 @@ web hosting process
 github pages는 2가지 방식으로 deploy 할 수 있음.
 ```{list-table}
 :header-rows: 1
-:name: example-table
+:name: gp_deploy_option
 
 * - 방법
   - 설명
@@ -149,7 +149,7 @@ github pages는 2가지 방식으로 deploy 할 수 있음.
 **3. github pages 접속 확인**
   * https://{github id}.github.io/{book name}
 
-##### build 자동화 - github action
+#### build 자동화 - github action
 * github > Actions 선택
 * `New workflow` 선택 후 아래 내용 작성 후 commit (`publish.yml`)
   ```

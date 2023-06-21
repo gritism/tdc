@@ -1,18 +1,18 @@
 ---
-jupytext:
-  formats: ipynb,md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.14.6
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.14.6
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
 ---
 
-# quickstart
+# 1. quickstart
 
 ```{note}
 1. **install**: jupyter-book library 설치
@@ -21,20 +21,24 @@ kernelspec:
 4. **browse**: 웹 브라우저로 book 확인
 ```
 
-```{code-cell} ipython3
-%cd ../../../
+
+```python
+import os
+
+home_dir = os.environ['HOME']
+work_dir = home_dir + "/workspace/book_demo"
+work_dir
 ```
 
 ## 1. install
 
-```{code-cell} ipython3
+```python tags=["hide-output"]
 #!pdm add jupyter-book
 !pdm show jupyter-book
 ```
 
 ## 2. create
 
-+++
 
 * `pdm run jb create {폴더명}`
 * {폴더명} 안에 관련 파일 생성됨(_config.yml, _toc.yml, intro.md 등)
@@ -42,13 +46,12 @@ kernelspec:
   * `_toc.yml`: 메뉴 구성 파일
   * `intro.md`: 메인화면 구성 파일
 
-```{code-cell} ipython3
+```python
 !tree ./docs -L 1 -l 
 ```
 
 ## 3. build
 
-+++
 
 * _build 폴더 내 html 파일 생성
 ```{tip}
@@ -57,21 +60,18 @@ kernelspec:
 * clean하지 않을 경우 이전 내용이 캐쉬되어 정상적으로 보여지지 않는 경우 존재
 ```
 
-```{code-cell} ipython3
-:tags: [output_scroll]
-
+```python tags=["output_scroll"]
 !pdm run jb build docs/
 ```
 
 <참고: build option>
 
-```{code-cell} ipython3
+```python
 !pdm run jb build --help
 ```
 
 ## 4. browse
 
-+++
 
 - '_build/html/index.html'을 브라우저로 열면 아래 화면 실행
 ```{figure} ./img/jb_02.png
@@ -79,14 +79,14 @@ kernelspec:
 ```
 - 아래는 github pages로 호스팅
 
-```{code-cell} ipython3
+```python
 from IPython.display import IFrame
 ```
 
-```{code-cell} ipython3
+```python
 IFrame(src='https://gritism.github.io/tdc', width=1000, height=600)
 ```
 
-```{code-cell} ipython3
+```python
 
 ```

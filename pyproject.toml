@@ -1,36 +1,26 @@
 
 [project]
-name = "jb"
+name = "tdc"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "yoblee", email = "yoblee@gmail.com"},
+    {name = "gritism", email = "yoblee@gmail.com"},
 ]
 dependencies = [
-    "jupyter-book>=0.15.1",
-    "matplotlib>=3.7.1",
-    "pydata-sphinx-theme>=0.13.3",
-    "sphinx-rtd-theme>=1.2.2",
-    "pandas>=2.0.2",
-    "pymysql>=1.0.3",
-    "bokeh>=3.1.1",
-    "folium>=0.14.0",
-    "seaborn>=0.12.2",
     "jupyter>=1.0.0",
-    "opendata>=0.0.1",
-    "opendata-kr>=0.0.8",
-    "openpyxl>=3.1.2",
-    "sphinx-press-theme>=0.8.0",
-    "sphinxawesome-theme>=5.0.0b2",
-    "jupytext>=1.14.6",
-    "jupyter-nbextensions-configurator>=0.6.3",
-    "jupyter-contrib-nbextensions>=0.7.0",
-    "ghp-import>=2.1.0",
-    "sphinxemoji>=0.2.0",
-    "notebook==6.5.2",
-    "jupyterlab-myst>=1.2.0",
-    "jupyterlab>=4.0.2",
+    "jupyter-book>=0.15.1",
     "myst-parser>=0.18.1",
+    "pandas>=2.0.2",
+    "seaborn>=0.12.2",
+    "bokeh>=3.1.1",
+    "opendata-kr>=0.0.8",
+    "furo>=2023.3.27",
+    "sphinx-press-theme>=0.8.0",
+    "piccolo-theme>=0.16.0",
+    "sphinx-material>=0.0.35",
+    "sphinxawesome-theme>=4.1.0",
+    "jupytext>=1.14.6",
+    "openpyxl>=3.1.2",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -40,3 +30,5 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
+[tool.pdm]
+PDM_IGNORE_ACTIVE_VENV = "false"

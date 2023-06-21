@@ -2,3 +2,4 @@ _backup/
 docs/_build/
 .pdm-build/
 .venv/
+.pdm-python

@@ -1,5 +1,5 @@
 (myst_cheatsheet)=
-# markdown
+# myst-detail
 ※ jupyter book의 ['MyST syntax cheat sheet'](https://jupyterbook.org/en/stable/reference/cheatsheet.html#) 참조하여 추가 정리
 
 ```{note}
@@ -233,7 +233,7 @@ syntax
 :::
 :::{grid-item-card} result
 :shadow: none
-  ```{image} ../tdc_logo_3.png
+  ```{image} ../img/tdc_logo_3.png
     :height: 100px
     :name: image-example
   ```
@@ -471,23 +471,4 @@ syntax
   :::
 ::::
 ------
-
-## flow
-
-```{mermaid}
-flowchart LR
-  A[Jupyter Notebook] --> D
-  B[Markdown] --> D
-  D{MyST}
-  D <--> E[LaTeX]
-  E --> F[PDF]
-  D --> G[Word]
-  D --> H[React]
-  D --> I[HTML]
-  D <--> J[JATS]
-```
-
-<!-- :::{div} sd-text-left sd-text-primary sd-fs-4 sd-font-weight-bolder  
-  ## Header
-::: -->
 

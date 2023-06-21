@@ -12,28 +12,32 @@ kernelspec:
 
 # Technical Document Center
 
-기술문서 정리
--------------
+::::{grid} 1 1 1 1
+:gutter: 3
 
-{bdg-primary}`A` Information
+:::{grid-item}
+{bdg-primary}`1` Overview
 * {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간
 * {octicon}`report;1em;sd-text-info` 관심분야: 데이터 분석/시각화, 머신러닝, 딥러닝 등 
+:::
 
------
+:::{grid-item}
+{bdg-primary}`2` to-do
+- [ ] thebe
+- [ ] autodoc
+- [ ] rst, latex
+- [ ] stock analysis
+:::
 
-{bdg-primary}`B` change  
-```{code-cell} ipython3
-:tags: ['remove-input']
+:::{grid-item}
+{bdg-primary}`3` change  
+- 202305: initial 
+- 202306: documentation (executable book, sphinx, markdown etc)
+  
+:::
 
-from myst_nb import glue
-import pandas as pd
-df = pd.read_pickle('./cn/history.pickle')
-df = df.sort_values(['date'], ascending=False)
-df.head()
-```
--------
-
-{bdg-primary}`C` reference site
+:::{grid-item}
+{bdg-primary}`4` reference site
 ```{list-table} 
 :header-rows: 1
 * - ref
@@ -45,6 +49,7 @@ df.head()
 * - [{bdg-info-line}`MyST`](https://mystmd.org/guide/quickstart)
   - MyST markdown reference site  
 ```
--------
+:::
+::::
 
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)

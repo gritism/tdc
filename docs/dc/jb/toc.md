@@ -1,29 +1,30 @@
-# toc
-* manage manu structure
+# 3. table of contents
+* 책 목차(table of contents) 정의하는 영역
+* `_toc.yml` location: {book_dir}/_toc.yml
 
-## _toc.yml 파일 내용
-* table of content 정의
-  ```md
-    format: jb-book
-    root: intro
-    parts:
-    - caption: doc generator
-      chapters:
-      - file: doc-generator/jupyter-book
-        sections:
-        - file: doc-generator/jb/overview
-        - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
-          title: MyST syntax
-  ```
-## description
+## `_toc.yml` 파일 내용
+```md
+format: jb-book
+root: intro
+parts:
+- caption: doc generator
+  chapters:
+  - file: doc-generator/jupyter-book
+    sections:
+    - file: doc-generator/jb/overview
+    - url: https://jupyterbook.org/en/stable/reference/cheatsheet.html
+      title: MyST syntax
+```
+
 ```{list-table} 항목 설명
 :header-rows: 1
 * - 항목
   - 설명
 * - {bdg-info}`format:`
   - jb-book, jb-article 2개 종류
+    * jb-book(part, chapter로 구성), jb-article(only section으로만 구성)
 * - {bdg-info}`root:`
-  - 메인화면 파일명 (intro.md)
+  - 책의 첫번째 페이지 명칭
 * - {bdg-info}`parts:`
   - 여러 chapter의 묶음 단위임. 논리적으로는 책을 구분하는 단위로 볼 수 있음. parts가 책 1권
 * - {bdg-info}`chapters:`

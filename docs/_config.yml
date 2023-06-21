@@ -9,6 +9,9 @@ logo: ./img/tdc_logo_3.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  timeout: 120
+  exclude_patterns:
+    - '_*.md'
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -25,22 +28,46 @@ repository:
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
+#######################################################################################
+# Parse and render settings
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    # - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
+  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
+
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  use_multitoc_numbering: false
 
 sphinx:
   extra_extensions:
+    - myst_parser
     - sphinxawesome_theme.docsearch
     - sphinxawesome.highlighting
-
+    
 sphinx:
   config:
-    html_css_files: custom.css
+    # html_css_files: custom.css
 #     sphinxemoji_style: twemoji
-    html_theme: sphinx_book_theme
+    # html_theme: sphinx_book_theme
     # html_theme: sphinx_rtd_theme
-    # html_theme: press
+    # html_theme: pydata_sphinx_theme
+    # html_theme: press # error
+    # html_theme: furo
+    # html_theme: piccolo_theme
+    # html_theme: sphinx_material
     # html_theme: sphinxawesome_theme

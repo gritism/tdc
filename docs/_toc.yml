@@ -12,24 +12,26 @@ parts:
     - file: dc/jb/config
     - file: dc/jb/toc
     - file: dc/jb/ghp
-    - file: dc/jb/intro_area
+    # - file: dc/jb/intro_area
 
   - file: dc/sphinx
     sections:
     - file: dc/sphinx_01
     - file: dc/sphinx_02
+    - file: py/docstring
 
   - file: dc/jupytext_01.ipynb
     sections:
-    - file: blank
+    - file: jupytext
 
-  - file: dc/markdown
+  - file: dc/markup
     sections:
     - file: dc/myst
+    - file: dc/markdown
+    - file: dc/rst
 
 - caption: python
   chapters:
-  - file: py/docstring
   - file: py/pandas
     sections:
     - file: jn/pandas_01
