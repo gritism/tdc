@@ -2,7 +2,9 @@
 numbering:
   heading_2: true
 ---
-# 4. github pages
+# github pages
+
+--------
 
 ```{dropdown} Objective
 

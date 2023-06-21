@@ -12,7 +12,7 @@ jupyter:
     name: python3
 ---
 
-# 1. quickstart
+# quickstart
 
 ```{note}
 1. **install**: jupyter-book library 설치

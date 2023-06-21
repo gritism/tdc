@@ -25,24 +25,24 @@ jupyter:
 ```
 
 
-## install
+## 1. install
 
 ```python tags=["hide-output"]
-!pdm add jupytext
+#!pdm add jupytext
 ```
 
 ```python
 !pdm show jupytext
 ```
 
-## config - save files at separate folders
+## 2. config
 
 ```{warning}
     jupytext는 notebook > 7 버전과 아직 호환되지 않음. (23.6월 기준) notebook <= 6 이하 버전 설치해야 함
 ```
 
 
-1. jupytext config 파일 위치 가능한 디렉토리 목록
+### 2.1. jupytext config 디렉토리
     * 아래 디렉토리 리스트에 jupytext config 파일 생성 가능 
 
 ```python
@@ -50,7 +50,10 @@ from jupytext.config import global_jupytext_configuration_directories
 list(global_jupytext_configuration_directories())
 ```
 
-2. `jupytext.yml` 파일에 각 파일 저장경로 설정  
+### 2.2. comfig 파일 생성 
+
+* jupytext.yml (yml파일 혁식)
+    * 위치: 위 디렉토리 중 선택  
     {octicon}`report;1em;sd-text-info` 기본적으로 jupytext는 ipynb, md 파일을 동일 디렉토리에 생성/저장
     저장 경로를 다르게 하기 위한 config 파일 구성임.  
     formats: "경로/prefix/확장자, 경로/prefix/확장자"
@@ -58,21 +61,29 @@ list(global_jupytext_configuration_directories())
         formats: "ipynb, _md//.md"
     ```
 
+* pyproject.toml 파일에 기록 (pdm, poetry 등 python package 관리 툴 사용하는 경우)
+    * 위치: {프로젝트 폴더}/.pyproject.toml
+    * 작성
+    ```
+    [tool.jupytext]
+    formats = "ipynb, _md/_/.md"
+    ```
 
-3. jupytext.yml 파일 인식여부 확인
+
+### 2.3. jupytext.yml 파일 인식여부 확인
 
 ```python
 from jupytext.config import find_jupytext_configuration_file
 find_jupytext_configuration_file('.')
 ```
 
-4. jupyter notebook 실행  
-{octicon}`alert-fill;1em;sd-text-info` 기존 작성된 ipynb 파일은 오류 발생하는 경우가 존재함.
+### 2.4. jupyter notebook 실행  
 
 
-## execute
+## 3. execute
 
 
+``` todo::
 1. notebook 실행 후 ipynb 파일 생성
 2. pairing: `file > jupytext > Pair Notebook with Markdown` 메뉴 선택
 3. save: jupytext_01.ipynb 파일 저장하면 동시에 scripts 폴더 내 `jupytext_01.md` 파일 저장

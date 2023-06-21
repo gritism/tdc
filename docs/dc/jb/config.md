@@ -1,4 +1,4 @@
-# 2. config
+# config
 * configure jupyter book
 * `_config.yml` location: {book_dir}/_config.yml
   

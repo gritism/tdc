@@ -60,7 +60,7 @@ os.chdir(work_dir)
 !pwd
 ```
 
-```python tags=["output_scroll"]
+```python tags=["hide-output"]
 !pdm add myst-parser
 ```
 

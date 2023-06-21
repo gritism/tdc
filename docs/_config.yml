@@ -8,7 +8,7 @@ logo: ./img/tdc_logo_3.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
   timeout: 120
   exclude_patterns:
     - '_*.md'
@@ -71,4 +71,11 @@ sphinx:
     # html_theme: piccolo_theme
     # html_theme: sphinx_material
     # html_theme: sphinxawesome_theme
-    html_theme: sphinx_typo3_theme
+    # html_theme: sphinx_typo3_theme
+    html_theme: bulma_sphinx_theme
+    html_theme_options: 
+      have_top_navbar: false
+    html_css_files:
+      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css
+      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css
+      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css

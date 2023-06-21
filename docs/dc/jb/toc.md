@@ -1,4 +1,4 @@
-# 3. table of contents
+# table of contents
 * 책 목차(table of contents) 정의하는 영역
 * `_toc.yml` location: {book_dir}/_toc.yml
 

@@ -10,8 +10,11 @@ parts:
     sections:
     - file: dc/jb/quickstart
     - file: dc/jb/config
+      title: 2. config
     - file: dc/jb/toc
+      title: 3. table of contents
     - file: dc/jb/ghp
+      title: 4. gh-pages
     # - file: dc/jb/intro_area
 
   - file: dc/sphinx
