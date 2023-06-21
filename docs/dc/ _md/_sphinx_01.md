@@ -28,7 +28,16 @@ jupyter:
 import os
 
 home_dir = os.path.expanduser('~')
-work_dir = f'{home_dir}/workspace/sphinx_demo'
+# work_dir = f'{home_dir}/sphinx_demo'
+print(home_dir)
+```
+
+```python
+!pip install pdm
+```
+
+```python
+work_dir = f'{home_dir}/sphinx_demo'
 print(work_dir)
 ```
 
