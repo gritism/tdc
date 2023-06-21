@@ -71,3 +71,4 @@ sphinx:
     # html_theme: piccolo_theme
     # html_theme: sphinx_material
     # html_theme: sphinxawesome_theme
+    html_theme: sphinx_typo3_theme
