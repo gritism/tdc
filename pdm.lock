@@ -1459,6 +1459,12 @@ requires_python = ">=3.5"
 summary = "A sphinx extension which renders display math in HTML via JavaScript"
 
 [[package]]
+name = "sphinxcontrib-mermaid"
+version = "0.9.2"
+requires_python = ">=3.7"
+summary = "Mermaid diagrams in yours Sphinx powered docs"
+
+[[package]]
 name = "sphinxcontrib-qthelp"
 version = "1.0.3"
 requires_python = ">=3.5"
@@ -1639,7 +1645,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 [metadata]
 lock_version = "4.2"
 groups = ["default"]
-content_hash = "sha256:25745f5431827a14cd8c4d03439ae4e480e0d2dd4c85eb3597947bcd463a2433"
+content_hash = "sha256:93ab6e62e898bdeb6347e37e2cb052b0372335686d18edd65dc3df2c5d0dbe82"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -3078,6 +3084,10 @@ content_hash = "sha256:25745f5431827a14cd8c4d03439ae4e480e0d2dd4c85eb3597947bcd4
 "sphinxcontrib-jsmath 1.0.1" = [
     {url = "https://files.pythonhosted.org/packages/b2/e8/9ed3830aeed71f17c026a07a5097edcf44b692850ef215b161b8ad875729/sphinxcontrib-jsmath-1.0.1.tar.gz", hash = "sha256:a9925e4a4587247ed2191a22df5f6970656cb8ca2bd6284309578f2153e0c4b8"},
     {url = "https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl", hash = "sha256:2ec2eaebfb78f3f2078e73666b1415417a116cc848b72e5172e596c871103178"},
+]
+"sphinxcontrib-mermaid 0.9.2" = [
+    {url = "https://files.pythonhosted.org/packages/71/1e/e8b5c7536deba39eac1444c83d404374ed00c3a567445ba122249648a9fc/sphinxcontrib_mermaid-0.9.2-py3-none-any.whl", hash = "sha256:6795a72037ca55e65663d2a2c1a043d636dc3d30d418e56dd6087d1459d98a5d"},
+    {url = "https://files.pythonhosted.org/packages/8f/70/3d5664a7260a57b68f0b3ddcb29934b7888cbaf1577163e1db81bb9e42e2/sphinxcontrib-mermaid-0.9.2.tar.gz", hash = "sha256:252ef13dd23164b28f16d8b0205cf184b9d8e2b714a302274d9f59eb708e77af"},
 ]
 "sphinxcontrib-qthelp 1.0.3" = [
     {url = "https://files.pythonhosted.org/packages/2b/14/05f9206cf4e9cfca1afb5fd224c7cd434dcc3a433d6d9e4e0264d29c6cdb/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl", hash = "sha256:bd9fc24bcb748a8d51fd4ecaade681350aa63009a347a8c14e637895444dfab6"},

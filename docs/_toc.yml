@@ -23,6 +23,7 @@ parts:
     - file: dc/sphinx_01
     - file: dc/sphinx_02
     - file: py/docstring
+    - file: dc/mermaid
 
   - file: dc/jupytext_01.ipynb
     sections:

@@ -13,26 +13,26 @@ kernelspec:
 # Technical Document Center
 
 ::::{grid} 1 1 1 1
-:gutter: 3
 
 :::{grid-item}
 {bdg-primary}`1` Overview
 * {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간
-* {octicon}`report;1em;sd-text-info` 관심분야: 데이터 분석/시각화, 머신러닝, 딥러닝 등 
+* {octicon}`report;1em;sd-text-info` 관심분야: 데이터 분석/시각화, 머신러닝, 딥러닝, 문서자동화 등 
 :::
 
 :::{grid-item}
 {bdg-primary}`2` to-do
 - [ ] thebe
+- [ ] mermaid
 - [ ] autodoc
-- [ ] rst, latex
-- [ ] stock analysis
+- [ ] ablog for sphinx
+- [ ] stock analysis (bokeh application using public data open api)
 :::
 
 :::{grid-item}
 {bdg-primary}`3` change  
 - 202305: initial 
-- 202306: documentation (executable book, sphinx, markdown etc)
+- 202306: T.D.C site implemention with github pages
   
 :::
 
@@ -42,12 +42,14 @@ kernelspec:
 :header-rows: 1
 * - ref
   - 설명
-* - [{bdg-info-line}`sphinx-design`](https://sphinx-design.readthedocs.io/en/rtd-theme/)
+* - [{bdg-success}`sphinx-design`](https://sphinx-design.readthedocs.io/en/rtd-theme/)
   - sphinx extension으로 grid, tab, icon 등 desing 컴포넌트 제공
-* - [{bdg-info-line}`jupyter book`](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
+* - [{bdg-success}`jupyter book`](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
   - jupyter book site: executable book 개발을 위한 라이브러리 제공   
-* - [{bdg-info-line}`MyST`](https://mystmd.org/guide/quickstart)
+* - [{bdg-success}`MyST`](https://mystmd.org/guide/quickstart)
   - MyST markdown reference site  
+* - [{bdg-success}`Shibuya`](https://shibuya.lepture.com/)
+  - beautiful sphinx theme, Highly customization  
 ```
 :::
 ::::

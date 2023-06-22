@@ -57,6 +57,7 @@ sphinx:
   extra_extensions:
     - myst_parser
     - myst_nb
+    - sphinxcontrib.mermaid
     - sphinxawesome_theme.docsearch
     - sphinxawesome.highlighting
     
@@ -139,3 +140,6 @@ sphinx:
           },
       ]
       "github_url": "https://github.com/gritism/tdc"
+
+    html_js_files:
+      - 'js/mermaid.js'
