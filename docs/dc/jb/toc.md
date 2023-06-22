@@ -2,7 +2,7 @@
 * 책 목차(table of contents) 정의하는 영역
 * `_toc.yml` location: {book_dir}/_toc.yml
 
-## `_toc.yml` 파일 내용
+## 1. toc(`_toc.yml`) 파일 구성
 ```md
 format: jb-book
 root: intro
@@ -16,7 +16,9 @@ parts:
       title: MyST syntax
 ```
 
-```{list-table} 항목 설명
+## 2. 항목 설명
+
+```{list-table}
 :header-rows: 1
 * - 항목
   - 설명

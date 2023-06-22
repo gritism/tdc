@@ -11,7 +11,8 @@ numbering:
 github pages(web hosting) 및 github action(workflow 자동화)를 이용하여 md 파일로 작성된 book을 호스팅하는 방법
 
 ```
-## 1. github pages 란
+
+## 1. github pages
 * `github pages`는 웹 사이트 hosting 제공 서비스임 
 * `github action`은 workflow 자동화하는 도구로 `github pages` 컨텐츠 build & deploy 자동화 시 활용함.
 * 위 2가지를 이용해 github에 등록된 정적 컨텐츠(html, image 등)를 쉽게 호스팅 할 수 있음. 
@@ -25,7 +26,9 @@ web hosting process
   > 1) create (.md 작성) -> build (html파일 생성) -> deploy (웹서버 배포)
 * 일련의 과정을 자동화 해주기 위해 `github action`을 사용함.
 ```
-## 2. build & deploy 2가지 방식
+
+## 2. build & deploy
+
 github pages는 2가지 방식으로 deploy 할 수 있음.
 ```{list-table}
 :header-rows: 1
@@ -40,12 +43,13 @@ github pages는 2가지 방식으로 deploy 할 수 있음.
 ```
 
 ### 2.1 github action  
-**1. github pages config**
+
+#### 2.1.1 github pages config
 
 >  ```{image} ./img/ghp_02.png
 >  ```
 
-**2. .yml 파일 생성**  
+#### 2.1.2. .yml 파일 생성  
 >  ```{code-block}
 >  # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 >  name: deploy book
@@ -105,21 +109,22 @@ github pages는 2가지 방식으로 deploy 할 수 있음.
 >        uses: actions/deploy-pages@v2
 >  ```
 
-**3. github pages 접속 확인**  
+#### 2.1.3. github pages 접속 확인  
 
 >  ```{image} ./img/ghp_site_01.png
 >  ```
 
-**4. example repository**  
+#### 2.1.4. example repository  
   * 아래 site에서 참조 (https://github.com/yoblee/book_deploy)
 
 ### 2.2 deploy from a branch 
-**1. github pages config**
+
+#### 2.2.1. github pages config
  * click github repo > setting, then click {bdg-primary}`pages` in left menu
    * Source: `Deploy from a branch`, Branch: `gh-pages`, `root` 선택 후 `save`
      ```{figure} ./img/ghp_01.png
 
-**2. ghp-import 설치 및 배포**  
+#### 2.2.2. ghp-import 설치 및 배포  
 
   ghp-import 모듈을 이용하여 build 후 `gh-pages` branch로 자동 배포
   * 모듈 설치: `pdm add ghp-import`
@@ -140,18 +145,18 @@ github pages는 2가지 방식으로 deploy 할 수 있음.
       To https://github.com/yoblee/tdc.git
       * [new branch]      gh-pages -> gh-pages
       ``` 
-    * 
+
     ```{note}
-    :class: dorpdown
-    -n: Include a .nojekyll file in the branch.
-    -p: Push the branch to origin/{branch} after committing.
-    -f: Force the push to the repository.
+    :class: dropdown
+    - n: Include a .nojekyll file in the branch.
+    - p: Push the branch to origin/{branch} after committing.
+    - f: Force the push to the repository.
     ```
 
-**3. github pages 접속 확인**
+#### 2.2.3. github pages 접속 확인
   * https://{github id}.github.io/{book name}
 
-#### build 자동화 - github action
+##### build 자동화 - github action
 * github > Actions 선택
 * `New workflow` 선택 후 아래 내용 작성 후 commit (`publish.yml`)
   ```

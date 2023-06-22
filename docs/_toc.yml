@@ -9,6 +9,7 @@ parts:
   - file: dc/jupyter-book
     sections:
     - file: dc/jb/quickstart
+      title: 1. quickstart
     - file: dc/jb/config
       title: 2. config
     - file: dc/jb/toc
@@ -25,7 +26,7 @@ parts:
 
   - file: dc/jupytext_01.ipynb
     sections:
-    - file: jupytext
+    - file: dc/Untitled1
 
   - file: dc/markup
     sections:

@@ -67,6 +67,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-lru"
+version = "2.0.2"
+requires_python = ">=3.8"
+summary = "Simple LRU cache for asyncio"
+dependencies = [
+    "typing-extensions>=4.0.0",
+]
+
+[[package]]
 name = "attrs"
 version = "23.1.0"
 requires_python = ">=3.7"
@@ -182,6 +191,15 @@ requires_python = ">=3.8"
 summary = "Python library for calculating contours of 2D quadrilateral grids"
 dependencies = [
     "numpy>=1.16",
+]
+
+[[package]]
+name = "cryptography"
+version = "41.0.1"
+requires_python = ">=3.7"
+summary = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+dependencies = [
+    "cffi>=1.12",
 ]
 
 [[package]]
@@ -380,6 +398,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "json5"
+version = "0.9.14"
+summary = "A Python implementation of the JSON5 data format."
+
+[[package]]
 name = "jsonpointer"
 version = "2.3"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -523,6 +546,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "jupyter-lsp"
+version = "2.2.0"
+requires_python = ">=3.8"
+summary = "Multi-Language Server WebSocket proxy for Jupyter Notebook/Lab server"
+dependencies = [
+    "jupyter-server>=1.1.2",
+]
+
+[[package]]
 name = "jupyter-server"
 version = "2.6.0"
 requires_python = ">=3.8"
@@ -560,10 +592,51 @@ dependencies = [
 ]
 
 [[package]]
+name = "jupyterlab"
+version = "4.0.2"
+requires_python = ">=3.8"
+summary = "JupyterLab computational environment"
+dependencies = [
+    "async-lru>=1.0.0",
+    "ipykernel",
+    "jinja2>=3.0.3",
+    "jupyter-core",
+    "jupyter-lsp>=2.0.0",
+    "jupyter-server<3,>=2.4.0",
+    "jupyterlab-server<3,>=2.19.0",
+    "notebook-shim>=0.2",
+    "packaging",
+    "tomli; python_version < \"3.11\"",
+    "tornado>=6.2.0",
+    "traitlets",
+]
+
+[[package]]
+name = "jupyterlab-myst"
+version = "1.2.0"
+requires_python = ">=3.7"
+summary = "Use MyST in JupyterLab"
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 requires_python = ">=3.7"
 summary = "Pygments theme using JupyterLab CSS variables"
+
+[[package]]
+name = "jupyterlab-server"
+version = "2.23.0"
+requires_python = ">=3.7"
+summary = "A set of server components for JupyterLab and JupyterLab like applications."
+dependencies = [
+    "babel>=2.10",
+    "jinja2>=3.0.3",
+    "json5>=0.9.0",
+    "jsonschema>=4.17.3",
+    "jupyter-server<3,>=1.21",
+    "packaging>=21.3",
+    "requests>=2.28",
+]
 
 [[package]]
 name = "jupyterlab-widgets"
@@ -998,6 +1071,12 @@ requires_python = ">=3.7"
 summary = "Pygments is a syntax highlighting package written in Python."
 
 [[package]]
+name = "pymysql"
+version = "1.0.3"
+requires_python = ">=3.7"
+summary = "Pure Python MySQL Driver"
+
+[[package]]
 name = "pyparsing"
 version = "3.1.0"
 requires_python = ">=3.6.8"
@@ -1156,6 +1235,15 @@ name = "setuptools"
 version = "68.0.0"
 requires_python = ">=3.7"
 summary = "Easily download, build, install, upgrade, and uninstall Python packages"
+
+[[package]]
+name = "shibuya"
+version = "2023.6.21"
+requires_python = ">=3.7"
+summary = "A clean, responsive, and customizable Sphinx documentation theme with light/dark mode."
+dependencies = [
+    "Sphinx",
+]
 
 [[package]]
 name = "six"
@@ -1440,6 +1528,12 @@ requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 summary = "Python Library for Tom's Obvious, Minimal Language"
 
 [[package]]
+name = "tomli"
+version = "2.0.1"
+requires_python = ">=3.7"
+summary = "A lil' TOML parser"
+
+[[package]]
 name = "tornado"
 version = "6.3.2"
 requires_python = ">= 3.8"
@@ -1544,9 +1638,8 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.2"
-cross_platform = true
 groups = ["default"]
-content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d1518069645fa1"
+content_hash = "sha256:25745f5431827a14cd8c4d03439ae4e480e0d2dd4c85eb3597947bcd463a2433"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -1599,6 +1692,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
 "asttokens 2.2.1" = [
     {url = "https://files.pythonhosted.org/packages/c8/e3/b0b4f32162621126fbdaba636c152c6b6baec486c99f48686e66343d638f/asttokens-2.2.1.tar.gz", hash = "sha256:4622110b2a6f30b77e1473affaa97e711bc2f07d3f10848420ff1898edbe94f3"},
     {url = "https://files.pythonhosted.org/packages/f3/e1/64679d9d0759db5b182222c81ff322c2fe2c31e156a59afd6e9208c960e5/asttokens-2.2.1-py2.py3-none-any.whl", hash = "sha256:6b0ac9e93fb0335014d382b8fa9b3afa7df546984258005da0b9e7095b3deb1c"},
+]
+"async-lru 2.0.2" = [
+    {url = "https://files.pythonhosted.org/packages/17/f8/bdc723f93ec2458db76352e0f2c017331fe284e4e6b749db262199803f81/async_lru-2.0.2-py3-none-any.whl", hash = "sha256:d7c2b873e9af5c5a1f0a87a6c145e7e0b4eb92342b7235dda9dd5b10e950d6e2"},
+    {url = "https://files.pythonhosted.org/packages/92/16/be197573adca3d584dbd64d508488e95e36324ea036d751564d2f88d74bf/async-lru-2.0.2.tar.gz", hash = "sha256:3b87ec4f2460c52cc7916a0138cc606b584c75d1ef7d661853c95d1d3acb869a"},
 ]
 "attrs 23.1.0" = [
     {url = "https://files.pythonhosted.org/packages/97/90/81f95d5f705be17872843536b1868f351805acf6971251ff07c1b8334dbb/attrs-23.1.0.tar.gz", hash = "sha256:6279836d581513a26f1bf235f9acd333bc9115683f14f7e8fae46c98fc50e015"},
@@ -1828,6 +1925,27 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/f4/41/674384fc46e8a45f4e170cadd1796cf9b7266a45c57df80db4a2dda12301/contourpy-1.1.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:89f06eff3ce2f4b3eb24c1055a26981bffe4e7264acd86f15b97e40530b794bc"},
     {url = "https://files.pythonhosted.org/packages/ff/dd/5d44bc3a5993c25b75b7aef4f810ebd74ef9057dd2a4eab37eba240ee401/contourpy-1.1.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:bcb41692aa09aeb19c7c213411854402f29f6613845ad2453d30bf421fe68fed"},
 ]
+"cryptography 41.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/00/5e/39850ff94df530b24c5600f56769d56da44ede9f2c6ef5f2a204dd6c0881/cryptography-41.0.1-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:8dde71c4169ec5ccc1087bb7521d54251c016f126f922ab2dfe6649170a3b8c5"},
+    {url = "https://files.pythonhosted.org/packages/06/04/71b679d76336fc5fd82041e492e4c372c6b605dba15047e3184654aa5fc7/cryptography-41.0.1-pp39-pypy39_pp73-manylinux_2_28_aarch64.whl", hash = "sha256:7bfc55a5eae8b86a287747053140ba221afc65eb06207bedf6e019b8934b477c"},
+    {url = "https://files.pythonhosted.org/packages/12/82/8d41bda1fc6e5a51ae4f47abc910e40c0207233bf44f2bcd794272db2c69/cryptography-41.0.1-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7fa01527046ca5facdf973eef2535a27fec4cb651e4daec4d043ef63f6ecd4ca"},
+    {url = "https://files.pythonhosted.org/packages/19/8c/47f061de65d1571210dc46436c14a0a4c260fd0f3eaf61ce9b9d445ce12f/cryptography-41.0.1.tar.gz", hash = "sha256:d34579085401d3f49762d2f7d6634d6b6c2ae1242202e860f4d26b046e3a1006"},
+    {url = "https://files.pythonhosted.org/packages/2c/74/5ccc293b24678010611eb43185663064a9c195cdebfbcef8fc323f71eb41/cryptography-41.0.1-pp39-pypy39_pp73-macosx_10_12_x86_64.whl", hash = "sha256:5f0ff6e18d13a3de56f609dd1fd11470918f770c6bd5d00d632076c727d35485"},
+    {url = "https://files.pythonhosted.org/packages/2d/18/1c1098a3faeb21e73d83acccaa01f25bcfe6218f59b8dfc59bc31505cbe0/cryptography-41.0.1-pp38-pypy38_pp73-manylinux_2_28_aarch64.whl", hash = "sha256:5d092fdfedaec4cbbffbf98cddc915ba145313a6fdaab83c6e67f4e6c218e6f3"},
+    {url = "https://files.pythonhosted.org/packages/32/86/2037a52402f8d03f7a2be172ffb4bbac0250c54e51d50136c0c6c4e0cf70/cryptography-41.0.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b46e37db3cc267b4dea1f56da7346c9727e1209aa98487179ee8ebed09d21e43"},
+    {url = "https://files.pythonhosted.org/packages/49/35/80c346e1a9509210defa857a05e9b7931093719aab25665d4d54f9b3ba83/cryptography-41.0.1-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:948224d76c4b6457349d47c0c98657557f429b4e93057cf5a2f71d603e2fc3a3"},
+    {url = "https://files.pythonhosted.org/packages/52/4c/a5b0cabca7033510d490b5a9fddce62f87a0420ddc4d96b1ab4435f10f75/cryptography-41.0.1-cp37-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:b4ceb5324b998ce2003bc17d519080b4ec8d5b7b70794cbd2836101406a9be31"},
+    {url = "https://files.pythonhosted.org/packages/6a/35/7d7ac1ecd59c88f760584d3b9606ebfd48c5442377d67a8d3081226be424/cryptography-41.0.1-cp37-abi3-win_amd64.whl", hash = "sha256:1fee5aacc7367487b4e22484d3c7e547992ed726d14864ee33c0176ae43b0d7c"},
+    {url = "https://files.pythonhosted.org/packages/92/12/f33c6911b70c59b92af870b2e4a8c11f8293a12a4d1318be96082e09318f/cryptography-41.0.1-pp39-pypy39_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:eb8163f5e549a22888c18b0d53d6bb62a20510060a22fd5a995ec8a05268df8a"},
+    {url = "https://files.pythonhosted.org/packages/a6/09/ac646c5f3ae56a2a895014ede63148a6e2be2689d7bfbdbaab02ed9fe684/cryptography-41.0.1-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:cb33ccf15e89f7ed89b235cff9d49e2e62c6c981a6061c9c8bb47ed7951190bc"},
+    {url = "https://files.pythonhosted.org/packages/b7/88/3e6c5eda9ab474fa9b0cf84e6119385aaefbe5c9700a5eacd6e0a9f415bb/cryptography-41.0.1-cp37-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:d198820aba55660b4d74f7b5fd1f17db3aa5eb3e6893b0a41b75e84e4f9e0e4b"},
+    {url = "https://files.pythonhosted.org/packages/c9/f1/94c71c6fd96ae2ec799c8e5d7a953944a7c7b2ddd8ba941ddc89443645c3/cryptography-41.0.1-pp38-pypy38_pp73-macosx_10_12_x86_64.whl", hash = "sha256:9a6c7a3c87d595608a39980ebaa04d5a37f94024c9f24eb7d10262b92f739ddb"},
+    {url = "https://files.pythonhosted.org/packages/d8/80/e32f30266381f6ca05ee4aa92ce5f305aa1acbef4117a9a8d94d9b60bb67/cryptography-41.0.1-cp37-abi3-macosx_10_12_universal2.whl", hash = "sha256:f73bff05db2a3e5974a6fd248af2566134d8981fd7ab012e5dd4ddb1d9a70699"},
+    {url = "https://files.pythonhosted.org/packages/e5/1d/184779dc4c1e9686bc87628c0bf1b1c846885c6c9ff79c954fda0a4b2498/cryptography-41.0.1-cp37-abi3-win32.whl", hash = "sha256:8f4ab7021127a9b4323537300a2acfb450124b2def3756f64dc3a3d2160ee4b5"},
+    {url = "https://files.pythonhosted.org/packages/eb/09/6b2c7f6dcf756f318cc232576c2198c114758510317ddade9490e568362a/cryptography-41.0.1-cp37-abi3-macosx_10_12_x86_64.whl", hash = "sha256:1a5472d40c8f8e91ff7a3d8ac6dfa363d8e3138b961529c996f3e2df0c7a411a"},
+    {url = "https://files.pythonhosted.org/packages/ef/78/d391ec7a08d4adf8a93d0fd9fa9fd468493ef50b6213c28deadf5322379d/cryptography-41.0.1-cp37-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:059e348f9a3c1950937e1b5d7ba1f8e968508ab181e75fc32b879452f08356db"},
+    {url = "https://files.pythonhosted.org/packages/fc/db/bccda95237c4a823164d2f243aac25036f8d81c1083a49e85457d185dd31/cryptography-41.0.1-pp38-pypy38_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:1a8e6c2de6fbbcc5e14fd27fb24414507cb3333198ea9ab1258d916f00bc3039"},
+]
 "css-html-js-minify 2.5.5" = [
     {url = "https://files.pythonhosted.org/packages/75/61/f52e5225abe8e36ed5396e5ae3074df5f4ef994b540e9b4fd55a39b03cfd/css-html-js-minify-2.5.5.zip", hash = "sha256:4a9f11f7e0496f5284d12111f3ba4ff5ff2023d12f15d195c9c48bd97013746c"},
     {url = "https://files.pythonhosted.org/packages/e8/21/1260081a2c67105a3bd0f8692ff3c80b5f0cb5fe9f3f8fd4a990f17b8a39/css_html_js_minify-2.5.5-py2.py3-none-any.whl", hash = "sha256:3da9d35ac0db8ca648c1b543e0e801d7ca0bab9e6bfd8418fee59d5ae001727a"},
@@ -2030,6 +2148,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
     {url = "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
 ]
+"json5 0.9.14" = [
+    {url = "https://files.pythonhosted.org/packages/70/ba/fa37123a86ae8287d6678535a944f9c3377d8165e536310ed6f6cb0f0c0e/json5-0.9.14-py2.py3-none-any.whl", hash = "sha256:740c7f1b9e584a468dbb2939d8d458db3427f2c93ae2139d05f47e453eae964f"},
+    {url = "https://files.pythonhosted.org/packages/f9/40/89e0ecbf8180e112f22046553b50a99fdbb9e8b7c49d547cda2bfa81097b/json5-0.9.14.tar.gz", hash = "sha256:9ed66c3a6ca3510a976a9ef9b8c0787de24802724ab1860bc0153c7fdd589b02"},
+]
 "jsonpointer 2.3" = [
     {url = "https://files.pythonhosted.org/packages/a0/6c/c52556b957a0f904e7c45585444feef206fe5cb1ff656303a1d6d922a53b/jsonpointer-2.3.tar.gz", hash = "sha256:97cba51526c829282218feb99dab1b1e6bdf8efd1c43dc9d57be093c0d69c99a"},
     {url = "https://files.pythonhosted.org/packages/a3/be/8dc9d31b50e38172c8020c40f497ce8debdb721545ddb9fcb7cca89ea9e6/jsonpointer-2.3-py2.py3-none-any.whl", hash = "sha256:51801e558539b4e9cd268638c078c6c5746c9ac96bc38152d443400e4f3793e9"},
@@ -2067,6 +2189,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/d0/b0/7afcd1d66834f43d08ec47c861a5540d7ad57eab47605ccd83429c147755/jupyter_events-0.6.3.tar.gz", hash = "sha256:9a6e9995f75d1b7146b436ea24d696ce3a35bfa8bfe45e0c33c334c79464d0b3"},
     {url = "https://files.pythonhosted.org/packages/ee/14/e11a93c1b47a69432ee7898f1b55f1da27f2f93b009a34dbdafb9b903f81/jupyter_events-0.6.3-py3-none-any.whl", hash = "sha256:57a2749f87ba387cd1bfd9b22a0875b889237dbf2edc2121ebb22bde47036c17"},
 ]
+"jupyter-lsp 2.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/01/f9/85c8361175208e279f63c3896db14b547d821c9cb8a52675e51a7bdb336f/jupyter-lsp-2.2.0.tar.gz", hash = "sha256:8ebbcb533adb41e5d635eb8fe82956b0aafbf0fd443b6c4bfa906edeeb8635a1"},
+    {url = "https://files.pythonhosted.org/packages/8f/b6/a1571e48550855a79898f851f57e5858b00eb36b09ea3b1a8bb65c53a290/jupyter_lsp-2.2.0-py3-none-any.whl", hash = "sha256:9e06b8b4f7dd50300b70dd1a78c0c3b0c3d8fa68e0f2d8a5d1fbab62072aca3f"},
+]
 "jupyter-server 2.6.0" = [
     {url = "https://files.pythonhosted.org/packages/6f/04/b2e87b4ee96a2219df7666706b28c9ebffd9895fc98fe4b5c56b8b6931ce/jupyter_server-2.6.0-py3-none-any.whl", hash = "sha256:19525a1515b5999618a91b3e99ec9f6869aa8c5ba73e0b6279fcda918b54ba36"},
     {url = "https://files.pythonhosted.org/packages/ef/59/ba1556d910d6b608d203ca033ed4eef4489415f6afeb4e27fc7d7d56d257/jupyter_server-2.6.0.tar.gz", hash = "sha256:ae4af349f030ed08dd78cb7ac1a03a92d886000380c9ea6283f3c542a81f4b06"},
@@ -2075,9 +2201,21 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/54/e1/6bc19392e6957356f085b8d7ec33d6d0d721e646b7576c1c6758dd264c64/jupyter_server_terminals-0.4.4.tar.gz", hash = "sha256:57ab779797c25a7ba68e97bcfb5d7740f2b5e8a83b5e8102b10438041a7eac5d"},
     {url = "https://files.pythonhosted.org/packages/ea/7f/36db12bdb90f5237766dcbf59892198daab7260acbcf03fc75e2a2a82672/jupyter_server_terminals-0.4.4-py3-none-any.whl", hash = "sha256:75779164661cec02a8758a5311e18bb8eb70c4e86c6b699403100f1585a12a36"},
 ]
+"jupyterlab 4.0.2" = [
+    {url = "https://files.pythonhosted.org/packages/35/a9/dbd56bc681e3ceee945f87f3faccfe6f8f92ef1dd603d38b5eaf311306ac/jupyterlab-4.0.2-py3-none-any.whl", hash = "sha256:201b4f729a7dc5e22ca6c4dd8944cde792f1cb008d7c6b821e0a48d2502205c8"},
+    {url = "https://files.pythonhosted.org/packages/ed/30/72352660bbb4f4f46da15ead0fcb02bbd2e45bacbaba86b5c0fddaa9ea0d/jupyterlab-4.0.2.tar.gz", hash = "sha256:0a77898aebb55da391e5f57022774c089fb075e98803ff3d514a79b727dc934d"},
+]
+"jupyterlab-myst 1.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/a1/79/e035ffc287c99524fb6e35ffa7463b8c5c15810ae32d61a8094582371555/jupyterlab_myst-1.2.0-py3-none-any.whl", hash = "sha256:29b8055003e713058f9702fcf8d28fbbf74002c9e66cf4625d8746d7ee8f22ae"},
+    {url = "https://files.pythonhosted.org/packages/b1/76/0338e44ff4928e1d918b6205d47ea2ccdb65a99c9337aeafdbe5ef17fa7a/jupyterlab_myst-1.2.0.tar.gz", hash = "sha256:fbc686a79543cdd439d256c71d26410d281bcdff6620ff92b7fea247a71b6f12"},
+]
 "jupyterlab-pygments 0.2.2" = [
     {url = "https://files.pythonhosted.org/packages/69/8e/8ae01f052013ee578b297499d16fcfafb892927d8e41c1a0054d2f99a569/jupyterlab_pygments-0.2.2.tar.gz", hash = "sha256:7405d7fde60819d905a9fa8ce89e4cd830e318cdad22a0030f7a901da705585d"},
     {url = "https://files.pythonhosted.org/packages/c0/7e/c3d1df3ae9b41686e664051daedbd70eea2e1d2bd9d9c33e7e1455bc9f96/jupyterlab_pygments-0.2.2-py2.py3-none-any.whl", hash = "sha256:2405800db07c9f770863bcf8049a529c3dd4d3e28536638bd7c1c01d2748309f"},
+]
+"jupyterlab-server 2.23.0" = [
+    {url = "https://files.pythonhosted.org/packages/02/65/f7ba44dc74f611b1d00fb37ed1ad0069edeb353a0f0cc7214e3014575b85/jupyterlab_server-2.23.0.tar.gz", hash = "sha256:83c01aa4ad9451cd61b383e634d939ff713850f4640c0056b2cdb2b6211a74c7"},
+    {url = "https://files.pythonhosted.org/packages/cb/14/8f1c4b9b80db855d48a762e248efd41649d102841b6bfadbd26b8c25e054/jupyterlab_server-2.23.0-py3-none-any.whl", hash = "sha256:a5ea2c839336a8ba7c38c8e7b2f24cedf919f0d439f4d2e606d9322013a95788"},
 ]
 "jupyterlab-widgets 3.0.7" = [
     {url = "https://files.pythonhosted.org/packages/46/98/e7ce879b7b5d4871b80e291be967d22e5e66fa43474c476a95fe6231f50d/jupyterlab_widgets-3.0.7-py3-none-any.whl", hash = "sha256:c73f8370338ec19f1bec47254752d6505b03601cbd5a67e6a0b184532f73a459"},
@@ -2608,6 +2746,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/34/a7/37c8d68532ba71549db4212cb036dbd6161b40e463aba336770e80c72f84/Pygments-2.15.1-py3-none-any.whl", hash = "sha256:db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1"},
     {url = "https://files.pythonhosted.org/packages/89/6b/2114e54b290824197006e41be3f9bbe1a26e9c39d1f5fa20a6d62945a0b3/Pygments-2.15.1.tar.gz", hash = "sha256:8ace4d3c1dd481894b2005f560ead0f9f19ee64fe983366be1a21e171d12775c"},
 ]
+"pymysql 1.0.3" = [
+    {url = "https://files.pythonhosted.org/packages/5b/b1/bb485db528749f07d6f11aa123e5f931f2e465a9c27945d6122bae5f7df7/PyMySQL-1.0.3-py3-none-any.whl", hash = "sha256:89fc6ae41c0aeb6e1f7710cdd623702ea2c54d040565767a78b00a5ebb12f4e5"},
+    {url = "https://files.pythonhosted.org/packages/7a/6f/b3fadf41239b9ca7ea3857c440c499fd2e9e0f410bb942bd8d593dce4bd6/PyMySQL-1.0.3.tar.gz", hash = "sha256:3dda943ef3694068a75d69d071755dbecacee1adf9a1fc5b206830d2b67d25e8"},
+]
 "pyparsing 3.1.0" = [
     {url = "https://files.pythonhosted.org/packages/4f/13/28e88033cab976721512e7741000fb0635fa078045e530a91abb25aea0c0/pyparsing-3.1.0.tar.gz", hash = "sha256:edb662d6fe322d6e990b1594b5feaeadf806803359e3d4d42f11e295e588f0ea"},
     {url = "https://files.pythonhosted.org/packages/a4/24/6ae4c9c45cf99d96b06b5d99e25526c060303171fb0aea9da2bfd7dbde93/pyparsing-3.1.0-py3-none-any.whl", hash = "sha256:d554a96d1a7d3ddaf7183104485bc19fd80543ad6ac5bdb6426719d766fb06c1"},
@@ -2838,6 +2980,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
     {url = "https://files.pythonhosted.org/packages/c7/42/be1c7bbdd83e1bfb160c94b9cafd8e25efc7400346cf7ccdbdb452c467fa/setuptools-68.0.0-py3-none-any.whl", hash = "sha256:11e52c67415a381d10d6b462ced9cfb97066179f0e871399e006c4ab101fc85f"},
     {url = "https://files.pythonhosted.org/packages/dc/98/5f896af066c128669229ff1aa81553ac14cfb3e5e74b6b44594132b8540e/setuptools-68.0.0.tar.gz", hash = "sha256:baf1fdb41c6da4cd2eae722e135500da913332ab3f2f5c7d33af9b492acb5235"},
 ]
+"shibuya 2023.6.21" = [
+    {url = "https://files.pythonhosted.org/packages/a2/4f/cdf338ac088bd57aaa7bc60bf66de95d434a4e4fab4f70be3032b05a49aa/shibuya-2023.6.21.tar.gz", hash = "sha256:e79cd3a27c83a687cadc6c1510c9624f18ed912db4bc6dc1dde186acba04bfbd"},
+    {url = "https://files.pythonhosted.org/packages/d6/fd/39937b97c344b517168e4a93fad733e0b50ac70edc1511976c44721cd7db/shibuya-2023.6.21-py3-none-any.whl", hash = "sha256:75d6e1e32772ab843a223eb6c36e73154b17b407c0ae3c59fbbaecab456db12c"},
+]
 "six 1.16.0" = [
     {url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
     {url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
@@ -3007,6 +3153,10 @@ content_hash = "sha256:6fb872ce89f54eefdf987313c3db0317bd5b53480291fd4e29d151806
 "toml 0.10.2" = [
     {url = "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {url = "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+"tomli 2.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {url = "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 "tornado 6.3.2" = [
     {url = "https://files.pythonhosted.org/packages/30/3c/68e9896ce47dd4acdb7e27945046f139db2862d3b990c655a5c0627c9a05/tornado-6.3.2-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:c367ab6c0393d71171123ca5515c61ff62fe09024fa6bf299cd1339dc9456829"},

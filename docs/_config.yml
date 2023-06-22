@@ -3,7 +3,7 @@
 
 title: Technical Document Center
 author: YB
-logo: ./img/tdc_logo_3.png
+logo: ./img/tdc_logo_5.jpg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -56,6 +56,7 @@ html:
 sphinx:
   extra_extensions:
     - myst_parser
+    - myst_nb
     - sphinxawesome_theme.docsearch
     - sphinxawesome.highlighting
     
@@ -72,10 +73,69 @@ sphinx:
     # html_theme: sphinx_material
     # html_theme: sphinxawesome_theme
     # html_theme: sphinx_typo3_theme
-    html_theme: bulma_sphinx_theme
+    # html_theme: bulma_sphinx_theme
+    html_theme: shibuya
+    # html_theme_options: 
+    #   have_top_navbar: false
+    # html_css_files:
+    #   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.css
+      # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css
+      # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css
+      # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css
+    # html_js_files: [ ['https://plausible.io/js/script.js', {'defer': 'defer', 'data-domain': 'yourdomain.com'}] ]
+
+    html_logo: _static/tdc_logo_7.png
     html_theme_options: 
-      have_top_navbar: false
-    html_css_files:
-      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css
-      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css
-      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css
+      "nav_links": [
+          {
+              "title": "Documentation",
+              "url": "dc/jupyter-book",
+              "children": [
+                  {
+                      "title": "jupyter book",
+                      "url": "dc/jupyter-book",
+                  },
+                  {
+                      "title": "sphinx",
+                      "url": "dc/sphinx",
+                  },
+                  {
+                      "title": "jupytext",
+                      "url": "dc/jupytext_01",
+                  },
+                  {
+                      "title": "markup",
+                      "url": "dc/markup",
+                  },
+              ]
+          },
+          {
+              "title": "Python",
+              "url": "py/pandas",
+              "children": [
+                  {
+                      "title": "pandas",
+                      "url": "py/pandas",
+                  },
+                  {
+                      "title": "pdm",
+                      "url": "py/pdm",
+                  },
+              ]
+          },
+          {
+              "title": "Data Visualization",
+              "url": "dv/seaborn",
+              "children": [
+                  {
+                      "title": "seaborn",
+                      "url": "dv/seaborn",
+                  },
+                  {
+                      "title": "bokeh",
+                      "url": "dv/bokeh",
+                  },
+              ]
+          },
+      ]
+      "github_url": "https://github.com/gritism/tdc"

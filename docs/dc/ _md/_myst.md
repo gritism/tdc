@@ -61,7 +61,7 @@ os.chdir(work_dir)
 ```
 
 ```python tags=["hide-output"]
-!pdm add myst-parser
+#!pdm add myst-parser
 ```
 
 ```python
