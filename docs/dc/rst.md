@@ -21,7 +21,6 @@
 
    A note written in reStructuredText.
 
-.. include:: ./include-rst.rst
 ```
 
 ## rst vs. markdown

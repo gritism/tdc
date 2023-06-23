@@ -53,15 +53,19 @@ html:
   use_repository_button: true
   use_multitoc_numbering: false
 
-sphinx:
-  extra_extensions:
-    - myst_parser
-    - myst_nb
-    - sphinxcontrib.mermaid
-    - sphinxawesome_theme.docsearch
-    - sphinxawesome.highlighting
+# sphinx:
+#   extra_extensions:
+#     - 'sphinxcontrib.mermaid'
+#     # - sphinxawesome_theme.docsearch
+#     # - sphinxawesome.highlighting
+#     # - myst_parser
+#     # - myst_nb
+#   local_extensions:
+#     - 'sphinxcontrib.mermaid'
     
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
   config:
     # html_css_files: custom.css
 #     sphinxemoji_style: twemoji

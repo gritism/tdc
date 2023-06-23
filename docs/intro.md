@@ -22,8 +22,8 @@ kernelspec:
 
 :::{grid-item}
 {bdg-primary}`2` to-do
+- [x] [mermaid](`./dc/mermaid.md`)
 - [ ] thebe
-- [ ] mermaid
 - [ ] autodoc
 - [ ] ablog for sphinx
 - [ ] stock analysis (bokeh application using public data open api)

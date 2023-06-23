@@ -42,5 +42,4 @@ parts:
   - markdown, rst 등 실제 문서 파일
 * - {bdg-info}`url:`
   - 외부 사이트 문서 링크
-
 ```
