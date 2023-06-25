@@ -5,13 +5,13 @@ mermaid test2
 ## install
 1) sphinx extension mermaid 설치
     ```
-        pdm add sphinxcontrib-mermaid
+    pdm add sphinxcontrib-mermaid
     ```
 2) config 설정 (_config.yml)
     ```
-        sphinx:
-            extra_extensions:
-                - sphinxcontrib.mermaid
+    sphinx:
+        extra_extensions:
+            - sphinxcontrib.mermaid
     ``` 
 
 ## flowcharts

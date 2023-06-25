@@ -32,7 +32,7 @@ If you document scripts (as opposed to library modules), make sure their main ro
 import os
 
 home_dir = os.path.expanduser('~')
-work_dir = f'{home_dir}/workspace/sphinx_demo'
+work_dir = f'{home_dir}/sphinx_demo'
 
 os.chdir(work_dir)
 !pwd
@@ -53,14 +53,14 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.viewcode']
 ```{code-block}
 import os
 import sys
-sys.path.insert(0, os.path.abspath('~/workspace/sph/.venv/lib/python3.10/site-packages/sphinx/'))
+sys.path.insert(0, os.path.abspath('~/sph/.venv/lib/python3.10/site-packages/sphinx/'))
 ```
 
 
 ### 2. apidoc
 
 ```python
-!pdm run sphinx-apidoc -o ./docs .venv/lib/python3.10/site-packages/sphinx
+!pdm run sphinx-apidoc -o ./docs .venv/lib/python3.10/site-packages/docutils
 ```
 
 ```python
@@ -81,8 +81,12 @@ sys.path.insert(0, os.path.abspath('~/workspace/sph/.venv/lib/python3.10/site-pa
 
 ```python tags=["output_scroll"]
 from IPython.display import display, HTML
-html = HTML('./docs/_build/html/sphinx.html')
+html = HTML('./docs/_build/html/index.html')
 display(html)
+```
+
+```python
+
 ```
 
 ```python

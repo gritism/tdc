@@ -29,7 +29,7 @@ syntax
 :shadow: none
 result
 ^^^
-  ### Heading level 3
+```{rubric} Heading level 3
 :::
 ::::
 

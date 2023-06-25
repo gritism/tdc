@@ -44,9 +44,9 @@ print(work_dir)
 ```python
 if not os.path.isdir(work_dir):
     os.mkdir(work_dir)
-else:
-    os.system(f'rm -rf '+work_dir)
-    os.mkdir(work_dir)
+# else:
+#     os.system(f'rm -rf '+work_dir)
+#     os.mkdir(work_dir)
     
 os.chdir(work_dir)
 ```

@@ -24,6 +24,7 @@ parts:
     - file: dc/sphinx_02
     - file: py/docstring
     - file: dc/mermaid
+    - file: dc/thebe
 
   - file: dc/jupytext_01.ipynb
     sections:
@@ -69,3 +70,7 @@ parts:
 - caption: reference
   chapters:
   - file: rf/ref.md
+
+- caption: log
+  chapters:
+  - file: changelog

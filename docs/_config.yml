@@ -66,6 +66,9 @@ html:
 sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
+    - sphinx_thebe
+    # - sphinxawesome_theme.docsearch
+    # - sphinxawesome.highlighting
   config:
     # html_css_files: custom.css
 #     sphinxemoji_style: twemoji
@@ -141,6 +144,10 @@ sphinx:
                       "url": "dv/bokeh",
                   },
               ]
+          },
+          {
+              "title": "Change",
+              "url": "changelog"
           },
       ]
       "github_url": "https://github.com/gritism/tdc"
