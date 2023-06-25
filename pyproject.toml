@@ -43,7 +43,7 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 [tool.pdm]
-PDM_IGNORE_ACTIVE_VENV = "false"
+PDM_IGNORE_ACTIVE_VENV = "true"
 
 [tool.jupytext]
 formats = "ipynb, _md/_/.md"
