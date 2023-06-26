@@ -33,7 +33,8 @@ kernelspec:
 {bdg-primary}`3` change  
 - 202305: initial 
 - 202306: T.D.C site implemention with github pages
-  ```{include} ./changelog.md
+
+  ```{include} ./chg_summary.md
   ```  
 :::
 

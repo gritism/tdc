@@ -239,12 +239,6 @@ requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 summary = "Docutils -- Python Documentation Utilities"
 
 [[package]]
-name = "entrypoints"
-version = "0.4"
-requires_python = ">=3.6"
-summary = "Discover and load entry points from installed packages."
-
-[[package]]
 name = "et-xmlfile"
 version = "1.1.0"
 requires_python = ">=3.6"
@@ -694,15 +688,6 @@ requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, != 3.4.*"
 summary = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
 
 [[package]]
-name = "m2r"
-version = "0.2.1"
-summary = "Markdown and reStructuredText in a single file."
-dependencies = [
-    "docutils",
-    "mistune",
-]
-
-[[package]]
 name = "markdown-it-py"
 version = "2.2.0"
 requires_python = ">=3.7"
@@ -760,8 +745,9 @@ summary = "Markdown URL utilities"
 
 [[package]]
 name = "mistune"
-version = "0.8.4"
-summary = "The fastest markdown parser in pure Python"
+version = "3.0.1"
+requires_python = ">=3.7"
+summary = "A sane and fast Markdown parser with useful plugins and renderers"
 
 [[package]]
 name = "myst-nb"
@@ -835,27 +821,25 @@ dependencies = [
 
 [[package]]
 name = "nbconvert"
-version = "6.5.4"
+version = "7.6.0"
 requires_python = ">=3.7"
 summary = "Converting Jupyter Notebooks"
 dependencies = [
-    "MarkupSafe>=2.0",
     "beautifulsoup4",
-    "bleach",
+    "bleach!=5.0.0",
     "defusedxml",
-    "entrypoints>=0.2.2",
     "jinja2>=3.0",
     "jupyter-core>=4.7",
     "jupyterlab-pygments",
-    "lxml",
-    "mistune<2,>=0.8.1",
+    "markupsafe>=2.0",
+    "mistune<4,>=2.0.3",
     "nbclient>=0.5.0",
-    "nbformat>=5.1",
+    "nbformat>=5.7",
     "packaging",
     "pandocfilters>=1.4.1",
     "pygments>=2.4.1",
     "tinycss2",
-    "traitlets>=5.0",
+    "traitlets>=5.1",
 ]
 
 [[package]]
@@ -1661,9 +1645,8 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.2"
-cross_platform = true
 groups = ["default"]
-content_hash = "sha256:f287b27fc0f326fae7af34fd5a20fb254270afb55837ecbdcc069c8b8cab693c"
+content_hash = "sha256:925416a22ff0c4414fda27cfa9022d67821bd2f62a77b2889567777f57072148"
 
 [metadata.files]
 "accessible-pygments 0.0.4" = [
@@ -2009,10 +1992,6 @@ content_hash = "sha256:f287b27fc0f326fae7af34fd5a20fb254270afb55837ecbdcc069c8b8
 "docutils 0.18.1" = [
     {url = "https://files.pythonhosted.org/packages/57/b1/b880503681ea1b64df05106fc7e3c4e3801736cf63deffc6fa7fc5404cf5/docutils-0.18.1.tar.gz", hash = "sha256:679987caf361a7539d76e584cbeddc311e3aee937877c87346f31debc63e9d06"},
     {url = "https://files.pythonhosted.org/packages/8d/14/69b4bad34e3f250afe29a854da03acb6747711f3df06c359fa053fae4e76/docutils-0.18.1-py2.py3-none-any.whl", hash = "sha256:23010f129180089fbcd3bc08cfefccb3b890b0050e1ca00c867036e9d161b98c"},
-]
-"entrypoints 0.4" = [
-    {url = "https://files.pythonhosted.org/packages/35/a8/365059bbcd4572cbc41de17fd5b682be5868b218c3c5479071865cab9078/entrypoints-0.4-py3-none-any.whl", hash = "sha256:f174b5ff827504fd3cd97cc3f8649f3693f51538c7e4bdf3ef002c8429d42f9f"},
-    {url = "https://files.pythonhosted.org/packages/ea/8d/a7121ffe5f402dc015277d2d31eb82d2187334503a011c18f2e78ecbb9b2/entrypoints-0.4.tar.gz", hash = "sha256:b706eddaa9218a19ebcd67b56818f05bb27589b1ca9e8d797b74affad4ccacd4"},
 ]
 "et-xmlfile 1.1.0" = [
     {url = "https://files.pythonhosted.org/packages/3d/5d/0413a31d184a20c763ad741cc7852a659bf15094c24840c5bdd1754765cd/et_xmlfile-1.1.0.tar.gz", hash = "sha256:8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c"},
@@ -2410,9 +2389,6 @@ content_hash = "sha256:f287b27fc0f326fae7af34fd5a20fb254270afb55837ecbdcc069c8b8
     {url = "https://files.pythonhosted.org/packages/f6/45/232a3be71587fc534c009147b36081eb9bebd3bf6e608aec84598325aa41/lxml-4.9.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:df0623dcf9668ad0445e0558a21211d4e9a149ea8f5666917c8eeec515f0a6d1"},
     {url = "https://files.pythonhosted.org/packages/ff/d9/e821232295ec540a9c62bbfd6121c2e2969996ee8bc3b0c5325cc88272d0/lxml-4.9.2-cp310-cp310-win32.whl", hash = "sha256:d02a5399126a53492415d4906ab0ad0375a5456cc05c3fc0fc4ca11771745cda"},
 ]
-"m2r 0.2.1" = [
-    {url = "https://files.pythonhosted.org/packages/39/e7/9fae11a45f5e1a3a21d8a98d02948e597c4afd7848a0dbe1a1ebd235f13e/m2r-0.2.1.tar.gz", hash = "sha256:bf90bad66cda1164b17e5ba4a037806d2443f2a4d5ddc9f6a5554a0322aaed99"},
-]
 "markdown-it-py 2.2.0" = [
     {url = "https://files.pythonhosted.org/packages/bf/25/2d88e8feee8e055d015343f9b86e370a1ccbec546f2865c98397aaef24af/markdown_it_py-2.2.0-py3-none-any.whl", hash = "sha256:5a35f8d1870171d9acc47b99612dc146129b631baf04970128b568f190d0cc30"},
     {url = "https://files.pythonhosted.org/packages/e4/c0/59bd6d0571986f72899288a95d9d6178d0eebd70b6650f1bb3f0da90f8f7/markdown-it-py-2.2.0.tar.gz", hash = "sha256:7c9a5e412688bc771c67432cbfebcdd686c93ce6484913dccf06cb5a0bea35a1"},
@@ -2524,9 +2500,9 @@ content_hash = "sha256:f287b27fc0f326fae7af34fd5a20fb254270afb55837ecbdcc069c8b8
     {url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
-"mistune 0.8.4" = [
-    {url = "https://files.pythonhosted.org/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl", hash = "sha256:88a1051873018da288eee8538d476dffe1262495144b33ecb586c4ab266bb8d4"},
-    {url = "https://files.pythonhosted.org/packages/2d/a4/509f6e7783ddd35482feda27bc7f72e65b5e7dc910eca4ab2164daf9c577/mistune-0.8.4.tar.gz", hash = "sha256:59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e"},
+"mistune 3.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/0c/88/6862147c3203750cef135070fe9f841d82146c4206f55239592bcc27b0cd/mistune-3.0.1.tar.gz", hash = "sha256:e912116c13aa0944f9dc530db38eb88f6a77087ab128f49f84a48f4c05ea163c"},
+    {url = "https://files.pythonhosted.org/packages/cc/c0/ac9587149e37cde62ae338e9db8241ae2fdc79a84bde8c8ba7caea2c22d8/mistune-3.0.1-py3-none-any.whl", hash = "sha256:b9b3e438efbb57c62b5beb5e134dab664800bdf1284a7ee09e8b12b13eb1aac6"},
 ]
 "myst-nb 0.17.2" = [
     {url = "https://files.pythonhosted.org/packages/15/e6/6ec454f930f1d542f1c1d9562d939acc41220408ff996b7c5b3b957fba1d/myst-nb-0.17.2.tar.gz", hash = "sha256:0f61386515fab07c73646adca97fff2f69f41e90d313a260217c5bbe419d858b"},
@@ -2544,9 +2520,9 @@ content_hash = "sha256:f287b27fc0f326fae7af34fd5a20fb254270afb55837ecbdcc069c8b8
     {url = "https://files.pythonhosted.org/packages/c8/ee/b9351110fbbc8229863cbc54454f1db91f7836c730018d674a188ede5efd/nbclient-0.7.4.tar.gz", hash = "sha256:d447f0e5a4cfe79d462459aec1b3dc5c2e9152597262be8ee27f7d4c02566a0d"},
     {url = "https://files.pythonhosted.org/packages/f3/97/d35da363d1df4a68f1b3d44335f80235487d7ca77d1f606b0c3523118f34/nbclient-0.7.4-py3-none-any.whl", hash = "sha256:c817c0768c5ff0d60e468e017613e6eae27b6fa31e43f905addd2d24df60c125"},
 ]
-"nbconvert 6.5.4" = [
-    {url = "https://files.pythonhosted.org/packages/1f/5b/f8dcd336fade9b02afa40c88924415a83ccb5ba5a24ee5e15bb22ee2f3d1/nbconvert-6.5.4.tar.gz", hash = "sha256:9e3c7c6d491374cbdd5f35d268c05809357716d346f4573186bbeab32ee50bc1"},
-    {url = "https://files.pythonhosted.org/packages/78/19/e3aa3145650e26936bcbc3bbf1f5fa5e1fb5f9a8b2bfd94063383c315a48/nbconvert-6.5.4-py3-none-any.whl", hash = "sha256:d679a947f849a966cbbd0bf6e7fedcfdb64be3b20ce7cef11ad55c13f5820e19"},
+"nbconvert 7.6.0" = [
+    {url = "https://files.pythonhosted.org/packages/7d/65/bd0ed8fc533ad31742f2dc629523257ade468dea860d8ebb6faa1448d709/nbconvert-7.6.0-py3-none-any.whl", hash = "sha256:5a445c6794b0791984bc5436608fe2c066cb43c83920c7bc91bde3b765e9a264"},
+    {url = "https://files.pythonhosted.org/packages/e7/0b/b214dd940274564cc610d6c66d98750ca0e8d59281f300451654f4542284/nbconvert-7.6.0.tar.gz", hash = "sha256:24fcf27efdef2b51d7f090cc5ce5a9b178766a55be513c4ebab08c91899ab550"},
 ]
 "nbformat 5.9.0" = [
     {url = "https://files.pythonhosted.org/packages/73/b0/7dcb4288e9096fc544e4c511253c5720210748dd37c23f0486541d145a0a/nbformat-5.9.0.tar.gz", hash = "sha256:e98ebb6120c3efbafdee2a40af2a140cadee90bb06dd69a2a63d9551fcc7f976"},

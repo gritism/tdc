@@ -9,12 +9,3 @@ __Feel__ free to fork and update.
 
 ---
 
-# change 2
-
-```{list-table}
-* - head1
-  - head2
-* - A
-  - B
-```
-
