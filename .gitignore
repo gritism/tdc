@@ -3,3 +3,4 @@ docs/_build/
 .pdm-build/
 .venv/
 .pdm-python
+blog/

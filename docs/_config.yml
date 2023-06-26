@@ -67,6 +67,7 @@ sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
     - sphinx_thebe
+    # - ablog
     # - sphinxawesome_theme.docsearch
     # - sphinxawesome.highlighting
   config:

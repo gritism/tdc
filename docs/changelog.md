@@ -2,6 +2,10 @@
 
 ## 2023-06-26
 
+- python class 내용 정리
+
+## 2023-06-25
+
 - make the top 5 list of change log in intro
   1. read full change log
   2. save pickle file

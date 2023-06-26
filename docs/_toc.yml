@@ -46,6 +46,8 @@ parts:
     sections:
     - file: jn/pdm_01
 
+  - file: py/class
+
 - caption: data visulization
   chapters:
   - file: dv/seaborn
