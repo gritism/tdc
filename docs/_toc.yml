@@ -66,6 +66,7 @@ parts:
   chapters:
   - file: et/wsl
   - file: et/mysql
+  - file: et/linux
 
 - caption: reference
   chapters:
