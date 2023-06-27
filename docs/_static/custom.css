@@ -99,6 +99,14 @@ h6 {
     margin: .6666666667rem 0 .4rem
 }
 
-table {
-    font-size: 0.5rem;
+.dataframe tbody tr th:only-of-type {
+    vertical-align: middle;
+}
+
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
 }
