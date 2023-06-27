@@ -37,10 +37,6 @@ jupyter:
 
 ## 2. config
 
-```{warning}
-    jupytext는 notebook > 7 버전과 아직 호환되지 않음. (23.6월 기준) notebook <= 6 이하 버전 설치해야 함
-```
-
 
 ### 2.1. jupytext config 디렉토리
     * 아래 디렉토리 리스트에 jupytext config 파일 생성 가능 
@@ -83,7 +79,6 @@ find_jupytext_configuration_file('.')
 ## 3. execute
 
 
-``` todo::
 1. notebook 실행 후 ipynb 파일 생성
 2. pairing: `file > jupytext > Pair Notebook with Markdown` 메뉴 선택
 3. save: jupytext_01.ipynb 파일 저장하면 동시에 scripts 폴더 내 `jupytext_01.md` 파일 저장
@@ -103,7 +98,3 @@ find_jupytext_configuration_file('.')
         * notebook File > jupytext > Pair notebook with ~ 선택
     2. configuration 파일에서 설정
         * 위 config 방법으로 설정 시 notebook 에서 Pair 설정할 경우 pair 파일 중복
-
-```python
-
-```

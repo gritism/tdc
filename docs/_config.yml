@@ -4,14 +4,14 @@
 title: Technical Document Center
 author: YB
 logo: ./img/tdc_logo_5.jpg
-
+exclude_patterns: ["_**.md"]
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: auto
   timeout: 120
   exclude_patterns:
-    - '_*.md'
+    - '_**.md'
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -67,6 +67,7 @@ sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
     - sphinx_thebe
+    - myst_nb
     # - ablog
     # - sphinxawesome_theme.docsearch
     # - sphinxawesome.highlighting
@@ -98,53 +99,15 @@ sphinx:
       "nav_links": [
           {
               "title": "Documentation",
-              "url": "dc/jupyter-book",
-              "children": [
-                  {
-                      "title": "jupyter book",
-                      "url": "dc/jupyter-book",
-                  },
-                  {
-                      "title": "sphinx",
-                      "url": "dc/sphinx",
-                  },
-                  {
-                      "title": "jupytext",
-                      "url": "dc/jupytext_01",
-                  },
-                  {
-                      "title": "markup",
-                      "url": "dc/markup",
-                  },
-              ]
+              "url": "dc/jupyter-book"
           },
           {
               "title": "Python",
-              "url": "py/pandas",
-              "children": [
-                  {
-                      "title": "pandas",
-                      "url": "py/pandas",
-                  },
-                  {
-                      "title": "pdm",
-                      "url": "py/pdm",
-                  },
-              ]
+              "url": "py/pandas"
           },
           {
               "title": "Data Visualization",
-              "url": "dv/seaborn",
-              "children": [
-                  {
-                      "title": "seaborn",
-                      "url": "dv/seaborn",
-                  },
-                  {
-                      "title": "bokeh",
-                      "url": "dv/bokeh",
-                  },
-              ]
+              "url": "dv/seaborn"
           },
           {
               "title": "Change",

@@ -54,7 +54,7 @@ jupyter:
 import os
 
 home_dir = os.path.expanduser('~')
-work_dir = f'{home_dir}/workspace/tdc'
+work_dir = f'{home_dir}/tdc'
 
 os.chdir(work_dir)
 !pwd

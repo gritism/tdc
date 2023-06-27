@@ -4,3 +4,4 @@ docs/_build/
 .venv/
 .pdm-python
 blog/
+_*.md

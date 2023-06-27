@@ -1269,7 +1269,7 @@ summary = "Easily download, build, install, upgrade, and uninstall Python packag
 
 [[package]]
 name = "shibuya"
-version = "2023.6.21"
+version = "2023.6.25"
 requires_python = ">=3.7"
 summary = "A clean, responsive, and customizable Sphinx documentation theme with light/dark mode."
 dependencies = [
@@ -1681,9 +1681,8 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.2"
-cross_platform = true
 groups = ["default"]
-content_hash = "sha256:3dac74e1580cb72fea2add0078f09fc37b49f725b3e6ff5b7646224597b1bc7e"
+content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda01670696877cb02e"
 
 [metadata.files]
 "ablog 0.11.4.post1" = [
@@ -3035,9 +3034,9 @@ content_hash = "sha256:3dac74e1580cb72fea2add0078f09fc37b49f725b3e6ff5b764622459
     {url = "https://files.pythonhosted.org/packages/c7/42/be1c7bbdd83e1bfb160c94b9cafd8e25efc7400346cf7ccdbdb452c467fa/setuptools-68.0.0-py3-none-any.whl", hash = "sha256:11e52c67415a381d10d6b462ced9cfb97066179f0e871399e006c4ab101fc85f"},
     {url = "https://files.pythonhosted.org/packages/dc/98/5f896af066c128669229ff1aa81553ac14cfb3e5e74b6b44594132b8540e/setuptools-68.0.0.tar.gz", hash = "sha256:baf1fdb41c6da4cd2eae722e135500da913332ab3f2f5c7d33af9b492acb5235"},
 ]
-"shibuya 2023.6.21" = [
-    {url = "https://files.pythonhosted.org/packages/a2/4f/cdf338ac088bd57aaa7bc60bf66de95d434a4e4fab4f70be3032b05a49aa/shibuya-2023.6.21.tar.gz", hash = "sha256:e79cd3a27c83a687cadc6c1510c9624f18ed912db4bc6dc1dde186acba04bfbd"},
-    {url = "https://files.pythonhosted.org/packages/d6/fd/39937b97c344b517168e4a93fad733e0b50ac70edc1511976c44721cd7db/shibuya-2023.6.21-py3-none-any.whl", hash = "sha256:75d6e1e32772ab843a223eb6c36e73154b17b407c0ae3c59fbbaecab456db12c"},
+"shibuya 2023.6.25" = [
+    {url = "https://files.pythonhosted.org/packages/a0/43/b4434b713ea331aec36e477ee77bb050baa96901b6cf7b4ac7cb9ddaa046/shibuya-2023.6.25.tar.gz", hash = "sha256:cc7f62297a19ee5628dc683c6870aebbbcdec3f5e0c3578139bf3a925d48a5b5"},
+    {url = "https://files.pythonhosted.org/packages/a4/ff/eff82fb9450fe72422357ec20627c3828f6ac2c09932a9792087e452eb1d/shibuya-2023.6.25-py3-none-any.whl", hash = "sha256:94afca088785ca38178e6260012e9b950270d1acf1e552320e6a93ed1eb31edf"},
 ]
 "six 1.16.0" = [
     {url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},

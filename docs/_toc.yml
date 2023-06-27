@@ -46,7 +46,7 @@ parts:
     sections:
     - file: jn/pdm_01
 
-  - file: py/class
+  - file: py/class_n7
 
 - caption: data visulization
   chapters:
@@ -61,6 +61,7 @@ parts:
   chapters:
   - file: jn/test.ipynb
   - file: jn/is.ipynb
+  - file: jn/glue.ipynb
   - file: jn/notebooks.ipynb
   - file: jn/sample.ipynb
 

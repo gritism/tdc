@@ -12,14 +12,15 @@ jupyter:
     name: python3
 ---
 
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 # class
+<!-- #endregion -->
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 ## class 정의
+<!-- #endregion -->
 
-```{code-cell} ipython3 
-:linenos: true
-
+```python editable=true slideshow={"slide_type": ""} tags=["linenos"]
 class MyClass: # class 선언
     def __init__(self, a: str = "initial"): # __init__ class constructor 역할 수행
         self.__a = a # ① double underscore 변수 `__a` python private variable 역할 수행
@@ -43,7 +44,6 @@ class MyClass: # class 선언
 
     def banna(self):
         print('I would like to eat banna')
- 
 ```
 
 ### ① 변수명
@@ -76,9 +76,24 @@ for fruit in arr:
     getattr(obj, f'{fruit}')() #변수명으로 MyClass의 함수 실행
 ```
 
+<!-- #region editable=true slideshow={"slide_type": ""} -->
+getattr 사용하지 않을 경우 code
+```
+for fruit in arr:
+    if fruit == "apple":
+        obj.apple()
+    elsif fruit == "banna":
+        obj.banna()
+    else:
+        obj.melon()        
+```
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 ## 객체(Object) 생성(호출)
 * MyClass()로 객체 생성
 * 객체 생성 시 '__init__' 함수가 싫행되어 객체 초기화(initialize) 수행
+<!-- #endregion -->
 
 ```python
 # 객체 생성 및 객체 변수(a) 출력
@@ -92,7 +107,7 @@ obj.a = "second"
 print(obj.a)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 # 객체 내부 변수를 아래와 같이 호출 시 에러 발생
 print(obj.__a)
 ```
