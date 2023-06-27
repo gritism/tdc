@@ -31,11 +31,8 @@ kernelspec:
 
 :::{grid-item}
 {bdg-primary}`3` change  
-- 202305: initial 
-- 202306: T.D.C site implemention with github pages
-
-  ```{include} ./chg_summary.md
-  ```  
+```{include} ./chg_summary.md
+```  
 :::
 
 :::{grid-item}
