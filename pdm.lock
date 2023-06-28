@@ -336,6 +336,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "iniconfig"
+version = "2.0.0"
+requires_python = ">=3.7"
+summary = "brain-dead simple config-ini parsing"
+
+[[package]]
 name = "invoke"
 version = "2.1.3"
 requires_python = ">=3.6"
@@ -1022,6 +1028,12 @@ requires_python = ">=3.7"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 
 [[package]]
+name = "pluggy"
+version = "1.2.0"
+requires_python = ">=3.7"
+summary = "plugin and hook calling mechanisms for python"
+
+[[package]]
 name = "prometheus-client"
 version = "0.17.0"
 requires_python = ">=3.6"
@@ -1118,6 +1130,20 @@ name = "pyrsistent"
 version = "0.19.3"
 requires_python = ">=3.7"
 summary = "Persistent/Functional/Immutable data structures"
+
+[[package]]
+name = "pytest"
+version = "7.4.0"
+requires_python = ">=3.7"
+summary = "pytest: simple powerful testing with Python"
+dependencies = [
+    "colorama; sys_platform == \"win32\"",
+    "exceptiongroup>=1.0.0rc8; python_version < \"3.11\"",
+    "iniconfig",
+    "packaging",
+    "pluggy<2.0,>=0.12",
+    "tomli>=1.0.0; python_version < \"3.11\"",
+]
 
 [[package]]
 name = "python-dateutil"
@@ -1418,6 +1444,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "sphinx-pytest"
+version = "0.1.1"
+requires_python = ">=3.7"
+summary = "Helpful pytest fixtures for sphinx extensions."
+dependencies = [
+    "pytest",
+    "sphinx",
+]
+
+[[package]]
 name = "sphinx-thebe"
 version = "0.2.1"
 summary = "Integrate interactive code blocks into your documentation with Thebe and Binder."
@@ -1682,7 +1718,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 [metadata]
 lock_version = "4.2"
 groups = ["default"]
-content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda01670696877cb02e"
+content_hash = "sha256:0c0bc25038d7c436311374eee14b6f6001653769148d5ba0cd0b73470c134a5c"
 
 [metadata.files]
 "ablog 0.11.4.post1" = [
@@ -2169,6 +2205,10 @@ content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda016706968
 "importlib-metadata 6.7.0" = [
     {url = "https://files.pythonhosted.org/packages/a3/82/f6e29c8d5c098b6be61460371c2c5591f4a335923639edec43b3830650a4/importlib_metadata-6.7.0.tar.gz", hash = "sha256:1aaf550d4f73e5d6783e7acb77aec43d49da8017410afae93822cc9cca98c4d4"},
     {url = "https://files.pythonhosted.org/packages/ff/94/64287b38c7de4c90683630338cf28f129decbba0a44f0c6db35a873c73c4/importlib_metadata-6.7.0-py3-none-any.whl", hash = "sha256:cb52082e659e97afc5dac71e79de97d8681de3aa07ff18578330904a9d18e5b5"},
+]
+"iniconfig 2.0.0" = [
+    {url = "https://files.pythonhosted.org/packages/d7/4b/cbd8e699e64a6f16ca3a8220661b5f83792b3017d0f79807cb8708d33913/iniconfig-2.0.0.tar.gz", hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3"},
+    {url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374"},
 ]
 "invoke 2.1.3" = [
     {url = "https://files.pythonhosted.org/packages/46/37/0c5e8d33773e55fc265d80d87bb0e78b353a447d6702ba72584536b9cf9d/invoke-2.1.3.tar.gz", hash = "sha256:a3b15d52d50bbabd851b8a39582c772180b614000fa1612b4d92484d54d38c6b"},
@@ -2748,6 +2788,10 @@ content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda016706968
     {url = "https://files.pythonhosted.org/packages/6d/1a/96efea7b36835ce89911d7813fe68f5b1db7ecae4023bf209a7aeba93017/platformdirs-3.5.3-py3-none-any.whl", hash = "sha256:0ade98a4895e87dc51d47151f7d2ec290365a585151d97b4d8d6312ed6132fed"},
     {url = "https://files.pythonhosted.org/packages/d2/5d/29eed8861e07378ef46e956650615a9677f8f48df7911674f923236ced2b/platformdirs-3.5.3.tar.gz", hash = "sha256:e48fabd87db8f3a7df7150a4a5ea22c546ee8bc39bc2473244730d4b56d2cc4e"},
 ]
+"pluggy 1.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/51/32/4a79112b8b87b21450b066e102d6608907f4c885ed7b04c3fdb085d4d6ae/pluggy-1.2.0-py3-none-any.whl", hash = "sha256:c2fd55a7d7a3863cba1a013e4e2414658b1d07b6bc57b3919e0c63c9abb99849"},
+    {url = "https://files.pythonhosted.org/packages/8a/42/8f2833655a29c4e9cb52ee8a2be04ceac61bcff4a680fb338cbd3d1e322d/pluggy-1.2.0.tar.gz", hash = "sha256:d12f0c4b579b15f5e054301bb226ee85eeeba08ffec228092f8defbaa3a4c4b3"},
+]
 "prometheus-client 0.17.0" = [
     {url = "https://files.pythonhosted.org/packages/0e/01/bda72c3b5d4a0df411bceb88c4993d413dd9b7d3b3b68ab19171a09e7db1/prometheus_client-0.17.0.tar.gz", hash = "sha256:9c3b26f1535945e85b8934fb374678d263137b78ef85f305b1156c7c881cd11b"},
     {url = "https://files.pythonhosted.org/packages/5b/62/75fc6f255e214ff0a8bd3267a0bd337521dd24f76cd593c10795e488f41b/prometheus_client-0.17.0-py3-none-any.whl", hash = "sha256:a77b708cf083f4d1a3fb3ce5c95b4afa32b9c521ae363354a4a910204ea095ce"},
@@ -2836,6 +2880,10 @@ content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda016706968
     {url = "https://files.pythonhosted.org/packages/de/9e/10c5bf794eec650a3aab1b4fb1f6824f53011d111ddfdce1459dc357408a/pyrsistent-0.19.3-cp311-cp311-win32.whl", hash = "sha256:64220c429e42a7150f4bfd280f6f4bb2850f95956bde93c6fda1b70507af6ef3"},
     {url = "https://files.pythonhosted.org/packages/ed/7b/7d032130a6838b179b46dff1ee88909c11d518a10ec9bc70c4b72c7c2f80/pyrsistent-0.19.3-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:20460ac0ea439a3e79caa1dbd560344b64ed75e85d8703943e0b66c2a6150e4a"},
     {url = "https://files.pythonhosted.org/packages/f4/43/183384edb4d2788374aa7663b82ace4afe4a0c1fbfee064875eb40ada95b/pyrsistent-0.19.3-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:3a8cb235fa6d3fd7aae6a4f1429bbb1fec1577d978098da1252f0489937786f3"},
+]
+"pytest 7.4.0" = [
+    {url = "https://files.pythonhosted.org/packages/33/b2/741130cbcf2bbfa852ed95a60dc311c9e232c7ed25bac3d9b8880a8df4ae/pytest-7.4.0-py3-none-any.whl", hash = "sha256:78bf16451a2eb8c7a2ea98e32dc119fd2aa758f1d5d66dbf0a59d69a3969df32"},
+    {url = "https://files.pythonhosted.org/packages/a7/f3/dadfbdbf6b6c8b5bd02adb1e08bc9fbb45ba51c68b0893fa536378cdf485/pytest-7.4.0.tar.gz", hash = "sha256:b4bf8c45bd59934ed84001ad51e11b4ee40d40a1229d2c79f9c592b0a3f6bd8a"},
 ]
 "python-dateutil 2.8.2" = [
     {url = "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
@@ -3097,6 +3145,10 @@ content_hash = "sha256:a595bd71da2cf7c5f973d3082ec13c062ce0b850507f6dda016706968
 "sphinx-press-theme 0.8.0" = [
     {url = "https://files.pythonhosted.org/packages/12/4b/73b14b65ba498e13c2c8eafac4d8ed9b750a916309116dae0a472dd23443/sphinx_press_theme-0.8.0.tar.gz", hash = "sha256:2884caab1dc01ecb11d158d4dd6d3179e2dd97cd48516c769cc27360272e62b3"},
     {url = "https://files.pythonhosted.org/packages/61/84/f9c86260e39b59527dbf24daaadbbcfec822d0114e36bf27795e3a96be1f/sphinx_press_theme-0.8.0-py3-none-any.whl", hash = "sha256:ddf877d414a2c66e13396d726115aa3f0c94d1ac9133b4df028c261bf388ab25"},
+]
+"sphinx-pytest 0.1.1" = [
+    {url = "https://files.pythonhosted.org/packages/04/56/52ca651f2bba04413cf79d9231efa88aa35d57730483874df0f7cadb8e8c/sphinx_pytest-0.1.1.tar.gz", hash = "sha256:3f4bdd54469c9bfd13d939a35610d76dc614c24e87539a7437ad8640dcf1d230"},
+    {url = "https://files.pythonhosted.org/packages/e6/41/44a36675eefa04b9fbfba53205e0a76e860732bfc1283d4491b6c59455f2/sphinx_pytest-0.1.1-py3-none-any.whl", hash = "sha256:04f0067ad430646dd113885b6532a3203aac2e235acbfb6c6aaf67bf663fb62d"},
 ]
 "sphinx-thebe 0.2.1" = [
     {url = "https://files.pythonhosted.org/packages/19/f6/fb50e5cb37447e30caa25b1cda2734cb2a1737c2f16bb36e4c463dee583c/sphinx-thebe-0.2.1.tar.gz", hash = "sha256:f4c8c1542054f991b73fcb28c4cf21697e42aba2f83f22348c1c851b82766583"},

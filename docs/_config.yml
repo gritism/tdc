@@ -68,6 +68,9 @@ sphinx:
     - sphinxcontrib.mermaid
     - sphinx_thebe
     - myst_nb
+  local_extensions:
+    hello: ../sph_ext
+    pys: ../sph_ext/pys
     # - ablog
     # - sphinxawesome_theme.docsearch
     # - sphinxawesome.highlighting

@@ -23,8 +23,8 @@ kernelspec:
 :::{grid-item}
 {bdg-primary}`2` to-do
 - [x] [mermaid](`./dc/mermaid.md`)
-- [ ] thebe
-- [ ] autodoc
+- [ ] sphinx pyscript
+- [ ] pyodide
 - [ ] ablog for sphinx
 - [ ] stock analysis (bokeh application using public data open api)
 :::
@@ -53,7 +53,5 @@ kernelspec:
 :::
 ::::
 
-```{only} html
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg)](https://doi.org/10.5281/zenodo.2561065)
-```
+[![Jupyter Book Badge](docs/images/badge.svg)](https://jupyterbook.org)
