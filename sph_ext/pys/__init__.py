@@ -52,15 +52,19 @@ class PyConfig(SphinxDirective):
         """Parse the config"""
         if self.content:
             try:
+                temp = "\n".join(self.content)
                 config = yaml.safe_load("\n".join(self.content))
             except Exception:
                 raise self.error("Could not read config as YAML")
         else:
             config = {}
 
-        print("################## setup ##########################")
-
         self.env.metadata[self.env.docname]["py-config"] = json.dumps(config)
+        LOGGER.info(f'PyConfig {self.content}')
+        LOGGER.info(f'PyConfig \n{temp}')
+        LOGGER.info(f'PyConfig {self.env.docname}')
+        LOGGER.info(f'PyConfig {self.env.metadata}')
+
         return []
 
 class PyScript(SphinxDirective):
@@ -91,6 +95,7 @@ class PyRepl(SphinxDirective):
     option_spec = {
         "auto-generate": directives.flag,
         "output": directives.unchanged,
+        "src": directives.path,
     }
 
     def run(self):
@@ -101,9 +106,12 @@ class PyRepl(SphinxDirective):
             attrs += ' auto-generate="true"'
         if "output" in self.options:
             attrs += f' output="{self.options["output"]}"'
+        if "src" in self.options:
+            attrs += f' src="{self.options["src"]}"'
         if self.content:
             code = "\n".join(self.content)
 
+        LOGGER.info(f'self.options \n{self.options}')
         '''raw(Special, Inline, PreBibliographic, FixedTextElement)'''
         return [nodes.raw("", f"<py-repl{attrs}>\n{code}\n</py-repl>\n", format="html")]
 
@@ -153,5 +161,5 @@ def doctree_read(app: Sphinx, doctree: nodes.document):
             )
 
 if __name__ == '__main__':
-    sph = Sphinx('./sph_ext/pys/src', './sph_ext/pys/src/', './sph_ext/pys/src/_build', './', 'html')
+    sph = Sphinx('./docs', './docs', './docs/_build', './', 'html')
     setup(sph)
