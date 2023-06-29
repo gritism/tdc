@@ -5,3 +5,5 @@ docs/_build/
 .pdm-python
 blog/
 _*.md
+sph_ext/__pycache__/
+sph_ext/pys/__pycache__/
