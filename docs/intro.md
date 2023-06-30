@@ -12,31 +12,30 @@ kernelspec:
 
 # Technical Document Center
 
-::::{grid} 1 1 1 1
+  {octicon}`report;1em;sd-text-info` **objective**: python 관련 기술 문서 정리  
+    
+  {octicon}`report;1em;sd-text-info` **interest**: data science & visualization, ML, DL, documentation/web 등 
 
-:::{grid-item}
-{bdg-primary}`1` Overview
-* {octicon}`report;1em;sd-text-info` python 관련 기술 문서 정리를 위한 공간
-* {octicon}`report;1em;sd-text-info` 관심분야: 데이터 분석/시각화, 머신러닝, 딥러닝, 문서자동화 등 
-:::
+`````{tab-set}
 
-:::{grid-item}
-{bdg-primary}`2` to-do
-- [x] [mermaid](`./dc/mermaid.md`)
-- [ ] sphinx pyscript
-- [ ] pyodide
-- [ ] ablog for sphinx
-- [ ] stock analysis (bokeh application using public data open api)
-:::
+````{tab-item} 1. changelog
 
-:::{grid-item}
-{bdg-primary}`3` change  
-```{include} ./chg_summary.md
+```{literalinclude} ./chg_summary.md
+:language: md
 ```  
-:::
+````
 
-:::{grid-item}
-{bdg-primary}`4` reference site
+````{tab-item} 2. to-do
+
+- [x] [mermaid](`./dc/mermaid.md`)
+- [x] sphinx pyscript
+- [x] pyodide
+- [x] jupyterlite
+- [ ] stock analysis (bokeh application using public data open api)
+````
+
+````{tab-item} 3. reference
+
 ```{list-table} 
 :header-rows: 1
 * - ref
@@ -50,8 +49,10 @@ kernelspec:
 * - [{bdg-success}`Shibuya`](https://shibuya.lepture.com/)
   - beautiful sphinx theme, Highly customization  
 ```
-:::
-::::
+````
+
+`````
 
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 [![Jupyter Book Badge](docs/images/badge.svg)](https://jupyterbook.org)
+

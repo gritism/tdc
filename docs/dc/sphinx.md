@@ -50,15 +50,6 @@
         - `extensions = ['myst_parser']`
     3. index.rst 수정
         - markdown 명 추가
-- m2r 이용
-    > myst_parser의 경우 md가 정확히 전환되지 않는 경우 존재하여 m2r로 이용
-    
-    1. m2r 라이브러리 설치
-        - `pdm add m2r`
-    2. conf.py 수정
-        - `extensions = ['m2r']`
-    3. index.rst 수정
-        - `.. mdinclude:: ../../파일명.md`
 
 ## theme
 - readthedocs theme 적용

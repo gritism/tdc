@@ -7,6 +7,7 @@ parts:
 - caption: documentation
   chapters:
   - file: dc/jupyter-book
+    title: 1. jupyter-book
     sections:
     - file: dc/jb/quickstart
       title: 1. quickstart
@@ -19,22 +20,30 @@ parts:
     # - file: dc/jb/intro_area
 
   - file: dc/sphinx
+    title: 2. sphinx
     sections:
     - file: dc/sphinx_01
-    - file: dc/sphinx_02
     - file: py/docstring
+    - file: dc/sphinx_02
+    - file: dc/sphinx_ext
     - file: dc/mermaid
     - file: dc/thebe
-
-  - file: dc/jupytext_01.ipynb
-    sections:
-    - file: dc/Untitled1
+    - file: dc/jupytext_01
 
   - file: dc/markup
+    title: 3. markup
     sections:
     - file: dc/myst
+    - file: jn/glue
     - file: dc/markdown
     - file: dc/rst
+
+- caption: Web
+  chapters:
+  - file: we/pyodide
+  - file: we/jupyterlite
+  - file: ps/pyscript
+  - file: we/flet
 
 - caption: python
   chapters:
@@ -47,6 +56,8 @@ parts:
     - file: jn/pdm_01
 
   - file: py/class_n7
+  - file: py/py_tip
+  - file: py/pyodide
 
 - caption: data visulization
   chapters:
@@ -61,13 +72,8 @@ parts:
   chapters:
   - file: jn/test.ipynb
   - file: jn/is.ipynb
-  - file: jn/glue.ipynb
   - file: jn/notebooks.ipynb
   - file: jn/sample.ipynb
-
-- caption: pyscript
-  chapters:
-  - file: ps/pyscript
 
 - caption: etc
   chapters:
