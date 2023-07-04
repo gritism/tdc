@@ -55,7 +55,7 @@ Here is a simple application to replace "a" with "b", using the `py-script` dire
 .. code-block:: restructuredtext
 
     .. py-script::
-        :file: convert_json_to_toml.py
+        :file: pys_test.py
 
     .. raw:: html
 
@@ -68,11 +68,11 @@ Here is a simple application to replace "a" with "b", using the `py-script` dire
 
 With the following code:
 
-.. literalinclude:: convert_json_to_toml.py
+.. literalinclude:: pys_test.py
     :language: python
 
 .. py-script::
-    :file: convert_json_to_toml.py
+    :file: pys_test.py
 
 .. raw:: html
 

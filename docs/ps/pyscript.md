@@ -8,13 +8,6 @@ py-config:
 
 # pyscript
 
-```{py-config}
-  splashscreen:
-    autoclose: true
-  packages:
-  - matplotlib
-```
-
 ## hello world
 ### 1) code
 ````md
