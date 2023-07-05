@@ -2,7 +2,7 @@
 
 ## 2023-07.1
 
-- sphinx extension pyscript module bug fix
+- sphinx extension pyscript module bug fix 
 
 ## 2023-06.08
 
