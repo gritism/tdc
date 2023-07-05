@@ -3,15 +3,22 @@ from sphinx.directives import SphinxDirective
 from docutils.parsers.rst import directives
 from docutils import nodes
 from sphinx.util.logging import getLogger
+import yaml
+import json
 
 logger = getLogger(__name__)
 
 class PyConfig(SphinxDirective):
+
     has_content = True
 
     def run(self):
 
-        return []
+        if self.content:
+            data = "\n".join(self.content)
+            data = json.dumps(yaml.safe_load(data), indent=2)
+
+            return [nodes.raw("", f'<py-config type="json">\n{data}\n</py-config>\n', format="html")]
 
 class PyRepl(SphinxDirective):
 

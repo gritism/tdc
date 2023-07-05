@@ -8,6 +8,8 @@ from sphinx.application import Sphinx
 from sphinx.util.logging import getLogger
 from sphinx.util.console import bold
 
+import click 
+
 logger = getLogger(__name__)
 
 __version__ = "2023.06.1"
@@ -31,11 +33,11 @@ def _add_config(app: Sphinx) -> None:
 
     temp_config_list: list[str] = []
 
-    for inx in config_list:
-        if inx in app.config.values:
-            temp_config_list.append(app.config.values[inx])
+    for v in config_list:
+        if v in app.config.values:
+            temp_config_list.append(v)
 
-    logger.info(bold("[pyscript] 2. add config value: %s"), temp_config_list)
+    click.secho(f"[pyscript] 2. config registered: {temp_config_list}", bold=True, fg="green")
 
 def _add_directive(app: Sphinx) -> None:
 
@@ -61,12 +63,12 @@ def _add_directive(app: Sphinx) -> None:
     for k in d:
         temp_list.append(directives._directives[k])
 
-    logger.info(bold("[pyscript] 3. add directive %s"), temp_list)
+    click.secho(f"[pyscript] 3. directive registered: {temp_list}", bold=True, fg="green")
 
 def _source_read(app: Sphinx, docname, source) -> None:
 
     if "py-config" in source[0]:
-        logger.info(bold("[pyscript] 4 source read -> filenm: %s, source: %s"), docname, str(source)[:30])
+        click.secho(f"[pyscript] 4 source read -> filenm: {docname}, source: {str(source)[:30]}", bold=True, fg="green")
 
 def _doc_read(app: Sphinx, doctree: nodes.document) -> None:
 
@@ -88,7 +90,7 @@ def _doc_read(app: Sphinx, doctree: nodes.document) -> None:
             app.add_js_file(app.config.pys_js, loading_method="defer")
             app.add_css_file(app.config.pys_css)
 
-            logger.info(bold("[pyscript] 5 build html -> filenm: %s, output: %s"), app.env.docname, str(doctree)[:30])
+            click.secho(f"[pyscript] 5 build html -> filenm: {app.env.docname}, source: {str(doctree)[:30]}", bold=True, fg="green")
 
 def _add_connect(app: Sphinx) -> None:
 
@@ -98,7 +100,7 @@ def _add_connect(app: Sphinx) -> None:
 def setup(app: Sphinx) -> dict[str, Any]:
 
     # 1. load extension
-    logger.info(bold("[pyscript] 1. load extension %s"), app.config.extensions)
+    click.secho(f"[pyscript] 1. load extension {app.config.extensions}", bold=True, fg="green")
 
     # 2. pyscript config
     _add_config(app)

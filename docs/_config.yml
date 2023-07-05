@@ -69,8 +69,8 @@ sphinx:
     - sphinx_thebe
     - myst_nb
   local_extensions:
-    hello: ../sphinx_pyscript
-    sphinx_pyscript: ../sphinx_pyscript
+    hello: ../sphext
+    sphinx_pyscript: ../sphext
     # - ablog
     # - sphinxawesome_theme.docsearch
     # - sphinxawesome.highlighting
