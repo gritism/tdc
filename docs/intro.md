@@ -30,7 +30,7 @@ kernelspec:
 - [x] [mermaid](`./dc/mermaid.md`)
 - [x] sphinx pyscript
 - [x] pyodide
-- [x] jupyterlite
+- [ ] click (cli)
 - [ ] stock analysis (bokeh application using public data open api)
 ````
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023-07.1
+
+- sphinx extension pyscript module bug fix
+
 ## 2023-06.08
 
 - [pyodide](./we/pyodide.ipynb) 내용 정리

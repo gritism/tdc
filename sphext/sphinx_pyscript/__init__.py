@@ -70,32 +70,70 @@ def _source_read(app: Sphinx, docname, source) -> None:
     if "py-config" in source[0]:
         click.secho(f"[pyscript] 4 source read -> filenm: {docname}, source: {str(source)[:30]}", bold=True, fg="green")
 
+# delete
 def _doc_read(app: Sphinx, doctree: nodes.document) -> None:
 
     metadata = app.env.metadata[app.env.docname]
 
-    for k in metadata:
-        if k == "py-config":
-            data = json.loads(metadata["py-config"])
-            data = json.dumps(data, indent=2)
+    # click.secho(f"doctree: {doctree.children}", bold=True, fg="blue")
+    # for k in metadata:
+        # if k == "py-config":
+    print(doctree[0][:100])
 
-            doctree.append(
-                nodes.raw(
-                        "",
-                        f'<py-config type="json">\n{data}\n</py-config>\n',
-                        format="html",
-                    )
+    print(list(filter(lambda x: 'py-config' in x, metadata)))
+    print('py-config' in str(doctree))
+    if ('py-config' in str(doctree)):
+        app.add_js_file(app.config.pys_js, loading_method="defer")
+        app.add_css_file(app.config.pys_css)
+        click.secho(f"[pyscript] 5 build html -> filenm: {app.env.docname}, source: {str(doctree)[:30]}", bold=True, fg="green")
+    elif ('py-config' in list(filter(lambda x: 'py-config' in x, metadata))):
+        data = json.loads(metadata["py-config"])
+        data = json.dumps(data, indent=2)
+
+        doctree.append(
+            nodes.raw(
+                    "",
+                    f'<py-config type="json">\n{data}\n</py-config>\n',
+                    format="html",
                 )
-        
-            app.add_js_file(app.config.pys_js, loading_method="defer")
-            app.add_css_file(app.config.pys_css)
+            )
+    
+        # app.add_js_file(app.config.pys_js, loading_method="defer")
+        # app.add_css_file(app.config.pys_css)
 
-            click.secho(f"[pyscript] 5 build html -> filenm: {app.env.docname}, source: {str(doctree)[:30]}", bold=True, fg="green")
+        click.secho(f"[pyscript] 5 build html -> filenm: {app.env.docname}, source: {str(doctree)[:30]}", bold=True, fg="green")
+
+def _page_context(app: Sphinx, pagename: str, templatename: str, context: dict, doctree: nodes.document) -> None:
+
+    metadata = app.env.metadata[pagename]
+
+    if ('py-config' in str(doctree)):
+        app.add_js_file(app.config.pys_js, loading_method="defer")
+        app.add_css_file(app.config.pys_css)
+        click.secho(f"[pyscript] 5 build html -> filenm: {pagename}, source: {str(doctree)[:30]}", bold=True, fg="green")
+        
+    elif ('py-config' in list(filter(lambda x: 'py-config' in x, metadata))):
+        data = json.loads(metadata["py-config"])
+        data = json.dumps(data, indent=2)
+
+        doctree.append(
+            nodes.raw(
+                    "",
+                    f'<py-config type="json">\n{data}\n</py-config>\n',
+                    format="html",
+                )
+            )
+    
+        app.add_js_file(app.config.pys_js, loading_method="defer")
+        app.add_css_file(app.config.pys_css)
+
+        click.secho(f"[pyscript] 5 build html -> filenm: {pagename}, source: {str(doctree)[:30]}", bold=True, fg="green")
 
 def _add_connect(app: Sphinx) -> None:
 
     app.connect("source-read", _source_read)
-    app.connect("doctree-read", _doc_read)
+    # app.connect("doctree-read", _doc_read)
+    app.connect("html-page-context", _page_context)
 
 def setup(app: Sphinx) -> dict[str, Any]:
 
